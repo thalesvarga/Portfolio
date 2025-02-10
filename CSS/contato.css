@@ -1,0 +1,90 @@
+@import url("/CSS/variaveis.css");
+
+#container-contato {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 100%;
+  padding-right: 2.5rem;
+  position: fixed;
+  opacity: 70%;
+  cursor: pointer;
+  box-sizing: border-box;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+}
+
+.lista-contato {
+  list-style-type: none;
+  list-style: none;
+  color: inherit;
+  align-items: flex-end;
+}
+
+.imagem-contato {
+  height: 1.5rem;
+  align-items: flex-end;
+}
+
+.link {
+  padding-left: 2rem;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: rgb(255, 255, 255);
+  opacity: 20%;
+}
+
+@media (max-width: 414px) {
+  #container-contato {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 50%;
+    height: auto;
+    align-items: flex-start;
+    top: 20%;
+    left: 30%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .lista-contato {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+
+  .imagem-contato {
+    height: 0.8rem;
+  }
+
+  .link {
+    padding: 0 0.3rem;
+  }
+}
+
+@media (max-width: 375px){
+  #container-contato {
+    left: 25%;
+    top: 21.5%;
+    padding: 0;
+  }
+}
+@media (max-width: 320px){
+  #container-contato {
+    top: 24.5%;
+    left: 34%;
+    padding: 0;
+    max-width: 30%;
+  }
+}

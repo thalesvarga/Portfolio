@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+:root {
+  --cor-background-quasepreto: #3d3d3d;
+  --cor-darkgrey: rgb(169, 169, 169);
+  --cor-fonte-branca: rgb(252, 252, 244);
+  --cor-fonte-cinza: grey;
+  --fonte-principal: "Encode Sans SC";
+}
