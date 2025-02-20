@@ -1,4 +1,4 @@
-@import url("/CSS/variaveis.css");
+@import url("/css/variaveis.css");
 
 .container-experiencia-profissional {
   transform: translate(-20%, 30%);
@@ -6,16 +6,14 @@
   max-height: 100%;
   max-width: 70%;
   transform: scale(1);
-
   overflow: hidden;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
   left: 28%;
   margin: 2rem 3rem;
-
   transition: max-height 0.7s ease, border-color 0.7s ease,
-    background-color 0.7s ease, transform 0.7s ease, font-weigth 0.7s ease;
+    background-color 0.7s ease, transform 0.7s ease, font-weight 0.7s ease;
 }
 
 .container-experiencia-profissional:hover {
@@ -76,6 +74,8 @@ li {
 .skills-exercidas {
   font-weight: bold;
 }
+
+/* 1025px and up */
 @media (min-width: 1025px) {
   .container-experiencia-profissional {
     width: 100%;
@@ -86,12 +86,13 @@ li {
   }
 }
 
+/* 1024px and below */
 @media (max-width: 1024px) {
   .container-experiencia-profissional {
     max-width: 80%;
     font-size: 0.7rem;
-    
   }
+
   .titulo-experiencia-profissional {
     justify-content: center;
   }
@@ -126,6 +127,7 @@ li {
   }
 }
 
+/* 767px and below */
 @media (max-width: 767px) {
   .container-experiencia-profissional {
     display: flex;
@@ -144,6 +146,7 @@ li {
   }
 }
 
+/* 414px and below */
 @media (max-width: 414px) {
   .container-experiencia-profissional {
     display: flex;
@@ -159,7 +162,6 @@ li {
     left: 4%;
     border: 0.1rem solid rgba(0, 0, 0, 0.037);
     font-size: 0.5rem;
-  
   }
 
   .titulo-experiencia-profissional {
@@ -198,6 +200,7 @@ li {
     padding: 0.2rem 0;
     margin: 0;
   }
+
   .skills-exercidas {
     text-decoration: underline;
     display: flex;
@@ -205,12 +208,15 @@ li {
   }
 }
 
+/* 375px and below */
 @media (max-width: 375px) {
   .container-experiencia-profissional {
     max-width: 80%;
     font-size: 0.4rem;
   }
 }
+
+
 @media (max-width: 320px) {
   .container-experiencia-profissional {
     max-width: 90%;

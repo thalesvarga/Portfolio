@@ -6,6 +6,8 @@
   "author": "Thales Varga",
   "license": "MIT",
   "private": false,
+  "type": "module",
+  
   "devDependencies": {
     "lite-server": "^2.6.1"
   },
