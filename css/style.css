@@ -1,187 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
 @import url("./variaveis.css");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-   
-}
-html{
-    overflow-x: hidden;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-body{
-    font-family:"Encode Sans SC";
-    font-weight: 150;
-    font-size: 0.7  rem;
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--cor-fonte-branca);
-    position: relative;
-    overflow-x: hidden;
-    width: 100%;
-    min-height: 100vh;
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html {
+  overflow-x: hidden;
 }
 
-body::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(/assets/IMG_20210813_143636_1.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: -1; 
+body {
+  font-family: "Encode Sans SC";
+  font-weight: 150;
+  font-size: 0.7 rem;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-fonte-branca);
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
 
-#pagina{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100%;
-    flex: 1;
-
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url(/assets/IMG_20210813_143636_1.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex-grow: 1;
+#pagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  flex: 1;
 }
 
-h3{
-    margin:0;
-    padding: 0;
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
 }
 
-.topicos{
-    margin-bottom: 1rem;
-    color: var(--cor-background-cinza);
-    font-weight: 700;
-    color: var(--cor-background-cinza);
-
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
-
-/* experiencia profissional e skills container*/    
-
-.container-experiencia-profissional-skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items:center ;
-    flex-direction: column;
-    max-width: 90%;
-    margin: 2rem 0 5rem 0;
-  
+.topicos {
+  margin-bottom: 1rem;
+  color: var(--cor-background-cinza);
+  font-weight: 700;
+  color: var(--cor-background-cinza);
 }
-.linha-de-teste1{
-    position: absolute;
-    bottom: 22%;
-    left:36%;
-    opacity: 0.3;
-    width:100%;
-    transform: rotate(97deg);
-    z-index: -1;
-  }
-  
 
+/* experiencia profissional e skills container*/
 
+.container-experiencia-profissional-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 2rem 0 5rem 0;
+}
+.linha-de-teste1 {
+  position: absolute;
+  bottom: 22%;
+  left: 36%;
+  opacity: 0.3;
+  width: 100%;
+  transform: rotate(97deg);
+  z-index: -1;
+}
 
 @media (min-width: 1025px) {
-    .container-experiencia-profissional-skills {
-      width: 100%;
-      max-width: 100%;
-    
-
-    }
-    }
-
-@media (max-width: 1024px){
-    .container-experiencia-profissional-skills{
-        display: flex;
-        flex-direction: column;
-        width:70%;
-        margin: 0 1rem;
-    }
+  .container-experiencia-profissional-skills {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
-@media (max-width: 767px){
-    .container-experiencia-profissional-skills{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        margin: 1.2rem;
-    }
+@media (max-width: 1024px) {
+  .container-experiencia-profissional-skills {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 1rem;
+  }
 }
 
-
-@media (max-width: 414px){
-    body{
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.4rem;
-        overflow-x: hidden;
-    }
-
-    #pagina{
-        width: 100%;
-        margin: 0.8rem;
-    }
-
-    .container-experiencia-profissional-skills{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        margin: 1.2rem;
-    }
+@media (max-width: 767px) {
+  .container-experiencia-profissional-skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1.2rem;
+  }
 }
 
-@media (max-width: 375px){
-    .container-experiencia-profissional-skills{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        margin: 1rem;
-    }
+@media (max-width: 414px) {
+  body {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.4rem;
+    overflow-x: hidden;
+  }
+
+  #pagina {
+    width: 100%;
+    margin: 0.8rem;
+  }
+
+  .container-experiencia-profissional-skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1.2rem;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 375px) {
+  .container-experiencia-profissional-skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem;
+  }
+}

@@ -15,7 +15,6 @@ document.addEventListener("click", (evento) => {
   if (!projeto) return alert("Projeto em desenvolvimento");
 
   if (
-    elemento.classList.contains("opcoes-ver-mais") ||
     elemento.classList.contains("imagem-projeto") ||
     elemento.classList.contains("nome-do-projeto")
   ) {

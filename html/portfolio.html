@@ -12,8 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="/assets/logo.png" sizes="32x32" type="image/png"/>
-
+    <link rel="icon" href="/assets/logo.png" sizes="32x32" type="image/png" />
 
     <link rel="stylesheet" href="/css/variaveis.css" />
     <link rel="stylesheet" href="/css/style.css" />
@@ -30,7 +29,11 @@
 
     <div id="pagina">
       <header>
-        <div style="display: flex; align-items: center">
+        <a
+          class="link-home"
+          href="./portfolio.html"
+          style="display: flex; align-items: center"
+        >
           <img
             class="imagem-perfil"
             src="/assets/eu.png"
@@ -43,8 +46,7 @@
               <span class="subtitulo-area">Desenvolvedor Front-End</span>
             </h1>
           </div>
-        </div>
-        <!-- <img class="imagem-logo-header" src="/assets/logo.png" alt="" /> -->
+        </a>
 
         <div class="container-menu-header">
           <input type="checkbox" id="menu" class="container-botao" />
@@ -88,13 +90,12 @@
             </p>
           </div>
           <div class="container-download-cv">
-  
-              <a
-                href="/assets/CV_Thales_Varga_FrontEnd_2025.pdf"
-                class="download-cv"
-                target="_blank"
-                >Download CV</a>
-            </button>
+            <a
+              href="/assets/CV_Thales_Varga_FrontEnd_2025.pdf"
+              class="download-cv"
+              target="_blank"
+              >Download CV</a
+            >
           </div>
         </section>
 
@@ -299,11 +300,11 @@
             </li>
           </ul>
         </div>
-        
+
         <section id="container-projetos">
           <h3 id="titulo-projetos" class="topicos">Projetos</h3>
           <div class="projetos">
-          <!-- <div class="destaque">
+            <!-- <div class="destaque">
             <h4 class="topicos">Destaque</h4>
               <div class="card-projetos" id="1">
                 <img
@@ -319,7 +320,6 @@
             </div> -->
           </div>
         </section>
-        
 
         <div class="modal" style="display: none">
           <div class="modal-conteudo">
@@ -354,9 +354,9 @@
         </div>
       </main>
 
-      <script type="module" src="/js/render.js" ></script>
-      <script type="module" src="/js/modal.js" ></script>
-      <script type="module" src="/js/dataBase.js" ></script>
+      <script type="module" src="/js/render.js"></script>
+      <script type="module" src="/js/modal.js"></script>
+      <script type="module" src="/js/dataBase.js"></script>
     </div>
     <!-- <footer>
       <div class="container-logo">

@@ -1,15 +1,5 @@
 import { dataBaseProjetos } from "/js/dataBase.js";
 
-const linkHome = document.querySelectorAll(
-  ".imagem-perfil, .titulo-nome, .subtitulo-area"
-);
-
-linkHome.forEach((link) => {
-  link.addEventListener("click", () => {
-    window.location.href = "index.html";
-  });
-});
-
 const cardProjetos = document.querySelector(".projetos");
 
 function ordenarProjetos(dataBaseProjetos) {
@@ -51,10 +41,7 @@ projetosOrdenados.forEach((projeto) => {
       <div class="card-projetos" id="${projeto.id}">
       <img class="imagem-projeto" src="${projeto.imagem}" alt="${projeto.titulo}">
       <h3 class="nome-do-projeto">${projeto.titulo}</h3>
-      <div class="barra-de-opcoes">
-      <p class="data-projeto">${projeto.data}</p>
-      <button class="opcoes-ver-mais">Ver Projeto</button>
-      </div>
+    
     </div>
     </div>
   `;
