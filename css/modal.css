@@ -1,0 +1,157 @@
+.modal {
+  display: none;
+  position: fixed;
+  border-radius: 8px;
+  z-index: 1003;
+  color: var(--cor-texto);
+  max-width: 50%;
+  min-height: 10vh;
+  top: 50%;
+  left: 58%;
+  transform: translate(1%, -40%);
+ 
+}
+
+.modal-conteudo {
+  background: var(--cor-background-modal);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  max-width: 40%;
+ 
+}
+
+.modal.active .modal-conteudo {
+  transform: translateY(0);
+}
+
+.modal-esquerda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
+}
+
+.modal-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modal-links a {
+  all: unset;
+  padding: 0.5rem 1.3rem;
+  color: var(--cor-texto);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.modal-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.modal-direita {
+  width: 80%;
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-titulo {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--cor-texto);
+  font-size: 0.7rem;
+}
+
+.modal-data {
+  font-size: 0.9rem;
+  color: var(--cor-texto);
+  margin: 1rem 0;
+}
+
+.modal-descricao {
+  font-size: 0.7rem;
+  color: var(--cor-texto);
+  line-height: 1.8;
+  width: 100%;
+}
+
+/* ================================================== */
+/* Estilos para telas médias (tablets) */
+/* ================================================== */
+@media (max-width: 1199px) {
+  .modal {
+    max-width: 50%;
+    max-height:50% ;
+    margin: 0.5rem auto;
+    left: 18%;
+    top: 65%;
+  }
+  .modal-conteudo {
+    padding: 1rem;
+    max-width:50%;
+    font-size: 0.5rem;
+    overflow-y: auto;
+  }
+
+  .modal-direita {
+    width: 100%; /* Ocupa a largura total */
+  
+  }
+
+  .modal-descricao {
+  font-size: 0.6rem;
+  color: var(--cor-texto);
+  line-height: 1.8;
+  width: 80%;
+
+  }
+}
+
+/* ================================================== */
+/* Estilos para telas pequenas (smartphones) */
+/* ================================================== */
+@media (max-width: 767px) {
+  .modal {
+    max-width: 100%;
+    max-height: 50%;
+    margin: 1rem auto;
+    top: 60%;
+    left: 10%;
+  }
+
+  .modal-conteudo {
+    padding-left: 2rem;
+    width: 90%;
+    overflow-y: auto;
+
+  }
+
+  .modal-direita {
+    padding-left: 0;
+  }
+
+  .modal-titulo {
+    font-size: 0.6rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .modal-descricao {
+    font-size: 0.5rem;
+  }
+
+  .modal-links a {
+    font-size: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .modal-links a {
+    padding: 0.5rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+:root {
+  --cor-background: #ffffff;
+  --cor-tema: #151515;
+  --cor-preto: #000000;
+  --cor-branco: #ffff;
+  --cor-texto: #303030;
+  --cor-barra-menu-selecionada: #303030;
+  --gradiente-personalizado: linear-gradient(
+    to left,
+    #f7f7f7 18%,
+    #efefef 57%,
+    #e7e7e7 84%
+  );
+  --cor-border: rgba(0, 0, 0, 0.307);
+  --cor-background-modal: #dad9d9;
+  --cor-background-opaco-modal: #4a4a4aec;
+  --cor-boxShadow: rgba(0, 0, 0, 0.2);
+  --cor-botao: #ededed;
+
+  --font-family: "Encode Sans SC";
+}
+
+[data-tema="escuro"] {
+  --cor-background: #222222;
+  --cor-preto: #000000;
+  --cor-branco: #ffffff;
+  --cor-tema: #ffffff;
+  --cor-texto: #cfcfcf;
+  --cor-barra-menu-selecionada: #cfcfcf;
+  --gradiente-personalizado: linear-gradient(
+    to left,
+    #252525 18%,
+    #333333 57%,
+    #383838 84%
+  );
+  --cor-background-modal: #282828;
+  --cor-background-opaco-modal: #1a1a1ad5;
+  --cor-boxShadow: rgba(0, 0, 0, 0.2);
+  --cor-border: rgba(255, 255, 255, 0.164);
+  --cor-botao: #f5f5f5;
+}
+
+@keyframes moverOnda {
+  0% {
+    background-position: 0% 0%; /* Posição inicial */
+  }
+  25% {
+    background-position: 100% 0%; /* Move a onda para a direita */
+  }
+  50% {
+    background-position: 0% 0%; /* Volta para a posição inicial */
+  }
+  75% {
+    background-position: 100% 0%; /* Move a onda para a direita novamente */
+  }
+  100% {
+    background-position: 0% 0%; /* Retorna ao estado inicial */
+  }
+}
+
+body {
+  background-color: var(--cor-background);
+  font-family: var(--font-family);
+  height: 100vh;
+  font-size: 0.7rem;
+  color: var(--cor-texto);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  position: absolute;
+  left: 85%;
+  top: 0;
+}
+
+header p {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+header p:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.moldura {
+  border: 0.2px solid var(--cor-border);
+  width: calc(100% - 4rem);
+  height: calc(100vh - 4rem);
+  margin: 2rem 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.fundo-gradiente {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--gradiente-personalizado);
+  background-size: 600% 100%;
+  animation: moverOnda 40s ease-in-out infinite;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+}
+
+main {
+  margin: 0;
+}
+
+.marca {
+  padding: 2rem;
+}
+
+.marca-nome {
+  font-size: 1.7rem;
+  letter-spacing: 10%;
+  font-weight: 300;
+  position: relative;
+}
+
+.marca-profissao {
+  padding-left: 1rem;
+  font-weight: 100;
+  letter-spacing: 5%;
+}
+
+.barra-de-navegacao {
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-item {
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100px;
+  position: relative;
+  text-align: left;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.menu-item.active::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--cor-barra-menu-selecionada);
+  position: absolute;
+  /* bottom: 5px;  */
+}
+
+.menu-item.active {
+  color: transparent;
+}
+
+.temas {
+  display: flex;
+  position: absolute;
+  right: 9%;
+  bottom: 0;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.temas-forma-escuro,
+.temas-forma-claro {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: var(--cor-texto);
+  transition: background-color 0.3s, color 0.3s;
+}
+.temas-forma-escuro:hover,
+.temas-forma-claro:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.9;
+}
+
+.temas-forma-escuro::before,
+.temas-forma-claro::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 0.3rem;
+}
+
+.temas-forma-escuro::before {
+  background-color: var(--cor-preto);
+  border: 0.5px solid;
+}
+
+.temas-forma-claro::before {
+  background-color: var(--cor-branco);
+  border: 0.2px solid;
+}
+
+button {
+  border: none;
+  background: none;
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+
+#conteudo {
+  padding: 20px;
+  position: relative;
+}
+
+.conteudo-item {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 1.5s ease-in-out, max-width 2s ease-in-out,
+    visibility 1.5s ease-in-out;
+  pointer-events: none;
+}
+
+.conteudo-item.active {
+  opacity: 1;
+  max-width: 500px;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+footer {
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  left: 0.6%;
+  bottom: 3%;
+  padding: 0.5rem;
+  font-size: 0.6rem;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  white-space: nowrap;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+/* ================================================== */
+/* Estilos para telas médias (tablets) */
+/* ================================================== */
+@media (max-width: 1199px) {
+  /* Ajustes gerais */
+  body {
+    font-size: 0.6rem; /* Reduz o tamanho da fonte */
+    /* overflow: auto; */
+  }
+
+  /* Ajustes no header */
+  header {
+    left: 75%; /* Reposiciona o header */
+  }
+
+  /* Ajustes na moldura */
+  .moldura {
+    width: calc(100% - 2rem); /* Reduz a margem */
+    height: calc(100vh - 1rem);
+    margin: 1rem 1rem;
+    overflow: auto;
+  }
+
+  .fundo-gradiente {
+    position: absolute;
+    width: 100%;
+    height: 1050px;
+  }
+
+  /* Ajustes na barra de navegação */
+  .barra-de-navegacao {
+    margin: 2rem 1rem; /* Reduz o espaçamento */
+  }
+
+  /* Ajustes no conteúdo */
+  #conteudo {
+    padding: 10px; /* Reduz o padding */
+  }
+
+  footer p {
+    left: 0.3%;
+    transform: rotate(0);
+    transform-origin: top left;
+    font-size: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.5rem;
+  }
+
+  header {
+    left: 60%;
+  }
+
+  .moldura {
+    width: calc(100% - 1rem);
+    height: calc(100vh - 1rem);
+    min-height: 400px;
+    margin: 0.5rem 0.5rem;
+    position: relative;
+  }
+
+  .fundo-gradiente {
+    position: absolute;
+    width: 100%;
+  }
+
+  .marca {
+    padding: 1rem;
+  }
+
+  .marca-nome {
+    font-size: 1.2rem;
+  }
+
+  .marca-profissao {
+    padding-left: 0.5rem;
+  }
+
+  .barra-de-navegacao {
+    margin: 1rem 0.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-item {
+    width: auto;
+    padding: 0.5rem;
+  }
+
+  .temas {
+    right: 5%;
+    bottom: 1%;
+  }
+
+  #conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+
+  .conteudo-item.active {
+    max-width: 100%;
+  }
+
+  footer p {
+    left: 0.3%;
+    transform: rotate(0);
+    transform-origin: top left;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+  }
+}
