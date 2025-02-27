@@ -1,6 +1,5 @@
 import { dataBaseProjetos } from "./dataBase.js";
 
-// Função para ativar o menu
 function ativarMenu() {
   const menuItens = document.querySelectorAll(".menu-item");
   const conteudoItens = document.querySelectorAll(".conteudo-item");
@@ -22,7 +21,9 @@ function ativarMenu() {
   }
 
   const homeItem = document.querySelector('.menu-item[data-item="home"]');
-  const homeConteudo = document.querySelector('.conteudo-item[data-conteudo="home"]');
+  const homeConteudo = document.querySelector(
+    '.conteudo-item[data-conteudo="home"]'
+  );
 
   if (homeItem && homeConteudo) {
     homeItem.classList.add("active");
@@ -49,10 +50,8 @@ function ativarMenu() {
   });
 }
 
-// Inicialização do menu
 window.addEventListener("load", ativarMenu);
 
-// Animação de entrada do site
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
     document.getElementById("entrada-site").style.opacity = "0";
@@ -65,20 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3500);
 });
 
-// Modal e movimento da div #projetos
 const modal = document.querySelector(".modal");
 const modalTitulo = document.querySelector(".modal-titulo");
 const modalDescricao = document.querySelector(".modal-descricao");
 const modalRepositorio = document.querySelector(".modal-repositorio");
 const modalSite = document.querySelector(".modal-site");
-const modalVideo = document.querySelector(".modal-video")
+const modalVideo = document.querySelector(".modal-video");
 
 const linkProjetoVariados = document.querySelectorAll(".projetos-variados a");
 const linkProjetoDestaques = document.querySelectorAll(".projetos-destaques a");
 
 const todosLinks = [...linkProjetoVariados, ...linkProjetoDestaques];
-
-const projetosContainer = document.getElementById("projetos");
 
 todosLinks.forEach((link) => {
   link.addEventListener("click", function (evento) {
@@ -87,26 +83,13 @@ todosLinks.forEach((link) => {
     const projeto = dataBaseProjetos.find((projeto) => projeto.id === id);
 
     if (projeto) {
-
       modalTitulo.textContent = projeto.titulo;
       modalDescricao.innerHTML = projeto.descricao;
       modalRepositorio.href = projeto.repositorio;
-      modalVideo.href=projeto.videoSrc
+      modalVideo.href = projeto.videoSrc;
       modalSite.href = projeto.site;
-
-      if (window.innerWidth <= 1119) {
-        // Ajuste para telas menores
-        projetosContainer.style.transform = "translate(0, 0)"; // Remove o transform
-        modal.style.width = "90%"; // Ocupa 90% da largura da tela
-        modal.style.maxWidth = "80%"; // Define uma largura máxima
-        modal.style.margin = "0"; // Centraliza o modal
-      } else {
-        // Comportamento padrão para telas maiores
-        projetosContainer.style.transition = "transform 1s ease-in-out";
-        projetosContainer.style.transform = "translate(calc(-50% - 85%), calc(50% - 18%)";
-      }
-
       modal.style.display = "flex";
+
       setTimeout(() => {
         modal.classList.add("active");
       }, 10);
@@ -116,7 +99,6 @@ todosLinks.forEach((link) => {
   });
 });
 
-// Fecha o modal ao clicar fora dele
 document.addEventListener("click", (evento) => {
   if (modal.classList.contains("active") && !modal.contains(evento.target)) {
     // Fecha o modal
@@ -124,9 +106,5 @@ document.addEventListener("click", (evento) => {
     setTimeout(() => {
       modal.style.display = "none";
     }, 100);
-
-    // Retorna a div #projetos para a posição inicial (sem transição)
-    projetosContainer.style.transition = "none"; // Remove a transição
-    projetosContainer.style.transform = "translate(0, 0)"; // Volta para a posição inicial
   }
 });

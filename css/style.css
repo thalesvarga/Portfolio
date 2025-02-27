@@ -72,10 +72,9 @@
 body {
   background-color: var(--cor-background);
   font-family: var(--font-family);
-  height: 100vh;
   font-size: 0.7rem;
   color: var(--cor-texto);
-  overflow: hidden;
+  overflow: auto;
 }
 
 header {
@@ -101,7 +100,6 @@ header p:hover {
   height: calc(100vh - 4rem);
   margin: 2rem 2rem;
   overflow: hidden;
-  position: relative;
 }
 
 .fundo-gradiente {
