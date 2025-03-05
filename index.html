@@ -3,162 +3,543 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thales Varga - Portfólio</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/modal.css" />
-    <link rel="stylesheet" href="/css/sobreMim.css" />
-    <link rel="stylesheet" href="/css/contato.css" />
-    <link rel="stylesheet" href="/css/skills.css" />
-    <link rel="stylesheet" href="/css/projetos.css" />
-    <link rel="stylesheet" href="/css/entradaSite.css" />
+    <title>Thales Varga</title>
+    <link rel="stylesheet" href="css/landingPage/main.css" />
+    <link rel="stylesheet" href="css/landingPage/header.css" />
+    <link rel="stylesheet" href="css/landingPage/sobremim.css" />
+    <link rel="stylesheet" href="css/landingPage/portfolioFotografia.css" />
+    <link rel="stylesheet" href="css/landingPage/skills.css" />
+    <link rel="stylesheet" href="css/landingPage/trabalhosRealizados.css" />
+    <link rel="stylesheet" href="css/landingPage/footer.css" />
 
+    <link rel="stylesheet" href="https://use.typekit.net/dnx5lfu.css" />
+    <script src="/landingpage.js" defer type="module"></script>
   </head>
   <body data-tema="claro">
-    <div id="entrada-site" class="oculto conteudo-entrada">
-      <h2>Thales Varga</h2>
-      <p>Portfólio</p>
-    </div>
-    <div id="three-container"></div>
-    <!-- <header>
-      <p>Inglês</p>
-      <p>Portugês</p>
-    </header> -->
+    <img class="linha" src="/assets/linha.svg" alt="" />
+    <header id="header">
+      <div class="header-nome">
+        <h1>
+          Thales Varga
+          <img
+            src="/assets/forma-circulo-laranja.svg"
+            alt="imagem geometrica forma-circulo"
+            class="header-imagem-circulo"
+          />
+        </h1>
+      </div>
+      <div class="header-menu">
+        <ul>
+          <li data-section="#skills">Skills</li>
+          <li data-section="#trabalhos">Trabalhos</li>
+          <li data-section="#sobre-mim">Sobre mim</li>
+          <li data-section="#footer">Contato</li>
 
+          <!-- <li>Skills</li>
+          <li>Projetos</li>
+          <li>Trabalhos</li> -->
+        </ul>
+      </div>
+      <div class="header-contato">
+        <a href="https://wa.me/5511967393632" target="_blank"
+          >Ei!Vamos conversar</a
+        >
+      </div>
+    </header>
     <main>
-      <div class="moldura">
-        <div class="fundo-gradiente"></div>
-        <div class="marca">
-          <a href="/" class="marca-nome">Thales Varga</a>
-          <p class="marca-profissao">Desenvolvedor Front-End</p>
-        </div>
-        <div class="barra-de-navegacao">
-          <ul class="menu">
-            <li class="menu-item active" data-item="home">Home</li>
-            <li class="menu-item" data-item="skills">Skills</li>
-            <li class="menu-item" data-item="projetos">Projetos</li>
-            <li class="menu-item" data-item="contato">Contato</li>
-          </ul>
-        </div>
+      <div id="introducao-sobre-mim">
+        <h2>
+          Desenvolvedor Front-End<br />
+          e UX/UI Designer
+        </h2>
+        <p>
+          com experiência em JavaScript, React.js, Angular e design centrado no
+          usuário. Especialista em criar interfaces responsivas e acessíveis,
+          otimizando performance e usabilidade.
+        </p>
+      </div>
 
-        <div class="assunto-menu">
-          <div id="sobre-mim" class="conteudo-item ativo" data-conteudo="home">
+      <div id="skills">
+        <div class="skills-background">
+          <img
+            src="/assets/forma-circulo.svg"
+            alt="imagem geometrica forma-circulo"
+            class="main-imagem-circulo-inicio"
+          />
+          <img
+            src="/assets/forma-circulo.svg"
+            alt="imagem geometrica forma-circulo"
+            class="main-imagem-circulo-meio"
+          />
+          <h2>Skills</h2>
+          <div class="skills-descricao">
             <p>
-              Desenvolvedor Front-End e UX/UI Designer com experiência em
-              JavaScript, React.js, Angular e design centrado no usuário.
-              Especialista em criar interfaces responsivas e acessíveis,
-              otimizando performance e usabilidade. Tenho prática em consumo de
-              APIs REST, manipulação de dados no front-end e prototipação no
-              Figma. Além disso, aplico princípios de SEO, acessibilidade (WCAG)
-              e desenvolvimento mobile-first para melhorar a experiência do
-              usuário. Trabalho com Git, Cypress para testes automatizados e
-              integração com sistemas escaláveis. Busco oportunidades para atuar
-              em projetos inovadores, contribuindo com código limpo, boas
-              práticas e um olhar voltado para UX.
+              Resumi todo o meu conhecimento relevante na área até o momento, e
+              continuo atualizando conforme avanço nos estudos e aprendo novas
+              ferramentas e linguagens. <br /><br />Além disso, possuo
+              experiência com softwares de edição de imagem, Trello, Excel e
+              Salesforce. Estou sempre em busca de ampliar minhas habilidades e
+              me manter atualizado com as demandas do mercado.
             </p>
           </div>
-          <div id="skills" class="conteudo-item" data-conteudo="skills">
-            <ul>
-              <h3>Linguagens de Programação:</h3>
-              <li>JavaScript</li>
-              <li>Python</li>
-            </ul>
-            <ul>
-              <h3>Tecnologias Web:</h3>
-              <li>HTML5</li>
-              <li>CSS3</li>
-            </ul>
-            <ul>
-              <h3>Bibliotecas e Frameworks:</h3>
-              <li>React.js</li>
-              <li>Angular</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Cors</li>
-            </ul>
-            <ul>
-              <h3>Ferramentas e Tecnologias:</h3>
-              <li>LocalStorage</li>
-              <li>Git</li>
-              <li>JSON</li>
-              <li>Requisições HTTP</li>
-            </ul>
-            <ul>
-              <h3>Design e UI/UX:</h3>
-              <li>Figma</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-            </ul>
-            <ul>
-              <h3>Habilidades</h3>
-              <li>Prototipação de interfaces</li>
-              <li>Design de experiências intuitivas e envolventes</li>
-              <li>Motion Graphics</li>
-            </ul>
-          </div>
-          <div
-            id="projetos"
-            class="conteudo-item projetos-container"
-            data-conteudo="projetos"
-          >
-            <ul class="projetos-variados">
-              <h3>Projetos</h3>
-              <a data-id="6">Vai Corinthians</a>
-              <a data-id="2">Memoteca</a>
-              <a data-id="1">Atividade Cronometrada</a>
-              <a data-id="3">Code Connect</a>
-              <a data-id="5">Lista de Compras</a>
-              <a data-id="4">Alura Books Mobile-First</a>
-            </ul>
-            <ul class="projetos-destaques">
-              <h3>Destaque</h3>
-              <a data-id="7">Sputify</a>
-            </ul>
-          </div>
-          <div id="contato" class="conteudo-item" data-conteudo="contato">
-            <ul>
-              <a
-                href="https://www.linkedin.com/in/thales-varga-11b83033a/"
-                target="_blank"
-                >Likedin</a
-              >
-              <a href="https://github.com/thalesvarga" target="_blank"
-                >Github</a
-              >
-              <a href="/">Instagram</a>
-              <a href="">Email</a>
-            </ul>
-          </div>
 
-          <div class="modal" style="display: none">
-            <div class="modal-conteudo">         
-              <h2 class="modal-titulo"></h2>
-              <p class="modal-descricao"></p>
-              <p class="modal-data"></p>
-            <div class="modal-links">
-              <a href="" class="modal-repositorio" target="_blank">Repositório</a>
-              <a href="" class="modal-site" target="_blank">Site</a>
-              <a href="" class="modal-video" target="_blank">Video</a>
+          <div class="skills-container">
+            <div
+              class="skills-front-end skills-card"
+              id="skills1"
+              data-card="skills-aba1"
+            >
+              <h3>Front-End</h3>
+              <ul>
+                HTML/CSS
+                <li>Dominio de HTML semantico.</li>
+                <li>Estilização com CSS puro, incluindo Flexbox e Grid.</li>
+                <li>Uso de Pré-processadores como SASS/SCSS.</li>
+              </ul>
+              <ul>
+                JavaScript:
+                <li>Conhecimento sólido em JavaScript Vanilla.</li>
+                <li>Manipulação do DOM.</li>
+                <li>
+                  Uso de ES6+ (arrow functions, destructuring, async/await,
+                  etc.).
+                </li>
+              </ul>
+              <ul>
+                Frameworks e Bibliotecas:
+                <li>
+                  React.js (componentes, hooks, context API, React Router).
+                </li>
+                <li>Uso de bibliotecas como Axios para requisições HTTP.</li>
+                <li>Vue.js</li>
+              </ul>
+              <ul>
+                Ferramentas de Build:
+                <li>Webpack, Vite ou similares.</li>
+                <li>Uso de npm/yarn para gerenciamento de pacotes.</li>
+              </ul>
+              <ul>
+                Responsividade:
+                <li>Design responsivo com media queries.</li>
+                <li>Uso de frameworks como Bootstrap ou Tailwind CSS.</li>
+              </ul>
+              <ul>
+                Testes:
+                <li>Testes end-to-end com Cypress</li>
+              </ul>
+            </div>
+
+            <div
+              class="skills-back-end skills-card"
+              id="skills2"
+              data-card="skills-aba2"
+            >
+              <h3>Back-End</h3>
+              <ul>
+                Linguagens:
+                <li>Node.js</li>
+              </ul>
+              <ul>
+                Frameworks:
+                <li>Express.js para criação de APIs RESTful.</li>
+                <li>Conhecimento de GraphQL</li>
+                <li>
+                  Uso de ES6+ (arrow functions, destructuring, async/await,
+                  etc.).
+                </li>
+              </ul>
+              <ul>
+                Banco de Dados:(Conhecimentos Básicos)
+                <li>Bancos relacionais: MySQL, PostgreSQL.</li>
+                <li>Bancos não relacionais: MongoDB.</li>
+              </ul>
+              <ul>
+                APIs:
+                <li>Criação e consumo de APIs REST.</li>
+                <li>Autenticação e autorização (JWT, OAuth).</li>
+              </ul>
+              <ul>
+                Ferramentas:
+                <li>Uso de Docker para conteinerização.</li>
+                <li>
+                  Conhecimento básico de CI/CD (GitHub Actions, GitLab CI,
+                  etc.)..
+                </li>
+              </ul>
+              <ul>
+                Segurança::
+                <li>
+                  Boas práticas de segurança (CORS, sanitização de inputs,
+                  etc.).
+                </li>
+                <li>
+                  Boas práticas de segurança (CORS, sanitização de inputs,
+                  etc.).
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="skills-ux-ui skills-card"
+              id="skills3"
+              data-card="skills-aba3"
+            >
+              <h3>UX/UI</h3>
+              <ul>
+                Design Thinking:
+                <li>Abordagem centrada no usuário.</li>
+                <li>Pesquisa de usuários e personas.</li>
+              </ul>
+              <ul>
+                Wireframes e Protótipos:
+                <li>Uso de ferramentas como Figma, Adobe XD ou Sketch.</li>
+                <li>Criação de wireframes de baixa e alta fidelidade.</li>
+              </ul>
+              <ul>
+                Usabilidade:
+                <li>Testes de usabilidade (A/B testing, heatmaps).</li>
+                <li>
+                  Princípios de design como hierarquia visual, contraste e
+                  alinhamento.
+                </li>
+              </ul>
+              <ul>
+                Acessibilidade:
+                <li>
+                  Conformidade com WCAG (Web Content Accessibility Guidelines).
+                </li>
+                <li>
+                  Uso de ARIA roles e atributos para melhorar a acessibilidade.
+                </li>
+              </ul>
+              <ul>
+                Fluxo de Usuário:
+                <li>Criação de jornadas do usuário (user journeys).</li>
+                <li>Análise de pontos de atrito e melhoria de fluxos.</li>
+              </ul>
+              <ul>
+                Ferramentas:
+                <li>
+                  Uso de ferramentas de análise como Google Analytics ou Hotjar.
+                </li>
+                <li>Prototipagem interativa para validação de ideias.</li>
+              </ul>
             </div>
           </div>
-            <button class="fechar"></button>
+          <div class="setas">
+            <img
+              src="/assets/Arrow_left.svg"
+              class="arrow-left"
+              alt="Avançar"
+            />
+            <img
+              src="/assets/Arrow_rigth.svg"
+              class="arrow-right inactive"
+              alt="Voltar"
+            />
+
+            <div class="abas-container">
+              <div class="aba" id="aba1" data-aba="aba1">
+                <div class="aba-conteudo">
+                  <button class="fechar-aba">&times;</button>
+                  <h3>Sputyfi</h3>
+                  <p>
+                    O Sputyfi é um projeto full-stack que simula um player de
+                    música funcional, desenvolvido como meu primeiro projeto
+                    utilizando React no front-end e um back-end próprio. O
+                    objetivo foi praticar e consolidar minhas habilidades como
+                    Desenvolvedor Full Stack.<br /><br />
+                    <!-- Front-end:<br />•React Hooks: useState e useEffect para
+                  gerenciamento de estado e efeitos colaterais.
+                  <br />•Manipulação de Tempo: setInterval para controle de
+                  reprodução. <br />•Manipulação de Áudio: useRef para interação
+                  com elementos de áudio. <br />•React Router: Navegação entre
+                  páginas.<br />•CSS: Estilização responsiva para melhor
+                  experiência do usuário.<br />
+                  •Vite: Configuração rápida do ambiente de desenvolvimento.<br />
+                  •Type Modules: Organização modular do código.<br />
+                  •Lógicas de map e filter: Manipulação e exibição de dados
+                  dinâmicos.<br /><br />
+                  Back-end:<br />•Node.js & Express: Servidor para gerenciar
+                  requisições. <br />•Middleware CORS: Permite requisições entre
+                  diferentes domínios.<br />•Banco de Dados: MongoDB para
+                  armazenamento de dados.<br />
+                  •Dependências: Gerenciadas via npm.<br /><br />
+                  Este projeto foi essencial para aplicar e aprimorar minhas
+                  habilidades técnicas em desenvolvimento full-stack. -->
+                  </p>
+                  <div class="aba-container-links">
+                    <a class="aba-links aba-links-site" href="">Site</a>
+                    <a class="aba-links aba-links-repositorio" href=""
+                      >Repositorio</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="aba" id="aba2" data-aba="aba2">
+                <div class="aba-conteudo">
+                  <button class="fechar-aba">&times;</button>
+                  <h3>Vai Corinthians</h3>
+                  <p>
+                    Vai Corinthians é uma aplicação de cadastro de todos os
+                    jogadores e jogadoras que passaram pelo Corinthians.<br /><br />
+
+                    <!-- O intuito desse projeto é desenvolver habilidades e técnicas
+                  no React.<br />
+
+                  •O uso de useState e useRef;<br />
+                  •Estruturando e organizando o projeto em Front-End e
+                  Back-End;<br />
+                  •Uso de JSON, Yarn e Git;<br />
+                  •Manipulação do DOM através do React.<br />
+                  •Criação de componentes. -->
+                  </p>
+                  <div class="aba-container-links">
+                    <a class="aba-links aba-links-site" href="">Site</a>
+                    <a class="aba-links aba-links-repositorio" href=""
+                      >Repositorio</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="aba" id="aba3" data-aba="aba3">
+                <div class="aba-conteudo">
+                  <button class="fechar-aba">&times;</button>
+                  <h3>Memoteca</h3>
+                  <p>
+                    A Memoteca é um aplicativo organizador de pensamentos e
+                    frases que permite cadastrar, listar, editar, deletar,
+                    filtrar e favoritar pensamentos, incluindo informações como
+                    conteúdo, autoria e data.<br /><br />
+
+                    <!-- O foco principal do projeto foi a utilização de
+                  HTML5,JavaScript,CSS3, onde desenvolvi e apliquei diversas
+                  técnicas, incluindo:<br />
+
+                  •Uso de Regex<br />
+                  •Estilização em CSS3 e Flexbox;<br />
+                  •Requisições de API Rest local, utilizando fetch e axios para
+                  ver as diferenças no codigo.;<br />
+                  •Utilização de Git e Node para fazer o deploy no Vercel
+                  diretamente do terminal.<br />
+                  •Manipulação do DOM para interatividade.,<br /><br />
+
+                  PS: Por enquanto o projeto só irá funcionar quando o servidor
+                  estiver rodando. Logo será implementado a continuação dele.` -->
+                  </p>
+                  <div class="aba-container-links">
+                    <a class="aba-links aba-links-site" href="">Site</a>
+                    <a class="aba-links aba-links-repositorio" href=""
+                      >Repositorio</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="abas-titulos">
+                <h3 class="abas-titulos-sputyfy abas-links" data-aba="aba1">
+                  Sputyfi
+                </h3>
+                <h3
+                  class="abas-titulos-vai-corinthians abas-links"
+                  data-aba="aba2"
+                >
+                  Vai Corinthians
+                </h3>
+                <h3 class="abas-titulos-memoteca abas-links" data-aba="aba3">
+                  Memoteca
+                </h3>
+              </div>
+            </div>
           </div>
-       
+        </div>
+      </div>
+
+      <div id="trabalhos">
+        <h2 class="trabalhos-realizado-titulo">Trabalhos Realizados</h2>
+        <div class="card" id="card1">
+          <div class="card-container-conteudo">
+            <div class="card-conteudo">
+              <h3>Door Digital</h3>
+              <p>
+                Criação e desenvolvimento do site, incluindo o design e a
+                estruturação da identidade visual para uma agência de eventos de
+                games e corporativos. O projeto foi centrado na experiência do
+                usuário e na comunicação eficaz da marca.
+              </p>
+
+              <div class="card-descricao">
+                <h5>FUNCÃO</h5>
+                <p>Desenvolvedor, UI Designer e UX Analista.</p>
+                <h5>PROCESSO</h5>
+                <p>
+                  Refatoração do site, aplicando conceitos de UI/UX para
+                  aprimorar a experiência do usuário e a interface. Otimização
+                  da usabilidade,com navegação mais intuitiva, com foco em
+                  acessibilidade e responsividade.
+                </p>
+              </div>
+              <a class="card-links card-links-site" href=""
+                >Da uma olhada no Site</a
+              >
+            </div>
+
+            <img src="/assets/memoteca.svg" alt="" />
+          </div>
+        </div>
+
+        <img class="seta" src="assets/arrow_down.svg" alt="" />
+
+        <div class="card" id="card2">
+          <div class="card-container-conteudo">
+            <div class="card2-conteudo">
+              <h3>LBC Corretora</h3>
+              <p>
+                Criação e desenvolvimento do site, incluindo o design e a
+                estruturação da identidade visual para uma agência de eventos de
+                games e corporativos. O projeto foi centrado na experiência do
+                usuário e na comunicação eficaz da marca.
+              </p>
+
+              <div class="card-descricao">
+                <h5>FUNCÃO</h5>
+                <p>Desenvolvedor, UI Designer e UX Analista.</p>
+                <h5>PROCESSO</h5>
+                <p>
+                  Refatoração do site, aplicando conceitos de UI/UX para
+                  aprimorar a experiência do usuário e a interface. Otimização
+                  da usabilidade,com navegação mais intuitiva, com foco em
+                  acessibilidade e responsividade.
+                </p>
+              </div>
+              <a class="card2-links card-links-site" href=""
+                >Da uma olhada no Site</a
+              >
+            </div>
+
+            <img src="/assets/memoteca.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="card" id="card3"></div>
+      </div>
+
+      <div class="divisao-sobre-mim">
+        <div class="divisao-sobre-mim-linha"></div>
+        <h2>Um pouco mais...</h2>
+      </div>
+
+      <div id="sobre-mim">
+        <p class="sobre-mim-descricao">
+          Sou de São Paulo, Brasil, e estou expandindo minha atuação em
+          Front-End e UX/UI. Estou sempre buscando novas formas de expressar
+          meus pensamentos e criar experiências através do design.<br /><br />
+
+          Antes de migrar para a área de tecnologia, trabalhei com Fotografia e
+          Produção Audiovisual. Foi em Londres, onde vivi por 5 anos, que
+          iniciei minha formação em Ciência da Computação. Escolhi Front-End
+          porque me sinto confortável na área e acredito que minha vivência
+          acadêmica e profissional pode agregar muito à experiência que venho
+          adquirindo.<br /><br />
+
+          Fique à vontade para consultar meu CV abaixo e conhecer mais detalhes
+          sobre minha trajetória.
+        </p>
+        <div class="sobre-mim-background">
+          <img
+            class="background-preto"
+            src="assets/forma-preta.svg"
+            alt="background do texto"
+          />
+        </div>
+      </div>
+      <div id="sobre-mim-linkedin">
+        <a
+          href="https://www.linkedin.com/in/thales-varga-11b83033a/"
+          target="_blank"
+          class="linkedin-link"
+        >
+          <img
+            src="assets/linkedin.svg"
+            alt="LinkedIn"
+            class="sobre-mim-icone-linkedin"
+          />
+          Vamos nos conectar
+        </a>
+
+        <div id="download-cv">
+          <a class="sobre-mim-download-cv">Download CV</a>
+        </div>
+      </div>
+
+      <div id="sobre-mim-2">
+        <div class="sobre-mim-2-background">
+          <img
+            class="background-cinza"
+            src="assets/forma-cinza.svg"
+            alt="background do texto"
+          />
+        </div>
+      </div>
+
+      <div id="portfolio-fotografia">
+        <div class="portfolio-fotografia-imagem">
+          <h3 class="portfolio-fotografia-titulo">Portfólio de Fotografia</h3>
+          <img
+            src="/assets/imagem-fotografia.svg"
+            alt="imagem de um link de portfolio de fotografia"
+          />
         </div>
       </div>
     </main>
-
-    <!-- <div class="temas">
-      <div >
-        <button class="temas-forma-escuro" id="tema-escuro"></button>
+    <img
+      src="/assets/forma-circulo.svg"
+      alt="imagem geometrica forma-circulo"
+      class="main-imagem-circulo-final"
+    />
+    <footer id="contato">
+      <div class="conteudo">
+        <div class="contato">
+          <h2>
+            <a
+              href="mailto:thalesfotos@hotmail.com"
+              style="text-decoration: none; color: white"
+            >
+              thalesfotos@hotmail.com
+            </a>
+          </h2>
+          <h2>
+            <a
+              href="https://wa.me/5511967393632"
+              target="_blank"
+              style="text-decoration: none; color: white"
+            >
+              +55 11 96739-3632
+            </a>
+          </h2>
+        </div>
+        <div class="redes-sociais">
+          <a href="https://github.com/thalesvarga" target="_blank"
+            ><img class="contato-icone" src="/assets/github.svg" alt="Github"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/thales-varga-11b83033a/"
+            target="_blank"
+            ><img
+              class="contato-icone"
+              src="/assets/linkedin.svg"
+              alt="Linkedin"
+          /></a>
+          <a href="https://www.instagram.com/thalesvarga/" target="_blank"
+            ><img
+              class="contato-icone"
+              src="/assets/instagram.svg"
+              alt="Instagram"
+          /></a>
+        </div>
+        <p>&copy; 2025 Thales Varga.</p>
       </div>
-      <div >
-        <button class="temas-forma-claro" id="tema-claro"></button>
-      </div>
-    </div> -->
-    <footer>
-      <p>©Thales Varga</p>
     </footer>
-    <script src="index.js" defer type="module"></script>
-    <script src="animacao.js" defer type="module"></script>
   </body>
 </html>

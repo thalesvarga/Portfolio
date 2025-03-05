@@ -1,0 +1,172 @@
+/* trabalhos realizado ---------------------------- */
+
+#trabalhos {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    z-index: 9999;
+    position: relative;
+    padding-right: 2rem;
+    margin-top: 15rem;
+  }
+  
+  .trabalhos-realizado-titulo {
+    position: absolute;
+    left: 23%;
+    top: -12%;
+    background: var(--cor-background-escuro);
+    padding: 1rem 4rem 1rem 1rem;
+    border-radius: 8px;
+    transform: rotate(-2deg);
+    color: var(--cor-texto-claro);
+    z-index: -1;
+  }
+  
+  .card {
+    width: 50%;
+    padding: 4rem;
+    border-radius: 18px;
+    transition: transform 0.5s ease;
+  }
+  
+  #card1 {
+    background: white;
+    position: absolute;
+  }
+  
+  #card2 {
+    position: absolute;
+    z-index: -1;
+    background: var(--cor-background-escuro);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, z-index 0.5s ease;
+    color: var(--cor-texto-escuro);
+    width: 50%;
+  }
+  
+  #card2.active {
+    transform: translateX(-5px);
+    z-index: 2;
+    background: var(--cor-background-escuro);
+  }
+  
+  .card2-conteudo {
+    color: var(--cor-texto-claro);
+  }
+  
+  #card3.active {
+    transform: translateX(0); /* Card3 fixo sem movimentação */
+    z-index: 1; /* Card3 permanece abaixo dos outros */
+  }
+  
+  .card-container-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .card-conteudo {
+    grid-column: 1 / 2;
+    color: var(--cor-texto-escuro);
+  }
+  
+  .card-conteudo h3,
+  .card2-conteudo h3 {
+    padding: 1rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .card-conteudo p {
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  @keyframes mexida {
+    0% {
+      transform: translateX(0);
+    }
+    30% {
+      transform: translateX(5px);
+    }
+    60% {
+      transform: translateX(-3px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .card-links {
+    display: inline-block;
+    color: var(--cor-texto-escuro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-links:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    animation: mexida 0.4s ease-in-out;
+  }
+  
+  .card-links::after {
+    content: " →";
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    padding-left: 0.3rem;
+  }
+  
+  .card2-links {
+    display: inline-block;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card2-links:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    animation: mexida 0.4s ease-in-out;
+  }
+  
+  .card2-links::after {
+    content: " →";
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    padding-left: 0.3rem;
+    color: var(--cor-texto-claro);
+  }
+  
+  .card-container-conteudo img {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-descricao {
+    padding: 1rem 0;
+  }
+  
+  .card-descricao p {
+    padding: 0.4rem 0;
+  }
+  
+  .seta {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    cursor: pointer;
+    z-index: 99999;
+  }
+  
+  .seta:active {
+    transform: scale(0.8);
+  }
+  
+  

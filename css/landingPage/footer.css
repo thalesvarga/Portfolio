@@ -1,0 +1,45 @@
+footer {
+  width: 100%;
+  height: 60vh;
+  background-image: url("/assets/footer-forma.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+
+.conteudo {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 8rem;
+}
+
+.contato h2 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  margin-top: 1rem;
+  padding: 3rem 0 2rem 0;
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+  transition: transform 1s ease;
+}
+
+.redes-sociais img:hover {
+  transform: scale(1.1);
+}

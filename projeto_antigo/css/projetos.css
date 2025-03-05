@@ -1,0 +1,66 @@
+#projetos {
+  position: fixed;
+  left: 85%;
+  bottom: 18%;
+  padding: 0.5rem;
+  width: 50%;
+  margin: 1rem;
+  transition: all 3s ease-in-out;
+  z-index: 1000;
+  min-width: 200px;
+  min-height: 150px;
+  overflow: visible;
+  z-index: 1000;
+}
+
+#projetos.mover-para-centro {
+  position: fixed;
+  z-index: 1001;
+  transition: all 0.5s ease;
+}
+
+#projetos a {
+  padding: 0.1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  display: block;
+}
+
+#projetos h3 {
+  font-size: 0.7rem;
+}
+
+.projetos-variados a:hover,
+.projetos-destaques a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1199px) {
+  #projetos {
+    left: 68%;
+    top: 70%;
+    position: absolute;
+    width: 100%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  #projetos {
+    position: absolute;
+    width: 100%;
+    max-width: 30%;
+    left: 7%;
+    top: 20%;
+  }
+
+  #projetos.mover-para-centro {
+    z-index: 1001;
+    transition: all 0.5s ease;
+  }
+
+  #projetos h3 {
+    font-size: 0.6rem;
+  }
+}

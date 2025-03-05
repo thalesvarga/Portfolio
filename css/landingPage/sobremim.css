@@ -1,0 +1,125 @@
+/* sobre mim - intro---------------------------- */
+
+#introducao-sobre-mim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  margin-top: 10rem;
+}
+
+#introducao-sobre-mim h2 {
+  font-weight: 700;
+  font-size: 5rem;
+  width: 70%;
+  margin: 1rem;
+ 
+}
+
+#introducao-sobre-mim p {
+  font-size: 1.5rem;
+  width: 70%;
+  margin: 1rem;
+  font-weight: 300;
+  font-style: light;
+
+}
+
+/* sobre mim - segunda parte---------------------------- */
+
+.divisao-sobre-mim {
+  display: flex;
+  align-items: center;  /* Alinha a linha e o texto na mesma altura */
+  gap: 1rem;  /* Espaço entre a linha e o texto */
+  width: fit-content; /* Para ocupar apenas o espaço necessário */
+  margin-top: 70vh;
+}
+
+.divisao-sobre-mim h2 {
+  font-size:3rem;
+  margin-left: 2rem; /* Remove margens extras */
+  white-space: nowrap; /* Impede quebra de linha */
+}
+
+
+#sobre-mim {
+  display: flex;
+  position: relative;
+  width: 100%;
+  
+}
+
+#sobre-mim p {
+  width: 40%;
+  margin: 5rem 3rem 3rem 3rem;
+  padding-left: 10rem;
+}
+
+#sobre-mim-2 {
+  margin-top: 10rem;
+}
+
+/* ============ LINKEDIN ============ */
+/* Ajuste para manter os links na mesma linha */
+#sobre-mim-linkedin {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaço entre os links */
+  flex-wrap: wrap; /* Garante que os itens fiquem na mesma linha, mas quebrem se necessário */
+  width: fit-content; /* Evita que ocupe toda a largura */
+  padding-left: 35rem;
+
+}
+
+/* Garante que os links não ocupem toda a largura */
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  border: 1px solid var(--cor-background-escuro);
+  font-family: var(--font-family);
+  border-radius: 12px;
+  background: none;
+  font-size: 0.8rem;
+  color: var(--cor-texto-escuro);
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  white-space: nowrap; /* Evita quebra de linha */
+  width: auto; /* Evita que ocupe todo o espaço disponível */
+}
+
+.linkedin-link:hover {
+  background-color: var(--cor-background-escuro);
+  color: var(--cor-texto-claro);
+}
+
+
+
+.sobre-mim-icone-linkedin {
+  width: 25px;
+  padding-right: 0.5rem;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+}
+
+.linkedin-link:hover .sobre-mim-icone-linkedin {
+  filter: invert(0);
+}
+
+.sobre-mim-download-cv{
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.sobre-mim-download-cv {
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.sobre-mim-download-cv:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transform: scale(1.1);
+}

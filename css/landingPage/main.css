@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor-texto-escuro: #0d0d0d;
+  --cor-texto-claro: #f2f2f2;
+  --cor-background: #ffffff;
+  --cor-background-claro: rgba(0, 0, 0, 0.2);
+  --cor-background-escuro: #262626;
+  --cor-borda-titulo-skill: rgba(89, 89, 89, 0.7);
+  --cor-borda-imagem-habilidade: #b0b0b02d;
+  --cor-borda-retangulo-habilidae: rgba(0, 0, 0, 0.7);
+
+  --font-family: "winco", sans-serif;
+}
+
+/* [data-tema="escuro"]{
+        --cor-texto-escuro: #0D0D0D ;
+    --cor-texto-claro: #F2F2F2;
+    --cor-background: #F2F2F2;
+    --cor-background-claro:rgba(0, 0, 0, 0.2);
+    --cor-background-escuro:#262626;
+    --cor-borda-imagem-habilidade:#B0B0B0;
+    --cor-borda-retangulo-habilidae:rgba(0, 0, 0, 0.7);
+} */
+
+html {
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cor-background);
+  color: var(--cor-texto-escuro);
+  max-width: 100%;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-style: normal;
+  position: relative;
+  scroll-behavior: smooth;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.linha {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+}
+
+.sobre-mim-background {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sobre-mim-2-background {
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 10rem;
+}
+
+.background-preto {
+  width: 20%;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+}
+
+.background-cinza {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  right: 80%;
+}
+
+.main-imagem-circulo-inicio {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  width: 20px;
+}
+
+.main-imagem-circulo-meio {
+  position: absolute;
+  left: 60%;
+  top: 75%;
+  width: 40px;
+}
+
+.main-imagem-circulo-final {
+  position: absolute;
+  left: 40%;
+}

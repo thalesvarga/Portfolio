@@ -1,0 +1,404 @@
+/* ============ SKILLS ============ */
+#skills {
+  position: relative;
+  width: 100%;
+  min-height: 120vh;
+  margin-top: 20rem;
+  padding: 3rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+}
+
+#skills h2 {
+  position: absolute;
+  left: 10%;
+  top: -5%;
+  background: var(--cor-background-escuro);
+  padding: 1rem 4rem 1rem 1rem;
+  border-radius: 8px;
+  transform: rotate(-2deg);
+  color: var(--cor-texto-claro);
+  z-index: -1;
+}
+
+.skills-container {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 5rem;
+}
+
+.skills-descricao {
+  width: 40%;
+  line-height: 1.5;
+  margin: 2rem;
+  padding: 2rem 0 3rem 10rem;
+}
+
+/* ============ CARDS NORMAIS ============ */
+.skills-front-end {
+  background: var(--cor-background-escuro);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: var(--cor-texto-claro);
+  width: 60%;
+  max-height: 350px;
+  padding: 1rem;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1; /* Garante que fique abaixo dos cards expandidos */
+  transform: translateX(80%);
+  animation: pulsar 2s ease-in-out infinite;
+}
+
+.skills-ux-ui,
+.skills-back-end {
+  background: var(--cor-background-escuro);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  left: 95.9%;
+  color: var(--cor-texto-claro);
+  width: 90px; /* Tamanho inicial pequeno */
+  max-width: 90px; /* Mantém tamanho fixo inicial */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Transição suave para todas as propriedades */
+  overflow: hidden;
+  max-height: 80px;
+  padding: 1rem;
+  border-radius: 12px;
+  transform: rotate(-15deg);
+}
+
+.skills-back-end {
+  top: 100%;
+  left: 100%;
+  transform: translate(-80%, 180%) /* Ajuste fino de posição */ rotate(15deg);
+}
+
+/* Posição inicial do UX/UI */
+.skills-ux-ui {
+  top: 100%;
+  left: 100%;
+  transform: translate(-60%, 350%) /* Ajuste fino de posição */ rotate(-10deg);
+}
+
+.skills-front-end.paused {
+  animation: none; /* Remove a animação */
+}
+
+/* ============ ESTADO EXPANDIDO ============ */
+.skills-back-end.expandida,
+.skills-ux-ui.expandida {
+  width: 60% !important; /* Força mesma largura do Front-End */
+  max-width: none !important; /* Remove restrição de largura */
+  max-height: 350px;
+  left: 0; /* Posição do Front-End */
+  top: 0;
+  transform: rotate(0deg) translateX(60%) !important; /* Remove todas as transformações */
+  z-index: 999; /* Garante sobreposição */
+  overflow: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.skills-front-end.invisible {
+  opacity: 0; /* Invisível */
+  pointer-events: none; /* Impede interação */
+}
+
+.skills-front-end.expandida {
+  transform: translateX(100%);
+  animation: pulsar 2s ease-in-out infinite;
+}
+
+.skills-front-end.active {
+  transform: translateX(0);
+  margin-right: 2rem;
+}
+
+/* ============ ELEMENTOS INTERNOS ============ */
+.skills-front-end ul,
+.skills-ux-ui ul,
+.skills-back-end ul {
+  margin: 0.4rem;
+}
+
+.skills-front-end li,
+.skills-ux-ui li,
+.skills-back-end li {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+}
+
+/* ============ HOVER E TRANSITIONS ============ */
+
+/* .skills-back-end:hover, 
+.skills-ux-ui:hover {
+  transform: scale(1.1);
+}
+
+.skills-back-end.expandida:hover, 
+.skills-ux-ui.expandida:hover {
+  transform: none !important; 
+} */
+
+/* ============ SETAS ============ */
+
+.setas {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+  padding-right: 10rem;
+}
+
+.setas img {
+  padding: 1rem;
+  cursor: pointer;
+  width: 50px;
+}
+.setas img.inactive {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ============ ANIMAÇÕES ============ */
+@keyframes entradaEsquerda {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entradaDireita {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsar {
+  0%,
+  100% {
+    transform: translateX(60%) translateY(0); /* Posição inicial e final */
+  }
+  50% {
+    transform: translateX(58%) translateY(0); /* Movimento mínimo para a esquerda */
+  }
+}
+
+/* ============ ABAS PROJETOS ============ */
+
+.abas-container {
+  position: absolute;
+  top: 70%;
+  right: 98%;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.aba {
+  width: 70px;
+  height: 50px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: transform 0.5s ease, width 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  border-radius: 12px;
+  transform-origin: right center;
+  will-change: transform, width, box-shadow, background-color;
+  box-shadow: 10px 10px 12px rgba(68, 68, 68, 0.344);
+}
+
+.aba:nth-child(1) {
+  top: 5px;
+  transform: rotate(-10deg);
+}
+
+.aba:nth-child(2) {
+  top: 90px;
+  width: 70px;
+  height: 70px;
+}
+
+.aba:nth-child(3) {
+  top: 200px;
+  transform: rotate(10deg);
+}
+
+.aba:nth-child(1):not(.expandida):hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.aba:nth-child(2):not(.expandida):hover {
+  transform: scale(1.2);
+}
+
+.aba:nth-child(3):not(.expandida):hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.abas-titulos {
+  position: relative;
+  width: 100%;
+  padding-left: 3rem;
+  z-index: 999;
+  transition: transform 0.5s ease,
+}
+
+
+
+.abas-titulos h3 {
+  display: block;
+  position: absolute;
+  color: var(--cor-texto-escuro);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: transform 0.5s ease, width 0.5s ease;
+  cursor: pointer;
+}
+
+.abas-titulos-sputyfy {
+  top: 5px;
+  left: 80px;
+}
+
+.abas-titulos-vai-corinthians {
+  top: 95px;
+  left: 80px;
+}
+
+.abas-titulos-memoteca {
+  top: 200px;
+  left: 80px;
+}
+
+
+.aba:nth-child(1):hover ~ .abas-titulos .abas-titulos-sputyfy {
+  transform: scale(1.2);
+}
+
+.aba:nth-child(2):hover ~ .abas-titulos .abas-titulos-vai-corinthians {
+  transform: scale(1.2);
+}
+
+.aba:nth-child(3):hover ~ .abas-titulos .abas-titulos-memoteca {
+  transform: scale(1.2);
+}
+
+
+
+.aba-conteudo {
+  color: var(--cor-texto-claro);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
+  will-change: opacity, visibility;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.aba-conteudo h3 {
+  /* padding: 0.5rem; */
+  color: #222;
+  margin-bottom: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: left;
+}
+
+.aba-conteudo p {
+  color: #444;
+  /* margin: 0 1rem; */
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.aba-container-links {
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.aba-links {
+  background-color: transparent;
+  color: #222;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.7rem;
+  transition: transform 0.5s ease;
+  text-underline-offset: 3px;
+}
+
+.aba-links:hover {
+  transform: scale(1.05);
+}
+
+.aba.expandida {
+  width: 300px;
+  height: auto;
+  max-height: 100vh;
+  transform: translate(180%, -90%) rotate(0deg) scale(1.2);
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transition: transform 0.5s ease, width 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.aba.expandida .aba-conteudo {
+  opacity: 1;
+  visibility: visible;
+  border-radius: 8px;
+  transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
+}
+
+.fechar-aba {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fechar-aba:hover {
+  transform: rotate(90deg);
+  color: #ff8c00;
+}
