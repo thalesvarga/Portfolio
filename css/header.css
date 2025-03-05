@@ -21,8 +21,11 @@
   }
   
   .header-menu li {
+    font-size: 0.8rem;
     padding: 2rem;
     list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
   }
   
   .header-contato {
@@ -33,7 +36,7 @@
   .header-contato a {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 0.8rem;
     border: 1px solid var(--cor-background-escuro);
     font-family: var(--font-family);
     border-radius: 12px;
@@ -44,8 +47,17 @@
     color: var(--cor-texto-escuro);
     
   }
- 
+
+  .header-contato img{
+    width: 20px;
+    filter: invert(0);
   
+  }
+ 
+  .header-contato a:hover img{
+    filter: invert(1);
+  }
+
   .header-contato a::before {
     content: "";
     position: absolute;
@@ -58,6 +70,7 @@
     transform-origin: right;
     transition: transform 0.9s ease;
     z-index: -1;
+   
  
   }
   

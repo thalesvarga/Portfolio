@@ -10,6 +10,7 @@ footer {
   justify-content: flex-start;
   align-items: center;
   color: white;
+ 
 }
 
 .conteudo {
@@ -43,3 +44,17 @@ footer {
 .redes-sociais img:hover {
   transform: scale(1.1);
 }
+
+footer h2 a {
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
+  text-decoration: none;
+  color: white;
+}
+
+.footer-whats {
+  width: 35px; /* Defina o tamanho da imagem do WhatsApp */
+  margin-right: 8px; /* Adiciona um espaço entre a imagem e o texto */
+  filter: invert(1);
+}
+

@@ -1,32 +1,50 @@
+/* ============ ENTRADA============ */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const entradaSite = document.getElementById("entrada-site");
+  const conteudoSite = document.getElementById("conteudo-site");
+
+  // Inicia a animação após 0.5s
+  setTimeout(() => {
+    entradaSite.classList.add("fade-out");
+    
+    // Remove completamente a entrada após 3s
+    setTimeout(() => {
+      entradaSite.style.display = "none";
+      conteudoSite.classList.add("fade-in");
+    }, 5000); // Tempo total = 0.5s + 3s
+
+  }, 500);
+});
+
 
 /* ============ HEADER MENUS SCROLL DOWN============ */
 const sectionOffsets = {
-  "skills": 50,         
-  "trabalhos": 80,
-  "sobre-mim": 100,  
-  "contato": 50 
+  skills: 50,
+  trabalhos: 80,
+  "sobre-mim": 100,
+  contato: 50,
 };
 
-document.querySelectorAll('.header-menu li').forEach(item => {
-  item.addEventListener('click', function () {
+document.querySelectorAll(".header-menu li").forEach((item) => {
+  item.addEventListener("click", function () {
     // Converte o texto do menu para minúsculas e substitui espaços por hífens
-    let sectionId = this.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+    let sectionId = this.textContent.trim().toLowerCase().replace(/\s+/g, "-");
     let targetSection = document.getElementById(sectionId);
 
     if (targetSection) {
-      let offset = targetSection.offsetTop - (sectionOffsets[sectionId] || 80); 
+      let offset = targetSection.offsetTop - (sectionOffsets[sectionId] || 80);
       // Se não houver ajuste específico, usa 80 como padrão
 
       window.scrollTo({
         top: offset,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     } else {
       console.error(`Seção com ID "${sectionId}" não encontrada.`);
     }
   });
 });
-
 
 /* ============ ABA/PROJETOS SKILLS ============ */
 
@@ -91,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const arrows = {
-    left: document.querySelector(".arrow-left"), 
-    right: document.querySelector(".arrow-right"), 
+    left: document.querySelector(".arrow-left"),
+    right: document.querySelector(".arrow-right"),
   };
 
   let currentStep = 0;
@@ -137,7 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCards();
 });
 
-
 /* ============ TRABALHOS REALIZADOS ============ */
 
 const setaClique = document.querySelector(".seta");
@@ -162,16 +179,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    
+
     const targetElement = document.querySelector(this.getAttribute("href"));
-    
+
     window.scrollTo({
       top: targetElement.offsetTop,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });

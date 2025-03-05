@@ -79,7 +79,7 @@
     font-weight: 700;
   }
   
-  .card-conteudo p {
+  .card-conteudo p, .card2-conteudo p {
     padding: 1rem 0;
     font-size: 0.8rem;
     line-height: 1.5;
