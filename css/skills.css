@@ -30,12 +30,22 @@
   margin-top: 5rem;
 }
 
-.skills-descricao {
+.skills-descricao{
   width: 40%;
   line-height: 1.5;
   margin: 2rem;
   padding: 2rem 0 3rem 10rem;
+  opacity: 0;
+  transform: translateX(3%);
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
+
+.skills-descricao.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 
 /* ============ CARDS NORMAIS ============ */
 .skills-front-end {
@@ -203,7 +213,7 @@
 
 .abas-container {
   position: absolute;
-  top: 70%;
+  top: 50%;
   right: 98%;
   transform: translateY(50%);
   display: flex;
@@ -215,7 +225,7 @@
 .aba {
   width: 70px;
   height: 50px;
-  background-color: orange;
+  background: var(--cor-background-escuro);
   color: white;
   text-align: center;
   line-height: 1.5;
@@ -232,7 +242,7 @@
 }
 
 .aba:nth-child(1) {
-  top: 5px;
+  top:1px;
   transform: rotate(-10deg);
 }
 

@@ -1,29 +1,60 @@
 /* ============ ENTRADA============ */
 
-document.addEventListener("DOMContentLoaded", function () {
-  const entradaSite = document.getElementById("entrada-site");
-  const conteudoSite = document.getElementById("conteudo-site");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const entradaSite = document.getElementById("entrada-site");
+//   const conteudoSite = document.getElementById("conteudo-site");
 
-  // Inicia a animação após 0.5s
-  setTimeout(() => {
-    entradaSite.classList.add("fade-out");
+//   // Inicia a animação após 0.5s
+//   setTimeout(() => {
+//     entradaSite.classList.add("fade-out");
     
-    // Remove completamente a entrada após 3s
-    setTimeout(() => {
-      entradaSite.style.display = "none";
-      conteudoSite.classList.add("fade-in");
-    }, 5000); // Tempo total = 0.5s + 3s
+//     // Remove completamente a entrada após 3s
+//     setTimeout(() => {
+//       entradaSite.style.display = "none";
+//       conteudoSite.classList.add("fade-in");
+//     }, 5000); // Tempo total = 0.5s + 3s
 
-  }, 500);
-});
+//   }, 500);
+// });
 
+
+/* ============ SKILLS (MOVIMENTAÇAO)============ */
+
+// Função para verificar se o elemento está visível
+function isElementVisible(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top <= (window.innerHeight / 1.3) && // Verifica se o elemento está próximo ao topo da tela
+    rect.bottom >= 0 // Verifica se o elemento ainda está na tela
+  );
+}
+
+// Função para ativar a animação quando o elemento estiver visível
+function handleScroll() {
+  // const skillsDescricao = document.querySelector(".skills-descricao");
+  // if (skillsDescricao && isElementVisible(skillsDescricao)) {
+  //   skillsDescricao.classList.add("visible");
+  // }
+  const elements = document.querySelectorAll(".sobre-mim-descricao, .divisao-sobre-mim, .sobre-mim-link, .skills-descricao");
+  elements.forEach((element) => {
+      if (isElementVisible(element)) {
+          element.classList.add("visible");
+      }
+  });
+}
+
+// Adiciona o evento de scroll para verificar a visibilidade
+document.addEventListener("scroll", handleScroll);
+
+// Verifica a visibilidade ao carregar a página
+handleScroll();
 
 /* ============ HEADER MENUS SCROLL DOWN============ */
 const sectionOffsets = {
-  skills: 50,
-  trabalhos: 80,
+  "skills": 50,
+  "trabalhos": 140,
   "sobre-mim": 100,
-  contato: 50,
+  "contato": 50,
 };
 
 document.querySelectorAll(".header-menu li").forEach((item) => {

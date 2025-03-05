@@ -9,12 +9,17 @@
     position: relative;
     padding-right: 2rem;
     margin-top: 15rem;
+    transition: transform 2s ease;
+  }
+
+  #trabalhos:hover{
+    transform: scale(1.02);
   }
   
   .trabalhos-realizado-titulo {
     position: absolute;
     left: 23%;
-    top: -12%;
+    top: -40%;
     background: var(--cor-background-escuro);
     padding: 1rem 4rem 1rem 1rem;
     border-radius: 8px;
@@ -28,6 +33,7 @@
     padding: 4rem;
     border-radius: 18px;
     transition: transform 0.5s ease;
+   
   }
   
   #card1 {
@@ -43,10 +49,11 @@
     transition: transform 0.5s ease, z-index 0.5s ease;
     color: var(--cor-texto-escuro);
     width: 50%;
+    top: 95%;
   }
   
   #card2.active {
-    transform: translateX(-5px);
+    transform: translateY(-8%);
     z-index: 2;
     background: var(--cor-background-escuro);
   }
@@ -54,12 +61,7 @@
   .card2-conteudo {
     color: var(--cor-texto-claro);
   }
-  
-  #card3.active {
-    transform: translateX(0); /* Card3 fixo sem movimentação */
-    z-index: 1; /* Card3 permanece abaixo dos outros */
-  }
-  
+    
   .card-container-conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;

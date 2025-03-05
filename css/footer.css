@@ -20,6 +20,11 @@ footer {
   max-width: 100%;
   margin: 0 8rem;
 }
+.conteudo p{
+  font-weight: 200;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
 
 .contato h2 {
   margin: 0.5rem 0;
