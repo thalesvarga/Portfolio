@@ -50,6 +50,11 @@
         </ul>
       </div>
       <div class="header-contato">
+        <div class="header-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <a href="https://wa.me/5511967393632" target="_blank">
           <img src="/assets/whatsapp.svg" alt="whatsapp" />
         </a>
@@ -80,7 +85,30 @@
             alt="imagem geometrica forma-circulo"
             class="main-imagem-circulo-meio"
           />
-          <h2>Skills</h2>
+          <div class="carrossel">
+            <div class="carrossel-conteudo">
+              <h2>
+                Skills <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong>Skills |
+              </h2>
+              <h2>
+                Skills <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills |
+              </h2>
+              <h2>
+                Skills <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills |
+              </h2>
+              <h2>
+                Skills <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills
+                <strong class="skills-titulo-separador">|</strong> Skills |
+              </h2>
+            </div>
+          </div>
           <div class="skills-descricao">
             <p>
               Resumi todo o meu conhecimento relevante na área até o momento, e
@@ -91,65 +119,69 @@
               me manter atualizado com as demandas do mercado.
             </p>
           </div>
-
-          <div class="skills-container">
-            <div
-              class="skills-front-end skills-card"
-              id="skills1"
-              data-card="skills-aba1"
-            >
-              <h3>Front-End</h3>
-              <ul>
-                HTML/CSS
-                <li>Dominio de HTML semantico.</li>
-                <li>Estilização com CSS puro, incluindo Flexbox e Grid.</li>
-                <li>Uso de Pré-processadores como SASS/SCSS.</li>
-              </ul>
-              <ul>
-                JavaScript:
-                <li>Conhecimento sólido em JavaScript Vanilla.</li>
-                <li>Manipulação do DOM.</li>
-                <li>
-                  Uso de ES6+ (arrow functions, destructuring, async/await,
-                  etc.).
-                </li>
-              </ul>
-              <ul>
-                Frameworks e Bibliotecas:
-                <li>
-                  React.js (componentes, hooks, context API, React Router).
-                </li>
-                <li>Uso de bibliotecas como Axios para requisições HTTP.</li>
-                <li>Vue.js</li>
-              </ul>
-              <ul>
-                Ferramentas de Build:
-                <li>Webpack, Vite ou similares.</li>
-                <li>Uso de npm/yarn para gerenciamento de pacotes.</li>
-              </ul>
-              <ul>
-                Responsividade:
-                <li>Design responsivo com media queries.</li>
-                <li>Uso de frameworks como Bootstrap ou Tailwind CSS.</li>
-              </ul>
-              <ul>
-                Testes:
-                <li>Testes end-to-end com Cypress</li>
-              </ul>
+          <div class="abas-container">
+            <!-- <h2 class="projetos-titulo">Projetos</h2> -->
+            <div class="aba" id="aba1" data-aba="aba1">
+              <h3 class="aba-titulo">Sputyfi</h3>
+              <div class="aba-conteudo">
+                <button class="fechar-aba">&times;</button>
+                <p>
+                  O Sputyfi é um projeto full-stack que simula um player de música funcional, desenvolvido como meu primeiro projeto utilizando React no front-end e um back-end próprio. O objetivo foi praticar e consolidar minhas habilidades como Desenvolvedor Full Stack.<br /><br />
+                </p>
+                <div class="aba-container-links">
+                  <a class="aba-links aba-links-site" href="https://sputyfi.onrender.com">Site</a>
+                  <a class="aba-links aba-links-repositorio" href="https://github.com/thalesvarga/Sputyfi">Repositório</a>
+                </div>
+              </div>
             </div>
+          
+            <div class="aba" id="aba2" data-aba="aba2">
+              <h3 class="aba-titulo">Vai Corinthians</h3>
+              <div class="aba-conteudo">
+                <button class="fechar-aba">&times;</button>
+                <p>
+                  Vai Corinthians é uma aplicação de cadastro de todos os jogadores e jogadoras que passaram pelo Corinthians.<br /><br />
+                </p>
+                <div class="aba-container-links">
+                  <a class="aba-links aba-links-site" href="https://vai-corinthians-ozsyvqrrc-thales-varga-projects.vercel.app">Site</a>
+                  <a class="aba-links aba-links-repositorio" href="https://github.com/thalesvarga/vai-corinthians">Repositório</a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="aba" id="aba3" data-aba="aba3">
+              <h3 class="aba-titulo">Memoteca</h3>
+              <div class="aba-conteudo">
+                <button class="fechar-aba">&times;</button>
+                <p>
+                  A Memoteca é um aplicativo organizador de pensamentos e frases que permite cadastrar, listar, editar, deletar, filtrar e favoritar pensamentos, incluindo informações como conteúdo, autoria e data.<br /><br />
+                </p>
+                <div class="aba-container-links">
+                  <a class="aba-links aba-links-site" href="https://memoteca-phi.vercel.app">Site</a>
+                  <a class="aba-links aba-links-repositorio" href="https://github.com/thalesvarga/Memoteca">Repositório</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          
+          
+      
+          <div class="skills-container">
+            <!-- Card 1: Front-End -->
             <div
-              class="skills-back-end skills-card"
+              class="skills-card skills-back-end"
               id="skills2"
               data-card="skills-aba2"
             >
-              <h3>Back-End</h3>
+            <h3>Back-End</h3>
+            <button class="fechar-card">×</button> 
               <ul>
-                Linguagens:
+                <strong>Linguagens:</strong>
                 <li>Node.js</li>
               </ul>
               <ul>
-                Frameworks:
+                <strong>Frameworks:</strong>
                 <li>Express.js para criação de APIs RESTful.</li>
                 <li>Conhecimento de GraphQL</li>
                 <li>
@@ -158,29 +190,25 @@
                 </li>
               </ul>
               <ul>
-                Banco de Dados:(Conhecimentos Básicos)
+                <strong>Banco de Dados:</strong>
                 <li>Bancos relacionais: MySQL, PostgreSQL.</li>
                 <li>Bancos não relacionais: MongoDB.</li>
               </ul>
               <ul>
-                APIs:
+                <strong>APIs:</strong>
                 <li>Criação e consumo de APIs REST.</li>
                 <li>Autenticação e autorização (JWT, OAuth).</li>
               </ul>
               <ul>
-                Ferramentas:
+                <strong>Ferramentas:</strong>
                 <li>Uso de Docker para conteinerização.</li>
                 <li>
                   Conhecimento básico de CI/CD (GitHub Actions, GitLab CI,
-                  etc.)..
+                  etc.).
                 </li>
               </ul>
               <ul>
-                Segurança::
-                <li>
-                  Boas práticas de segurança (CORS, sanitização de inputs,
-                  etc.).
-                </li>
+                <strong>Segurança:</strong>
                 <li>
                   Boas práticas de segurança (CORS, sanitização de inputs,
                   etc.).
@@ -189,23 +217,71 @@
             </div>
 
             <div
-              class="skills-ux-ui skills-card"
+              class="skills-card active skills-front-end"
+              id="skills1"
+              data-card="skills-aba1"
+            >
+              <h3>Front-End</h3>
+              <button class="fechar-card">×</button> 
+              <ul>
+                <strong>HTML/CSS:</strong>
+                <li>Dominio de HTML semantico.</li>
+                <li>Estilização com CSS puro, incluindo Flexbox e Grid.</li>
+                <li>Uso de Pré-processadores como SASS/SCSS.</li>
+              </ul>
+              <ul>
+                <strong>JavaScript:</strong>
+                <li>Conhecimento sólido em JavaScript Vanilla.</li>
+                <li>Manipulação do DOM.</li>
+                <li>
+                  Uso de ES6+ (arrow functions, destructuring, async/await,
+                  etc.).
+                </li>
+              </ul>
+              <ul>
+                <strong>Frameworks e Bibliotecas:</strong>
+                <li>
+                  React.js (componentes, hooks, context API, React Router).
+                </li>
+                <li>Uso de bibliotecas como Axios para requisições HTTP.</li>
+                <li>Vue.js</li>
+              </ul>
+              <ul>
+                <strong>Ferramentas de Build:</strong>
+                <li>Webpack, Vite ou similares.</li>
+                <li>Uso de npm/yarn para gerenciamento de pacotes.</li>
+              </ul>
+              <ul>
+                <strong>Responsividade:</strong>
+                <li>Design responsivo com media queries.</li>
+                <li>Uso de frameworks como Bootstrap ou Tailwind CSS.</li>
+              </ul>
+              <ul>
+                <strong>Testes:</strong>
+                <li>Testes end-to-end com Cypress</li>
+              </ul>
+            </div>
+
+            <div
+              class="skills-card skills-ux-ui"
               id="skills3"
               data-card="skills-aba3"
             >
               <h3>UX/UI</h3>
+              <button class="fechar-card">×</button> 
               <ul>
-                Design Thinking:
+                <strong>Design Thinking:</strong>
                 <li>Abordagem centrada no usuário.</li>
                 <li>Pesquisa de usuários e personas.</li>
               </ul>
               <ul>
-                Wireframes e Protótipos:
+                <strong>Wireframes e Protótipos:</strong>
+
                 <li>Uso de ferramentas como Figma, Adobe XD ou Sketch.</li>
                 <li>Criação de wireframes de baixa e alta fidelidade.</li>
               </ul>
               <ul>
-                Usabilidade:
+                <strong>Usabilidade:</strong>
                 <li>Testes de usabilidade (A/B testing, heatmaps).</li>
                 <li>
                   Princípios de design como hierarquia visual, contraste e
@@ -213,7 +289,7 @@
                 </li>
               </ul>
               <ul>
-                Acessibilidade:
+                <strong>Acessibilidade:</strong>
                 <li>
                   Conformidade com WCAG (Web Content Accessibility Guidelines).
                 </li>
@@ -222,12 +298,12 @@
                 </li>
               </ul>
               <ul>
-                Fluxo de Usuário:
+                <li><strong>Fluxo de Usuário:</strong></li>
                 <li>Criação de jornadas do usuário (user journeys).</li>
                 <li>Análise de pontos de atrito e melhoria de fluxos.</li>
               </ul>
               <ul>
-                Ferramentas:
+                <strong>Ferramentas:</strong>
                 <li>
                   Uso de ferramentas de análise como Google Analytics ou Hotjar.
                 </li>
@@ -235,93 +311,15 @@
               </ul>
             </div>
           </div>
-          <div class="setas">
-            <img
-              src="/assets/Arrow_left.svg"
-              class="arrow-left"
-              alt="Avançar"
-            />
-            <img
-              src="/assets/Arrow_rigth.svg"
-              class="arrow-right inactive"
-              alt="Voltar"
-            />
-
-            <div class="abas-container">
-              <div class="aba" id="aba1" data-aba="aba1">
-                <div class="aba-conteudo">
-                  <button class="fechar-aba">&times;</button>
-                  <h3>Sputyfi</h3>
-                  <p>
-                    O Sputyfi é um projeto full-stack que simula um player de
-                    música funcional, desenvolvido como meu primeiro projeto
-                    utilizando React no front-end e um back-end próprio. O
-                    objetivo foi praticar e consolidar minhas habilidades como
-                    Desenvolvedor Full Stack.<br /><br />
-                  </p>
-                  <div class="aba-container-links">
-                    <a class="aba-links aba-links-site" href="">Site</a>
-                    <a class="aba-links aba-links-repositorio" href=""
-                      >Repositorio</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div class="aba" id="aba2" data-aba="aba2">
-                <div class="aba-conteudo">
-                  <button class="fechar-aba">&times;</button>
-                  <h3>Vai Corinthians</h3>
-                  <p>
-                    Vai Corinthians é uma aplicação de cadastro de todos os
-                    jogadores e jogadoras que passaram pelo Corinthians.<br /><br />
-                  </p>
-                  <div class="aba-container-links">
-                    <a class="aba-links aba-links-site" href="">Site</a>
-                    <a class="aba-links aba-links-repositorio" href=""
-                      >Repositorio</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div class="aba" id="aba3" data-aba="aba3">
-                <div class="aba-conteudo">
-                  <button class="fechar-aba">&times;</button>
-                  <h3>Memoteca</h3>
-                  <p>
-                    A Memoteca é um aplicativo organizador de pensamentos e
-                    frases que permite cadastrar, listar, editar, deletar,
-                    filtrar e favoritar pensamentos, incluindo informações como
-                    conteúdo, autoria e data.<br /><br />
-                  </p>
-                  <div class="aba-container-links">
-                    <a class="aba-links aba-links-site" href="">Site</a>
-                    <a class="aba-links aba-links-repositorio" href=""
-                      >Repositorio</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="abas-titulos">
-                <h3 class="abas-titulos-sputyfy abas-links" data-aba="aba1">
-                  Sputyfi
-                </h3>
-                <h3
-                  class="abas-titulos-vai-corinthians abas-links"
-                  data-aba="aba2"
-                >
-                  Vai Corinthians
-                </h3>
-                <h3 class="abas-titulos-memoteca abas-links" data-aba="aba3">
-                  Memoteca
-                </h3>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+          <!-- <div class="setas">
+            <img src="/assets/Arrow_left.svg" class="arrow-left" alt="Voltar" aria-hidden="true" />
+            <img src="/assets/Arrow_rigth.svg" class="arrow-right " alt="Avançar" aria-hidden="true" />
+          </div> -->
 
+      
+   
+        
       <div id="trabalhos">
         <h2 class="trabalhos-realizado-titulo">Trabalhos Realizados</h2>
         <div class="card" id="card1">
@@ -387,7 +385,7 @@
               >
             </div>
 
-            <img src="/assets/LBC_Corretora.png" alt="" />
+            <img src="/assets/lbc-logo-branco.webp" alt="logo LBC" />
           </div>
         </div>
       </div>
@@ -453,6 +451,7 @@
       </div>
 
       <!-- <div id="portfolio-fotografia">
+
         <div class="portfolio-fotografia-imagem">
           <h3 class="portfolio-fotografia-titulo">Portfólio de Fotografia</h3>
           <img
@@ -461,58 +460,61 @@
           />
         </div>
       </div> -->
+
+      
     </main>
     <img
       src="/assets/forma-circulo.svg"
       alt="imagem geometrica forma-circulo"
       class="main-imagem-circulo-final"
     />
-    <footer id="contato">
-      <div class="conteudo">
-        <div class="contato">
-          <h2>
-            <a
-              href="mailto:thalesfotos@hotmail.com"
-              style="text-decoration: none; color: white"
-            >
-              thalesfotos@hotmail.com
-            </a>
-          </h2>
-          <h2>
-            <a
-              href="https://wa.me/5511967393632"
-              target="_blank"
-              style="text-decoration: none; color: white"
-              ><img
-                class="footer-whats"
-                src="assets/whatsapp.svg"
-                alt="whatsapp"
-              />
-              +55 11 96739-3632
-            </a>
-          </h2>
-        </div>
-        <div class="redes-sociais">
-          <a href="https://github.com/thalesvarga" target="_blank"
-            ><img class="contato-icone" src="/assets/github.svg" alt="Github"
-          /></a>
-          <a
-            href="https://www.linkedin.com/in/thales-varga-11b83033a/"
-            target="_blank"
-            ><img
-              class="contato-icone"
-              src="/assets/linkedin.svg"
-              alt="Linkedin"
-          /></a>
-          <a href="https://www.instagram.com/thalesvarga/" target="_blank"
-            ><img
-              class="contato-icone"
-              src="/assets/instagram.svg"
-              alt="Instagram"
-          /></a>
-        </div>
-        <p>Copyright © 2025 Todos os direitos reservados.</p>
-      </div>
-    </footer>
   </body>
+
+  <footer id="contato">
+    <div class="conteudo">
+      <div class="contato">
+        <h2>
+          <a
+            href="mailto:thalesfotos@hotmail.com"
+            style="text-decoration: none; color: white"
+          >
+            thalesfotos@hotmail.com
+          </a>
+        </h2>
+        <h2>
+          <a
+            href="https://wa.me/5511967393632"
+            target="_blank"
+            style="text-decoration: none; color: white"
+            ><img
+              class="footer-whats"
+              src="assets/whatsapp.svg"
+              alt="whatsapp"
+            />
+            +55 11 96739-3632
+          </a>
+        </h2>
+      </div>
+      <div class="redes-sociais">
+        <a href="https://github.com/thalesvarga" target="_blank"
+          ><img class="contato-icone" src="/assets/github.svg" alt="Github"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/thales-varga-11b83033a/"
+          target="_blank"
+          ><img
+            class="contato-icone"
+            src="/assets/linkedin.svg"
+            alt="Linkedin"
+        /></a>
+        <a href="https://www.instagram.com/thalesvarga/" target="_blank"
+          ><img
+            class="contato-icone"
+            src="/assets/instagram.svg"
+            alt="Instagram"
+        /></a>
+      </div>
+      <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </div>
+  </footer>
 </html>

@@ -1,174 +1,385 @@
 /* trabalhos realizado ---------------------------- */
 
 #trabalhos {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    width: 100%;
-    z-index: 9999;
-    position: relative;
-    padding-right: 2rem;
-    margin-top: 15rem;
-    transition: transform 2s ease;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  z-index: 9999;
+  position: relative;
+  padding-right: 2rem;
+  margin-top: 15rem;
+  transition: transform 2s ease;
+}
+
+/* #trabalhos:hover{
+    transform: scale(1.02);
+  } */
+
+.trabalhos-realizado-titulo {
+  background: var(--cor-background-escuro);
+  padding: 1rem 4rem 1rem 1rem;
+  border-radius: 8px;
+  transform: rotate(-2deg);
+  color: var(--cor-texto-claro);
+  z-index: -1;
+  position: absolute;
+  bottom: 100%;
+  left: 40%;
+  z-index: -1;
+}
+
+.card {
+  width: 50%;
+  padding: 3rem;
+  border-radius: 18px;
+  transition: transform 0.5s ease;
+}
+
+#card1 {
+  background: white;
+  position: absolute;
+  top: 10%;
+}
+
+/* card lbc */
+
+#card2 {
+  position: absolute;
+  z-index: -1;
+  background: var(--cor-background-escuro);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, z-index 0.5s ease;
+  color: var(--cor-texto-escuro);
+  width: 50%;
+  top: 40%;
+}
+
+#card2.active {
+  transform: translateY(-4%);
+  z-index: 2;
+  background: var(--cor-background-escuro);
+}
+
+.card-container-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 24px;
+}
+.card2-conteudo {
+  color: var(--cor-texto-claro);
+}
+
+.card-conteudo {
+  grid-column: 1 / 2;
+  color: var(--cor-texto-escuro);
+}
+
+.card-conteudo h3,
+.card2-conteudo h3 {
+  padding: 1rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.card-conteudo p,
+.card2-conteudo p {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@keyframes mexida {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.card-links {
+  display: inline-block;
+  color: var(--cor-texto-escuro);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-links:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  animation: mexida 0.4s ease-in-out;
+}
+
+.card-links::after {
+  content: " →";
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 0.3rem;
+}
+
+.card2-links {
+  display: inline-block;
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card2-links:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  animation: mexida 0.4s ease-in-out;
+}
+
+.card2-links::after {
+  content: " →";
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 0.3rem;
+  color: var(--cor-texto-claro);
+}
+
+.card-container-conteudo img {
+  grid-column: 2 / 3;
+  width: 100%;
+  height: auto;
+}
+
+.card-descricao {
+  padding: 1rem 0;
+}
+
+.card-descricao p {
+  padding: 0.4rem 0;
+}
+
+.seta {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.seta:active {
+  transform: scale(0.8);
+}
+
+/* @media (min-width: 1440px) {
+    .trabalhos-realizado-titulo {
+      left: 20%; 
+      top: 65%;
+    }
+  
+    #card1 {
+      top: 80%; 
+    }
+  
+    #card2 {
+      top: 90%; 
+    }
+  } */
+
+/* @media (max-width: 1200px) {
+  #trabalhos {
+    margin-top: 10rem; 
+    height: 25vh;
   }
 
-  #trabalhos:hover{
-    transform: scale(1.02);
-  }
-  
   .trabalhos-realizado-titulo {
-    position: absolute;
-    left: 23%;
-    top: -40%;
-    background: var(--cor-background-escuro);
-    padding: 1rem 4rem 1rem 1rem;
-    border-radius: 8px;
-    transform: rotate(-2deg);
-    color: var(--cor-texto-claro);
-    z-index: -1;
-  }
+    left: 18%; 
+    top: 70%;
   
-  .card {
-    width: 50%;
-    padding: 4rem;
-    border-radius: 18px;
-    transition: transform 0.5s ease;
-   
   }
-  
+
   #card1 {
-    background: white;
-    position: absolute;
+    width: 60%; 
+    top: 85%;
   }
-  
+
   #card2 {
-    position: absolute;
-    z-index: -1;
-    background: var(--cor-background-escuro);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease, z-index 0.5s ease;
-    color: var(--cor-texto-escuro);
-    width: 50%;
+    width: 60%;
     top: 95%;
   }
-  
-  #card2.active {
-    transform: translateY(-8%);
-    z-index: 2;
-    background: var(--cor-background-escuro);
+} */
+
+@media (max-width: 1024px) {
+  #trabalhos {
+    margin-top: 8rem;
+    height: 20vh;
   }
-  
-  .card2-conteudo {
-    color: var(--cor-texto-claro);
+
+  .trabalhos-realizado-titulo {
+    left: 15%;
+    top: 20%;
+    padding: 2rem 2rem;
   }
-    
-  .card-container-conteudo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
+
+  #card1 {
+    width: 70%;
+    top: 90%;
   }
-  
-  .card-conteudo {
-    grid-column: 1 / 2;
-    color: var(--cor-texto-escuro);
+
+  #card2 {
+    width: 70%;
+    top: 100%;
   }
-  
-  .card-conteudo h3,
-  .card2-conteudo h3 {
-    padding: 1rem 0;
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  
-  .card-conteudo p, .card2-conteudo p {
-    padding: 1rem 0;
-    font-size: 0.8rem;
-    line-height: 1.5;
-  }
-  
-  @keyframes mexida {
-    0% {
-      transform: translateX(0);
-    }
-    30% {
-      transform: translateX(5px);
-    }
-    60% {
-      transform: translateX(-3px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  .card-links {
-    display: inline-block;
-    color: var(--cor-texto-escuro);
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card-links:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    animation: mexida 0.4s ease-in-out;
-  }
-  
-  .card-links::after {
-    content: " →";
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-    padding-left: 0.3rem;
-  }
-  
-  .card2-links {
-    display: inline-block;
-    color: var(--cor-texto-claro);
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card2-links:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    animation: mexida 0.4s ease-in-out;
-  }
-  
-  .card2-links::after {
-    content: " →";
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-    padding-left: 0.3rem;
-    color: var(--cor-texto-claro);
-  }
-  
-  .card-container-conteudo img {
-    grid-column: 2 / 3;
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-descricao {
-    padding: 1rem 0;
-  }
-  
-  .card-descricao p {
-    padding: 0.4rem 0;
-  }
-  
   .seta {
     position: absolute;
-    top: 45%;
-    left: 20%;
+    top: 100%;
+    left: 10%;
     cursor: pointer;
     z-index: 99999;
   }
-  
-  .seta:active {
-    transform: scale(0.8);
+}
+
+@media (max-width: 768px) {
+  #trabalhos {
+    margin-top: 2rem;
+    width: 100%;
   }
-  
-  
+
+  .trabalhos-realizado-titulo {
+    left: 10%;
+    top: 50%;
+  }
+
+  #card1 {
+    width: 70%;
+    top: 90%;
+  }
+
+  #card2 {
+    width: 70%;
+    top: 100%;
+  }
+
+  .card-container-conteudo {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card-conteudo {
+    order: 2;
+    text-align: center;
+    width: 80%;
+  }
+
+  .card-container-conteudo img {
+    order: 1;
+    max-width: 200px;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .card img {
+    order: 1;
+    width: auto;
+    max-width: 50%;
+  }
+
+  .seta {
+    position: absolute;
+    bottom: 70%;
+    left: 10%;
+    cursor: pointer;
+    z-index: 99999;
+  }
+}
+
+@media (max-width: 600px) {
+  #trabalhos {
+    margin-top: 4rem;
+    height: 10vh;
+  }
+
+  .trabalhos-realizado-titulo {
+    left: 5%;
+    top: 5%;
+  }
+
+  #card1 {
+    width: 90%;
+    top: 100%;
+  }
+
+  #card2 {
+    width: 90%;
+    top: 110%;
+  }
+
+  .card-conteudo h3,
+  .card2-conteudo h3 {
+    font-size: 2rem;
+  }
+
+  .card-conteudo p,
+  .card2-conteudo p {
+    font-size: 0.7rem;
+  }
+
+  .seta {
+    position: absolute;
+    top: 135%;
+    left: 8%;
+    cursor: pointer;
+    z-index: 99999;
+  }
+}
+
+@media (max-width: 480px) {
+  #trabalhos {
+    margin-top: 3rem;
+  }
+
+  .trabalhos-realizado-titulo {
+    left: 10%;
+    top: 30%;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  #card1 {
+    width: 95%;
+    top: 105%;
+  }
+
+  #card2 {
+    width: 95%;
+    top: 115%;
+  }
+
+  .card-conteudo h3,
+  .card2-conteudo h3 {
+    font-size: 1.8rem;
+  }
+
+  .card-conteudo p,
+  .card2-conteudo p {
+    font-size: 0.6rem;
+  }
+
+  .seta {
+    position: absolute;
+    top: 135%;
+    left: 5%;
+    cursor: pointer;
+    z-index: 99999;
+  }
+}

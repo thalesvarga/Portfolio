@@ -1,83 +1,251 @@
+/* #header {
+  display: flex;
+  padding: 1.5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-imagem-circulo {
+  width: 8px;
+  padding-top: 1rem;
+}
+
+.header-menu {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-background-escuro);
+  z-index: 999;
+}
+.header-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem;
+}
+
+.header-menu li {
+  text-align: center;
+}
+.header-menu li a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.header-hamburguer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.header-hamburguer span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--cor-texto-escuro);
+  transition: transform 0.3s ease;
+}
+
+
+.header-contato {
+  display: flex;
+  align-items: center;
+}
+
+.header-contato a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid var(--cor-background-escuro);
+  font-family: var(--font-family);
+  border-radius: 12px;
+  background: none;
+  overflow: hidden;
+  position: relative;
+  font-size: 1rem;
+  color: var(--cor-texto-escuro);
+}
+
+.header-contato img {
+  width: 20px;
+  filter: invert(0);
+}
+
+.header-contato a:hover img {
+  filter: invert(1);
+}
+
+.header-contato a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-background-escuro);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.9s ease;
+  z-index: -1;
+}
+
+.header-contato a:hover::before {
+  transform: scaleX(1);
+}
+
+.header-contato a:hover {
+  color: var(--cor-texto-claro);
+} */
+/* Estilo base */
+/* Estilização do Cabeçalho */
+
 #header {
-    display: flex;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  width: 100%;
+  position: relative;
+}
+
+.header-nome h1 {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.header-imagem-circulo {
+  width: 20px;
+}
+
+/* MENU HAMBÚRGUER (Oculto por padrão) */
+.header-hamburguer {
+  display: none; /* Some em telas grandes */
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.header-hamburguer span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--cor-texto-escuro);
+  transition: transform 0.3s ease;
+}
+
+/* MENU (Por padrão, aparece em telas grandes) */
+.header-menu {
+  display: flex;
+  position: static;
+  background: transparent;
+}
+
+.header-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-menu li {
+  text-align: center;
+}
+
+.header-menu li a {
+  color: var(--cor-texto-escuro);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* CONTATO */
+.header-contato {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-contato img {
+  width: 20px;
+}
+
+.header-contato a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid var(--cor-background-escuro);
+  border-radius: 12px;
+  background: none;
+  position: relative;
+  font-size: 1rem;
+  color: var(--cor-texto-escuro);
+}
+
+/* MEDIA QUERIES */
+
+/* Telas menores (até 768px) - Aparece menu hambúrguer */
+@media (max-width: 768px) {
+  .header-menu {
+    display: none; /* Esconde menu normal */
+    position: absolute;
+    top: 100%;
+    right: 0;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    position: relative
+    background-color: var(--cor-background-escuro);
+    flex-direction: column;
+    z-index: 999;
   }
 
-  .header-imagem-circulo{
-    width: 8px;
-   padding-top: 1rem;
-  
+  .header-nome h1 {
+    font-size: 1rem;
+    margin: 0;
   }
-  
+
+  .header-menu ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: white;
+  }
+ 
+
+  .header-hamburguer {
+    display: flex; /* Aparece o hamburguer */
+  }
+  .header-hamburguer span {
+    width: 17px;
+  }
+
+  .header-imagem-circulo {
+    width: 10px;
+  }
+
+  .header-contato a {
+    padding: 0.3rem;
+  }
+  .header-contato img {
+    width: 15px;
+  }
+}
+
+/* Telas maiores (769px ou mais) - Remove menu hamburguer */
+@media (min-width: 769px) {
+  .header-hamburguer {
+    display: none;
+  }
+
   .header-menu {
     display: flex;
   }
-  .header-menu ul {
-    display: flex;
-  }
-  
-  .header-menu li {
-    font-size: 0.8rem;
-    padding: 2rem;
-    list-style: none;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  
-  .header-contato {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header-contato a {
-    display: flex;
-    align-items: center;
-    padding: 0.8rem;
-    border: 1px solid var(--cor-background-escuro);
-    font-family: var(--font-family);
-    border-radius: 12px;
-    background: none;
-    overflow: hidden;
-    position: relative;
-    font-size: 1rem;
-    color: var(--cor-texto-escuro);
-    
-  }
-
-  .header-contato img{
-    width: 20px;
-    filter: invert(0);
-  
-  }
- 
-  .header-contato a:hover img{
-    filter: invert(1);
-  }
-
-  .header-contato a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cor-background-escuro);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.9s ease;
-    z-index: -1;
-   
- 
-  }
-  
-  .header-contato a:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .header-contato a:hover {
-    color: var(--cor-texto-claro);
-  }
+}

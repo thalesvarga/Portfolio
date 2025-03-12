@@ -78,113 +78,47 @@ document.querySelectorAll(".header-menu li").forEach((item) => {
 });
 
 /* ============ ABA/PROJETOS SKILLS ============ */
+// Seleciona todas as abas
+const abas = document.querySelectorAll('.aba');
 
-// Função para fechar a aba aberta e restaurar o título correspondente
-function fecharAbaAberta() {
-  const abaAberta = document.querySelector(".aba.expandida");
-  if (abaAberta) {
-    abaAberta.classList.remove("expandida");
+// Adiciona evento de clique para cada aba
+abas.forEach(aba => {
+  const conteudo = aba.querySelector('.aba-conteudo'); // Encontra o conteúdo da aba
+  const fecharBotao = aba.querySelector('.fechar-aba'); // Encontra o botão de fechar
 
-    // Restaura o título correspondente à aba fechada
-    const idAbaAberta = abaAberta.getAttribute("data-aba");
-    const tituloAbaAberta = document.querySelector(
-      `.abas-titulos h3[data-aba="${idAbaAberta}"]`
-    );
-    if (tituloAbaAberta) {
-      tituloAbaAberta.style.display = "block";
-    }
-  }
-}
+  // Quando a aba é clicada
+  aba.addEventListener('click', () => {
+    // Fecha todas as outras abas
+    abas.forEach(outraAba => {
+      if (outraAba !== aba) {
+        outraAba.classList.remove('expandida');
+      }
+    });
 
-// Adiciona evento de clique nas abas e links
-document.querySelectorAll(".aba, .abas-links").forEach((elemento) => {
-  elemento.addEventListener("click", (event) => {
-    event.preventDefault();
+    // Alterna o estado 'expandida' da aba clicada
+    aba.classList.toggle('expandida');
+  });
 
-    const idAba = elemento.getAttribute("data-aba");
-
-    // Fecha a aba aberta anteriormente (se houver)
-    fecharAbaAberta();
-
-    // Oculta o título correspondente à nova aba
-    const tituloCorrespondente = document.querySelector(
-      `.abas-titulos h3[data-aba="${idAba}"]`
-    );
-    if (tituloCorrespondente) {
-      tituloCorrespondente.style.display = "none";
-    }
-
-    // Abre a nova aba
-    const abaCorrespondente = document.getElementById(idAba);
-    if (abaCorrespondente) {
-      abaCorrespondente.classList.add("expandida");
-    }
+  // Quando o botão de fechar é clicado
+  fecharBotao.addEventListener('click', (event) => {
+    event.stopPropagation(); // Impede que o clique no botão afete a aba
+    aba.classList.remove('expandida'); // Fecha a aba
   });
 });
 
-// Adiciona evento de clique no botão de fechar
-document.querySelectorAll(".fechar-aba").forEach((botao) => {
-  botao.addEventListener("click", (event) => {
-    event.stopPropagation();
-    fecharAbaAberta();
-  });
+// Fecha a aba ativa ao clicar fora dela
+document.addEventListener('click', (event) => {
+  const isClickInside = Array.from(abas).some(aba => aba.contains(event.target));
+  if (!isClickInside) {
+    abas.forEach(aba => {
+      aba.classList.remove('expandida');
+    });
+  }
 });
 
 /* ============ CARDS SKILLS ============ */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = {
-    front: document.querySelector(".skills-front-end"),
-    back: document.querySelector(".skills-back-end"),
-    ux: document.querySelector(".skills-ux-ui"),
-  };
 
-  const arrows = {
-    left: document.querySelector(".arrow-left"),
-    right: document.querySelector(".arrow-right"),
-  };
-
-  let currentStep = 0;
-  const maxStep = 3;
-
-  const updateCards = () => {
-    // Atualiza estado dos cards
-    cards.front.classList.toggle("active", currentStep === 1); // Front-End completamente visível apenas no Passo 1
-    cards.front.classList.toggle("invisible", currentStep >= 2); // Front-End invisível a partir do Passo 2
-    cards.back.classList.toggle("expandida", currentStep >= 2); // Back-End expande a partir do Passo 2
-    cards.ux.classList.toggle("expandida", currentStep >= 3); // UX/UI expande apenas no Passo 3
-
-    // Atualiza estado das setas
-    arrows.left.classList.toggle("inactive", currentStep === maxStep); // Desativa avançar no último passo
-    arrows.right.classList.toggle("inactive", currentStep === 0); // Desativa voltar no primeiro passo
-
-    // Pausa a animação ao interagir com as setas
-    if (currentStep !== 0) {
-      cards.front.classList.add("paused"); // Pausa a animação do card front-end
-    } else {
-      cards.front.classList.remove("paused"); // Volta a animação ao estado inicial
-    }
-  };
-
-  // Seta da esquerda (avançar)
-  arrows.left.addEventListener("click", () => {
-    if (currentStep < maxStep) {
-      currentStep++;
-      updateCards();
-    }
-  });
-
-  // Seta da direita (voltar)
-  arrows.right.addEventListener("click", () => {
-    if (currentStep > 0) {
-      currentStep--;
-      updateCards();
-    }
-  });
-
-  // Estado inicial
-  updateCards();
-});
 
 /* ============ TRABALHOS REALIZADOS ============ */
 
@@ -197,28 +131,82 @@ setaClique.addEventListener("click", () => {
 
 /* ============ PORTFOLIO FOTOGRAFIA ============ */
 
-document.addEventListener("DOMContentLoaded", function () {
-  const img = document.querySelector("#portfolio-fotografia img");
-  const h3 = document.querySelector("#portfolio-fotografia h3");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const img = document.querySelector("#portfolio-fotografia img");
+//   const h3 = document.querySelector("#portfolio-fotografia h3");
 
-  img.addEventListener("mouseenter", () => {
-    h3.classList.add("ativo");
+//   img.addEventListener("mouseenter", () => {
+//     h3.classList.add("ativo");
+//   });
+
+//   img.addEventListener("mouseleave", () => {
+//     h3.classList.remove("ativo");
+//   });
+// });
+
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+//   anchor.addEventListener("click", function (e) {
+//     e.preventDefault();
+
+//     const targetElement = document.querySelector(this.getAttribute("href"));
+
+//     window.scrollTo({
+//       top: targetElement.offsetTop,
+//       behavior: "smooth",
+//     });
+//   });
+// });
+// ====================HEADER HAMBURGUER===============
+
+// Seleciona o ícone do hamburguer e o menu
+const hamburguer = document.querySelector('.header-hamburguer');
+const menu = document.querySelector('.header-menu');
+
+// Adiciona um evento de clique ao hamburguer
+hamburguer.addEventListener('click', () => {
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+// ====================skills cards===============
+// Seleciona todos os cards
+// Seleciona todos os cards
+const skillsCards = document.querySelectorAll('.skills-card');
+
+// Adiciona evento de clique para cada card
+skillsCards.forEach(card => {
+  const closeButton = card.querySelector('.fechar-card'); // Encontra o botão de fechamento
+
+  // Quando o card é clicado
+  card.addEventListener('click', (event) => {
+    event.stopPropagation(); // Impede que o clique no card afete o documento
+
+    // Verifica se o card já está ativo
+    const isAlreadyActive = card.classList.contains('ativo');
+
+    // Fecha todos os outros cards
+    skillsCards.forEach(otherCard => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('ativo');
+      }
+    });
+
+    // Se o card já estiver ativo, não faz nada (permite que o usuário clique novamente para fechar)
+    if (!isAlreadyActive) {
+      card.classList.add('ativo'); // Ativa o card clicado
+    }
   });
 
-  img.addEventListener("mouseleave", () => {
-    h3.classList.remove("ativo");
+  // Quando o botão de fechamento é clicado
+  closeButton.addEventListener('click', (event) => {
+    event.stopPropagation(); // Impede que o clique no botão afete o card
+    card.classList.remove('ativo'); // Remove a classe 'ativo'
   });
 });
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const targetElement = document.querySelector(this.getAttribute("href"));
-
-    window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: "smooth",
-    });
+// Fecha o card ativo ao clicar fora dele
+document.addEventListener('click', () => {
+  skillsCards.forEach(card => {
+    if (card.classList.contains('ativo')) {
+      card.classList.remove('ativo'); // Fecha o card ativo
+    }
   });
 });
