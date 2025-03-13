@@ -356,23 +356,32 @@
   }
 
   #card1 {
-    width: 95%;
+    width: 75%;
     top: 105%;
+    padding: 0;
   }
 
   #card2 {
-    width: 95%;
+    width: 75%;
     top: 115%;
+    padding: 0;
   }
+
+  .card-container-conteudo{
+    border: none;
+    
+  }
+
 
   .card-conteudo h3,
   .card2-conteudo h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .card-conteudo p,
   .card2-conteudo p {
     font-size: 0.6rem;
+    
   }
 
   .seta {

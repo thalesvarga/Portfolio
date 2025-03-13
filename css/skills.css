@@ -29,7 +29,7 @@
   margin-right: 50px;
 }
 
-.skills-titulo-separador{
+.skills-titulo-separador {
   font-size: 8rem;
   color: orange;
 }
@@ -47,13 +47,18 @@ strong {
   }
 }
 
-/* CONTAINER DOS CARDS */
+/* ===============CONTAINER DOS CARDS SKILLS================ */
 .skills-container {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Espaçamento entre cards */
+  gap: 2rem;
   padding: 2rem 0;
+  margin-top: 10rem;
   position: relative;
+}
+.skills-container h1{
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 .skills-descricao {
@@ -76,7 +81,7 @@ strong {
   transform: translateX(0);
 }
 
-/* ============ CARDS NAO EXPANDIDO ============ */
+/* ============ CARDS SKILLS NAO EXPANDIDO ============ */
 
 .skills-card {
   height: 100px;
@@ -93,17 +98,16 @@ strong {
   margin-top: 5rem;
   cursor: pointer;
   position: relative;
-
 }
 
-.skills-card.ativo{
+.skills-card.ativo {
   transform: scale(1.05);
   opacity: 1;
-  height: auto; 
+  height: auto;
   width: 350px;
 }
 
-.skills-card ul{
+.skills-card ul {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -111,30 +115,28 @@ strong {
 }
 
 .skills-card.ativo ul {
-    max-height: 200px; /* Ajuste para caber o conteúdo */
-    opacity: 1;
-  
+  max-height: 200px;
+  opacity: 1;
 }
 
 .skills-card li {
   padding: 0.2rem;
   font-size: 0.8rem;
-  text-align: left; /* Alinha o texto à esquerda */
+  text-align: left;
   list-style-position: inside;
 }
 strong {
   font-size: 0.9rem;
-  
 }
 
-.skills-front-end{
-opacity: 1;
+.skills-front-end {
+  opacity: 1;
 }
-.skills-back-end{
-opacity: 0.5;
+.skills-back-end {
+  opacity: 0.5;
 }
-.skills-ux-ui{
-opacity: 0.5;
+.skills-ux-ui {
+  opacity: 0.5;
 }
 
 .fechar-card {
@@ -144,68 +146,63 @@ opacity: 0.5;
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #ff4d4d; 
+  color: #ff4d4d;
   cursor: pointer;
-  transition: opacity 0.3s ease; /* Animação suave para aparecer/desaparecer */
-  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s ease; 
+  opacity: 0; 
   z-index: 10;
 }
 
 .fechar-card:hover {
   transform: rotate(90deg);
-  color: #ff8c00; /* Altera a cor ao passar o mouse */
-  opacity: 1; /* Visível apenas quando o card está ativo */
+  color: #ff8c00; 
+  opacity: 1; 
 }
-
-
 
 /* ============ ABAS PROJETOS ============ */
 
-
-
 .projetos-titulo {
-  font-size: 1.5rem; 
-  font-weight: bold; 
-  color: white; 
-  text-align: center; 
-  margin-bottom: 1rem; 
-  letter-spacing: 0.1rem; 
-  text-transform: uppercase; 
-  position: relative; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
   background: var(--cor-background-escuro);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   width: 100%;
 }
 
-
 .projetos-titulo::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
-  height: 3px; 
-  /* background: orange;  */
-  margin: 0.5rem auto 0; 
+  height: 3px;
+  margin: 0.5rem auto 0;
 }
 
 .abas-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  gap: 1rem; /* Espaçamento entre as abas */
+  align-items: center; 
+  gap: 1rem; 
   padding: 2rem;
   position: absolute;
   z-index: 1;
   left: 39%;
-  top: 14%;
+  top: 32%;
 }
 
-/* Abas (botões) */
+/* Abas (botões) === SEM EXPANDIR */
+
 .aba {
-  width: auto; 
-  min-width: 70px; /* Define uma largura mínima */
-  max-width: 150px; /* Define uma largura máxima */
-  height: 50px; /* Altura fixa */
+  width: auto;
+  min-width: 70px;
+  max-width: 150px;
+  height: 50px;
   background: orange;
   color: white;
   text-align: center;
@@ -216,40 +213,41 @@ opacity: 0.5;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; 
-
+  overflow: hidden;
 }
-.aba:hover{
+
+.aba:hover {
   transform: scale(1.05) rotate(3deg);
 }
 
-/* Título dentro das abas */
 .aba-titulo {
-  display: none; /* Oculta o título por padrão */
-  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
-  margin-bottom: 0.5rem; /* Adiciona um espaçamento abaixo do título */
-  text-align: center; /* Centraliza o texto */
-  color:white; /* Define uma cor de texto adequada */
+  display: none;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: white;
   padding: 0 0.5rem;
 }
 
-/* Exibe o título quando a aba está expandida */
 .aba.expandida .aba-titulo {
-  display: block; /* Torna o título visível */
-}
-.aba-links{
-  display: flex;
-  align-items: center;
-  color:inherit;
-  padding:0.3rem;
+  display: block;
 }
 
-/* Conteúdo expandido */
+.aba-links {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  padding: 0.3rem;
+}
+
+/* Conteúdo EXPANDIDO */
+
+
 .aba.expandida {
-  width: 90%; /* Largura controlada */
-  max-width: 400px; /* Limite máximo para telas pequenas */
+  width: 90%; 
+  max-width: 400px; 
   height: auto;
-  transform: none; /* Remove transformações desnecessárias */
+  transform: none;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -274,7 +272,6 @@ opacity: 0.5;
   color: black;
 }
 
-/* Botão de fechar */
 .fechar-aba {
   position: absolute;
   top: 10px;
@@ -291,24 +288,23 @@ opacity: 0.5;
   transform: rotate(90deg);
   color: #ff8c00;
 }
+
+.skills-linha {
+  display: none;
+}
 /* ============ RESPONSIVO PARA TELAS PEQUENAS (768px) ============ */
 
-
-
 @media (max-width: 768px) {
-  /* Desativa animações e efeitos de hover */
   * {
     animation: none !important;
     transition: none !important;
   }
 
-  /* Centraliza tudo */
   #skills {
     padding: 1rem 0;
     height: auto;
     text-align: center;
   }
-
 
   .carrossel {
     margin-bottom: 2rem;
@@ -336,23 +332,23 @@ opacity: 0.5;
     font-size: 0.8rem;
     line-height: 1.2;
   }
-
   .skills-card {
     height: 50px;
     width: 20%;
-    max-width: 350px; 
-    margin: 0 auto; 
+    max-width: 350px;
+    margin: 0 auto;
     padding: 1rem;
-    font-size: 0.7rem; 
-    text-align: left; 
+    font-size: 0.7rem;
+    text-align: left;
   }
 
   .skills-card.ativo {
     width: 90%;
-    max-width: 400px; 
+    max-width: 400px;
     height: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
+
   .fechar-card {
     position: absolute;
     top: 10px;
@@ -361,25 +357,21 @@ opacity: 0.5;
     border: none;
     font-size: 1.5rem;
     color: #ff4d4d;
-    cursor: pointer; /* Indica que é clicável */
+    cursor: pointer;
     z-index: 10;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: 0.5rem; /* Aumenta a área clicável */
+    padding: 0.5rem;
   }
-  
-
 
   .skills-card ul {
     max-height: 150px;
-  
   }
 
   .skills-card li {
     font-size: 0.7rem;
   }
 
-  /* Ajustes nas abas */
   .abas-container {
     position: static;
     flex-direction: row;
@@ -437,20 +429,285 @@ opacity: 0.5;
   }
 
   .aba-titulo {
-    font-size: 0.8rem; /* Reduz o tamanho da fonte para telas pequenas */
+    font-size: 0.8rem;
   }
 
   .aba {
-    min-width: 60px; /* Diminui a largura mínima para telas pequenas */
-    max-width: 120px; /* Diminui a largura máxima para telas pequenas */
+    min-width: 60px;
+    max-width: 120px;
   }
 
   @media (hover: none) and (pointer: coarse) {
-    /* Estilo específico para dispositivos touch */
     .fechar-card {
       font-size: 1.2rem;
       top: 5px;
       right: 5px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #skills {
+    padding: 0.5rem 0;
+  }
+
+  .carrossel h2 {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.7;
+  }
+
+  .skills-titulo-separador {
+    font-size: 0.9rem;
+  }
+
+  .skills-linha {
+    height: 580px;
+    width: 8px;
+    position: absolute;
+    z-index: -4;
+  }
+
+  .skills-container {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  .skills-container h1 {
+    margin-bottom: 5rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background: white;
+  }
+
+  .skills-descricao {
+    width: 60%;
+    padding: 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .skills-card {
+    width: 30%;
+    font-size: 0.6rem;
+    padding: 0.9rem;
+  }
+
+  .skills-card.ativo {
+    width: 95%;
+    max-width: 70%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .fechar-card {
+    font-size: 1.2rem;
+    top: 5px;
+    right: 5px;
+  }
+
+  .skills-card ul {
+    max-height: 120px;
+  }
+
+  .skills-card li {
+    font-size: 0.6rem;
+  }
+
+  .abas-container {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 3rem;
+  }
+
+  .aba {
+    width: 40px;
+    height: 40px;
+  }
+
+  .aba.expandida {
+    width: 50%;
+  }
+
+  .aba-conteudo {
+    padding: 0.5rem;
+    width: 72%;
+  }
+
+  .aba-conteudo h3 {
+    font-size: 0.9rem;
+  }
+
+  .aba-conteudo p {
+    font-size: 0.7rem;
+  }
+
+  .aba-container-links {
+    gap: 0.3rem;
+  }
+
+  .aba-links {
+    font-size: 0.7rem;
+  }
+
+  .fechar-aba {
+    font-size: 14px;
+    top: 2px;
+    right: 2px;
+  }
+
+  .aba-titulo {
+    font-size: 0.7rem;
+  }
+
+  .aba {
+    min-width: 50px;
+    max-width: 100px;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .fechar-card {
+      font-size: 1rem;
+      top: 2px;
+      right: 2px;
+    }
+  }
+}
+@media (max-width: 320px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #skills {
+    padding: 0.3rem 0;
+  }
+
+  .carrossel h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .skills-titulo-separador {
+    font-size: 0.8rem;
+  }
+
+  .skills-linha {
+    height: 500px;
+    width: 6px;
+  }
+
+  .skills-container {
+    gap: 0.3rem;
+    padding: 0.3rem;
+  }
+
+  .skills-container h1 {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
+
+  .skills-descricao {
+    width: 80%;
+    padding: 1rem;
+    font-size: 0.6rem;
+  }
+
+  .skills-card {
+    width: 40%;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .skills-card.ativo {
+    width: 90%;
+    max-width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .fechar-card {
+    font-size: 1rem;
+    top: 3px;
+    right: 3px;
+  }
+
+  .skills-card ul {
+    max-height: 100px;
+  }
+
+  .skills-card li {
+    font-size: 0.5rem;
+  }
+
+  .abas-container {
+    gap: 0.3rem;
+    padding: 0.3rem;
+    margin-top: 2rem;
+  }
+
+  .aba {
+    width: 30px;
+    height: 30px;
+  }
+
+  .aba.expandida {
+    width: 90%;
+  }
+
+  .aba-conteudo {
+    padding: 0.3rem;
+    width: 80%;
+  }
+
+  .aba-conteudo h3 {
+    font-size: 0.8rem;
+  }
+
+  .aba-conteudo p {
+    font-size: 0.6rem;
+  }
+
+  .aba-container-links {
+    gap: 0.2rem;
+  }
+
+  .aba-links {
+    font-size: 0.6rem;
+  }
+
+  .fechar-aba {
+    font-size: 12px;
+    top: 1px;
+    right: 1px;
+  }
+
+  .aba-titulo {
+    font-size: 0.6rem;
+  }
+
+  .aba {
+    min-width: 40px;
+    max-width: 80px;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .fechar-card {
+      font-size: 0.8rem;
+      top: 1px;
+      right: 1px;
     }
   }
 }

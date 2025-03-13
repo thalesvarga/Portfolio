@@ -89,39 +89,19 @@ main {
   right: 80%;
 }
 
-.main-imagem-circulo-inicio {
-  position: absolute;
-  left: 20%;
-  top: 40%;
-  width: 20px;
-  z-index: 9999;
-}
-
-.main-imagem-circulo-meio {
-  position: absolute;
-  left: 30%;
-  top: 15%;
-  width: 40px;
-}
-
-.main-imagem-circulo-final {
-  position: absolute;
-  left: 40%;
-  top: 80%;
-}
-
 @media (max-width: 768px) {
   .linha {
     display: none;
   }
 
   .sobre-mim-2-background {
-    width: 100%; /* Ajusta a largura para ocupar a tela inteira */
-    margin-top: 5rem; /* Ajusta a margem superior */
+    width: 100%; 
+    margin-top: 5rem;
   }
 
   .background-preto,
   .background-cinza {
-    width: 50%; /* Ajusta a largura dos elementos de fundo */
+    width: 50%; 
   }
+
 }

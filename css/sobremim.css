@@ -43,7 +43,7 @@
   flex-direction: column;
   width: 60%;
   height: 70vh;
-  margin-top: 10rem;
+  margin: 5rem 0;
   text-align: center;
   overflow-x: hidden;
 }
@@ -183,70 +183,92 @@
   }
 }
 
-  @media (max-width: 480px) {
-    /* Ajuste do texto */
-    #sobre-mim{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-    }
+@media (max-width: 480px) {
+  #introducao-sobre-mim {
+    margin: 2rem;
+    height: 32vh;
+  }
+  #introducao-sobre-mim h2 {
+    font-size: 1.7rem;
+  }
+  #introducao-sobre-mim p {
+    font-size: 0.7rem;
+    margin: 0.7rem;
+  }
 
-    .sobre-mim-container{
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-     
-    }
+  #sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     
-    .sobre-mim-descricao {
-      width: 80% !important;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      margin: 0 auto 2rem !important;
-      height: auto !important;
-      padding: 2rem 0;
-    }
-  
-    /* Container dos botões */
-    #sobre-mim-linkedin {
-      display: flex;
-      flex-wrap: wrap;
-      gap: rem;
-      justify-content: center;
-      width: 100%;
-      margin-top: 2rem;
-    }
-  
-    /* Tentativa de lado a lado */
+    height: 25vh;
+  }
+
+  .sobre-mim-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sobre-mim-titulo{
+    font-size: 2rem;
+ 
+
+  }
+  .sobre-mim-titulo h2{
+    font-size: 2rem;
+    position: absolute;
+    top: -90%;
+  }
+
+  .sobre-mim-descricao {
+    width: 80% !important;
+    font-size: 0.6rem;
+    line-height: 1.5;
+    margin: 0 auto 2rem !important;
+    height: auto !important;
+    padding: 2rem 0;
+  }
+
+  #sobre-mim-linkedin {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+ 
+  }
+
+  .linkedin-link,
+  #download-cv {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    margin: 0 0.5rem;
+    font-size: 0.6rem;
+  }
+
+
+  @media (max-width: 340px) {
     .linkedin-link,
     #download-cv {
-      flex: 1;
-      min-width: 200px;
-      max-width: 250px;
-      margin: 0 0.5rem;
+      flex: 100%;
+      max-width: 100%;
+      margin: 0.5rem 0;
     }
-  
-    /* Fallback para empilhamento */
-    @media (max-width: 340px) {
-      .linkedin-link,
-      #download-cv {
-        flex: 100%;
-        max-width: 100%;
-        margin: 0.5rem 0;
-      }
-    }
-  
-    /* Ajuste final dos elementos */
+
     .sobre-mim-icone-linkedin {
       width: 24px !important;
       margin-right: 0.5rem;
     }
-  
+
     .sobre-mim-download-cv {
       text-align: center;
       padding: 0.8rem;
       display: block;
     }
   }
+}
