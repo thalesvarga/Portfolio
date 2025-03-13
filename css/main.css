@@ -79,7 +79,7 @@ main {
   width: 20%;
   position: absolute;
   top: -50%;
-  left: 110%;
+  right: -65%;
 }
 
 .background-cinza {

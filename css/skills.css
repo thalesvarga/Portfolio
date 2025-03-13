@@ -208,13 +208,16 @@ strong {
   text-align: center;
   cursor: pointer;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
+
+
+
 
 .aba:hover {
   transform: scale(1.05) rotate(3deg);

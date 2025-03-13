@@ -45,7 +45,7 @@ function handleScroll() {
   // if (skillsDescricao && isElementVisible(skillsDescricao)) {
   //   skillsDescricao.classList.add("visible");
   // }
-  const elements = document.querySelectorAll(".sobre-mim-descricao, .divisao-sobre-mim, .sobre-mim-link, .skills-descricao");
+  const elements = document.querySelectorAll(".sobre-mim-descricao, .divisao-sobre-mim, .sobre-mim-link, .skills-descricao, .abas-container ");
   elements.forEach((element) => {
       if (isElementVisible(element)) {
           element.classList.add("visible");

@@ -7,7 +7,7 @@
 }
 
 .divisao-sobre-mim.visible {
-  opacity: 1; /* Torna visível */
+  opacity: 1; 
   transform: translateX(0); /* Move para a posição original */
 }
 
