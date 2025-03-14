@@ -119,18 +119,6 @@
   filter: invert(0);
 }
 
-.sobre-mim-download-cv {
-  text-decoration: none;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: transform 1s ease;
-}
-
-.sobre-mim-download-cv:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transform: scale(1.1);
-}
 
 .sobre-mim-link {
   opacity: 0;

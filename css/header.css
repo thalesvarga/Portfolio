@@ -15,9 +15,11 @@
   margin: 0;
 }
 
-.header-imagem-circulo {
-  width: 10px;
-}
+  .header-imagem-circulo {
+    width: 10px;
+    transition: all 0.3s ease;
+   
+  }
 
 /* MENU HAMBÚRGUER (Oculto por padrão) */
 .header-hamburguer {
@@ -53,6 +55,9 @@
 .header-menu li {
   text-align: center;
   cursor: pointer;
+ margin-right: 5rem;
+ position: relative;
+ transition: transform 0.7s ease; 
 }
 
 .header-menu li a {
@@ -60,6 +65,10 @@
   text-decoration: none;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.header-menu li:hover {
+  transform: scale(1.1);
 }
 
 .header-contato {
@@ -84,7 +93,9 @@
   color: var(--cor-texto-escuro);
 }
 
-/* MEDIA QUERIES */
+
+
+
 
 
 @media (max-width: 768px) {

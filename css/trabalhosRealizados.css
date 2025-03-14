@@ -8,20 +8,23 @@
   width: 100%;
   margin-top: 5rem;
   margin-bottom: 20rem;
-  min-height: 800px;
+  min-height: 600px;
   position: relative;
 }
 
 /* Título */
 .trabalhos-realizado-titulo {
   background: var(--cor-background-escuro);
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 20rem;
   border-radius: 8px;
   transform: rotate(-2deg);
   color: var(--cor-texto-claro);
   margin-bottom: 5rem;
   position: relative;
   z-index: 3;
+  width: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+
 }
 
 /* Container dos cards */
