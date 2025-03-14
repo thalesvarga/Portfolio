@@ -59,6 +59,9 @@ strong {
   padding: 2rem 0;
   margin-top: 1rem;
   position: relative;
+  /* max-height: 600px; */
+  overflow: hidden; 
+  transform: translateZ(0)
 }
 
 .skills-container h1 {
@@ -96,8 +99,8 @@ strong {
   cursor: pointer;
   transition: transform 1s ease;
   position: absolute;
-  top: 45%;
-  left: 60%;
+  top: 620px;
+  left: 1000px;
   color: inherit;
 }
 
@@ -363,18 +366,18 @@ strong {
   }
 
   .skills-descricao p {
-    margin: 1rem 0 1rem 1rem; /* Margens ainda menores */
-    padding: 1.5rem; /* Padding reduzido */
-    width: 50%; /* Largura maior para ocupar mais espaço */
-    font-size: 0.8rem; /* Tamanho da fonte ajustado */
+    margin: 1rem 0 1rem 1rem; 
+    padding: 1.5rem; 
+    width: 50%; 
+    font-size: 0.8rem; 
     align-items: center;
   }
 
   .sobre-mim-download-cv {
-    top: 105%; /* Reposiciona o botão */
-    left: 52%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajuste fino para centralização */
-    font-size: 0.65rem; /* Tamanho da fonte reduzido */
+    top: 105%; 
+    left: 52%; 
+    transform: translateX(-50%); 
+    font-size: 0.65rem; 
   }
   .skills-card {
     height: 50px;
@@ -535,18 +538,18 @@ strong {
   }
 
   .skills-descricao p {
-    margin: 1rem 0 1rem 1rem; /* Margens ainda menores */
-    padding: 1.5rem; /* Padding reduzido */
-    width: 100%; /* Largura maior para ocupar mais espaço */
-    font-size: 0.8rem; /* Tamanho da fonte ajustado */
+    margin: 1rem 0 1rem 1rem; 
+    padding: 1.5rem; 
+    width: 100%; 
+    font-size: 0.8rem; 
     align-items: flex-start;
   }
 
   .sobre-mim-download-cv {
-    top: 15%; /* Reposiciona o botão */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajuste fino para centralização */
-    font-size: 0.65rem; /* Tamanho da fonte reduzido */
+    top: 15%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 0.65rem; 
   }
 
   .skills-card {

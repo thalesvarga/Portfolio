@@ -1,185 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/lbcConsultoria.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <title>Plano de UX/UI - LBC Corretora</title>
-    <style>
-        /* Estilos baseados no Manual de Identidade Visual */
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #192050;
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #0E2C72;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #0E2C72;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        p {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #F15A24;
-            color: #ffffff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #C4FBB7;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table th, table td {
-            border: 1px solid #6D6D6D;
-            padding: 10px;
-            text-align: left;
-        }
-        footer {
-            background-color: #192050;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Plano de UX/UI para o Site da LBC Corretora</h1>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-nome">
+        <h1>
+          Thales Varga
+          <img
+            src="/assets/forma-circulo-laranja.svg"
+            alt="imagem geometrica forma-circulo"
+            class="header-imagem-circulo"
+          />
+        </h1>
+      </div>
+      <div class="header-menu">
+        <ul>
+          <a href="/index.html" class="home" ><li >Home</li></a>
+         <a href="assets/CV_Thales_Varga_Front-End.pdf" target="_blank"  rel="noopener noreferrer"></a><li>Download CV</li></a>
+        </ul>
+      </div>
+      <div class="header-contato">
+        <div class="header-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="https://wa.me/5511967393632" target="_blank">
+          <img src="/assets/whatsapp.svg" alt="whatsapp" />
+        </a>
+      </div>
     </header>
     <div class="container">
-        <section>
-            <h2>Introdução</h2>
-            <p>Este plano foi desenvolvido exclusivamente para apresentação ao cliente, com foco em explicar de forma clara e detalhada as decisões estratégicas que guiarão o redesenho do site da LBC Corretora de Planos de Saúde.</p>
-        </section>
-        <section>
-            <h2>Objetivos do Projeto</h2>
-            <ul>
-                <li><strong>Captação de Leads:</strong> Incentivar os visitantes a preencher formulários e fornecer informações relevantes.</li>
-                <li><strong>Alinhamento com a Identidade Visual:</strong> Aplicação rigorosa das cores, tipografia e elementos gráficos conforme o manual de identidade visual.</li>
-                <li><strong>Experiência Simplificada:</strong> Um fluxo de navegação intuitivo, com foco na conversão e facilidade de uso.</li>
-                <li><strong>Mobile-First Design:</strong> Garantia de que o site seja totalmente responsivo e otimizado para dispositivos móveis.</li>
-                <li><strong>SEO Básico:</strong> Implementação de práticas de otimização para motores de busca.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Estratégias de UX/UI Detalhadas</h2>
-            <p><strong>Lei de Hick-Hyman:</strong> Redução de escolhas no menu principal e CTAs claros.</p>
-            <p><strong>Lei de Fitts:</strong> Botões grandes e próximos do cursor para facilitar cliques.</p>
-            <p><strong>Princípio de Gestalt:</strong> Agrupamento visual de informações relacionadas.</p>
-            <p><strong>Lei de Jakob Nielsen:</strong> Padrões de usabilidade conhecidos, como posicionamento de logo e formulários lógicos.</p>
-        </section>
-        <section>
-            <h2>Cronograma de Implementação</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Fase</th>
-                        <th>Descrição</th>
-                        <th>Prazo Estimado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pesquisa e Planejamento</td>
-                        <td>Análise detalhada do público-alvo e definição de requisitos.</td>
-                        <td>2 semanas</td>
-                    </tr>
-                    <tr>
-                        <td>Wireframes e Protótipos</td>
-                        <td>Criação de esboços iniciais e protótipos navegáveis.</td>
-                        <td>3 semanas</td>
-                    </tr>
-                    <tr>
-                        <td>Design Final</td>
-                        <td>Desenvolvimento do design visual final.</td>
-                        <td>4 semanas</td>
-                    </tr>
-                    <tr>
-                        <td>Desenvolvimento</td>
-                        <td>Codificação do site com foco em performance.</td>
-                        <td>5 semanas</td>
-                    </tr>
-                    <tr>
-                        <td>Testes e Ajustes</td>
-                        <td>Testes de usabilidade e compatibilidade.</td>
-                        <td>2 semanas</td>
-                    </tr>
-                    <tr>
-                        <td>Lançamento</td>
-                        <td>Publicação do novo site.</td>
-                        <td>1 semana</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h2>Orçamento Estimado</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Etapa</th>
-                        <th>Valor Estimado (R$)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pesquisa, Planejamento e Wireframes</td>
-                        <td>R$ 5.000,00</td>
-                    </tr>
-                    <tr>
-                        <td>Design UI e Prototipagem</td>
-                        <td>R$ 8.000,00</td>
-                    </tr>
-                    <tr>
-                        <td>Desenvolvimento e Testes</td>
-                        <td>R$ 12.000,00</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>R$ 25.000,00</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h2>Conclusão</h2>
-            <p>Este plano detalha todas as estratégias de UX/UI que serão implementadas no site da LBC Corretora de Planos de Saúde, com foco na captação eficiente de leads e na criação de uma experiência de usuário fluida e envolvente.</p>
-            <a href="#" class="cta-button">Entre em Contato Agora</a>
-        </section>
+      <section>
+        <h2>Introdução</h2>
+        <p>
+          A LBC Consultoria é uma corretora de planos de saúde e seguros de vida
+          há mais de 15 anos no mercado, e o pricipal objetivo desse trabalho é
+          criar um site moderno, alinhado ao manual de identidade visual
+          fornecido pelo cliente, e otimizado para a captação eficiente de
+          leads. Cada decisão de design e usabilidade foi baseada em princípios
+          consolidados de UX/UI, garantindo uma experiência intuitiva e de alta
+          conversão.
+        </p>
+      </section>
+      <section>
+        <h2>Objetivos do Projeto</h2>
+        <ul>
+          <li>
+            <strong>Captação de Leads:</strong> Incentivar os visitantes a
+            preencher formulários e fornecer informações relevantes.
+          </li>
+          <li>
+            <strong>Alinhamento com a Identidade Visual:</strong> Aplicação
+            rigorosa das cores, tipografia e elementos gráficos conforme o
+            manual de identidade visual.
+          </li>
+          <li>
+            <strong>Experiência Simplificada:</strong> Um fluxo de navegação
+            intuitivo, com foco na conversão e facilidade de uso.
+          </li>
+          <li>
+            <strong>Mobile-First Design:</strong> Garantia de que o site seja
+            totalmente responsivo e otimizado para dispositivos móveis.
+          </li>
+          <li>
+            <strong>SEO Básico:</strong> Implementação de práticas de otimização
+            para motores de busca.
+          </li>
+        </ul>
+      </section>
+  
+      <section>
+        <h2>Estratégias de UX/UI Detalhadas</h2>
+        <p>
+          <strong>Lei de Hick-Hyman -</strong> Afirma que quanto mais opções
+          forem apresentadas ao usuário, mais tempo ele levará para tomar uma
+          decisão. Para simplificar a jornada do usuário:
+        </p>
+        <ul>
+          <li>
+            O menu principal será limitado a 5 itens: Sobre, Serviços,
+            Contato,Faça o Orçamento.
+          </li>
+          <li>
+            Cada página terá CTAs claros e objetivos, como "Quero um Plano de
+            Saúde" ou "Fale com um Especialista".
+          </li>
+        </ul>
+        <br />
+        <p>
+          <strong>Lei de Fitts -</strong> Sugere que botões maiores e mais
+          próximos do cursor são mais fáceis de clicar.
+        </p>
+        <ul>
+          <li>
+            Os botões de CTA serão posicionados estrategicamente em áreas de
+            maior visibilidade, como no topo da página inicial e ao final de
+            cada seção.
+          </li>
+          <li>
+            Tamanho mínimo dos botões: 48px x 48px , conforme recomendações de
+            acessibilidade.
+          </li>
+        </ul>
+        <br />
+        <p>
+          <strong>Princípio de Gestalt -</strong> Enfatiza que o cérebro humano
+          organiza informações visualmente. Para melhorar a percepção
+        </p>
+        <ul>
+          <li>
+            Agruparemos informações relacionadas em blocos visuais claros, como
+            "Diferenciais da LBC" e "Depoimentos de Clientes.
+          </li>
+          <li>
+            Usaremos espaçamentos consistentes entre os elementos para evitar
+            sobrecarga visual.
+          </li>
+        </ul>
+        <br />
+        <p>
+          <strong>Lei de Jakob Nielsen -</strong> Afirma que os usuários esperam
+          que os sites funcionem de forma semelhante a outros que já utilizaram.
+          Para atender a essa expectativa:
+        </p>
+
+        <ul>
+          <li>
+            O layout seguirá padrões conhecidos, como o posicionamento do logo
+            no canto superior esquerdo e o menu no topo.
+          </li>
+          <li>
+            Formulários seguirão um fluxo lógico: Tipo de Plano Desejado → Nome
+            → Telefone → E-mail ou haverá pequenas diferenças a depender do
+            Plano escolhido .
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Antes e Depois</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Elemento</th>
+              <th>Antes</th>
+              <th>Depois</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Layout Geral</strong></td>
+              <td>Básico e ultrapassado, sem hierarquia clara.</td>
+              <td>Moderno, com degradê suave e espaçamentos consistentes.</td>
+            </tr>
+            <tr>
+              <td><strong>Cores</strong></td>
+              <td>Inconsistentes, sem alinhamento com o manual.</td>
+              <td>
+                Baseadas no manual: azul (#0E2C72), laranja (#F15A24), branco.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Tipografia</strong></td>
+              <td>Genérica e inconsistente.</td>
+              <td>Padronizada: Open Sans (corpo) e Roboto (títulos).</td>
+            </tr>
+            <tr>
+              <td><strong>Botões e CTAs</strong></td>
+              <td>Pequenos e pouco destacados.</td>
+              <td>
+                Grandes, com cores do manual e posicionamento estratégico.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Formulários</strong></td>
+              <td>Extensos e sem validação em tempo real.</td>
+              <td>Simplificados, com validação e feedback visual.</td>
+            </tr>
+            <tr>
+              <td><strong>Velocidade</strong></td>
+              <td>Lento, prejudicando a experiência do usuário.</td>
+              <td>Otimizado para carregamento rápido (menos de 3 segundos).</td>
+            </tr>
+            <tr>
+              <td><strong>SEO</strong></td>
+              <td>Básico, sem práticas avançadas.</td>
+              <td>
+                Implementação de palavras-chave, meta tags e URLs amigáveis.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="site-antigo">
+          <h3>Site antigo:</h3>
+          <a href="https://lbccorretora.com.br/">LBC Consultoria</a>
+        </div>
+      </section>
+      <section>
+        <h2>Cronograma de Implementação</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Fase</th>
+              <th>Descrição</th>
+              <th>Prazo Estimado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pesquisa e Planejamento</td>
+              <td>
+                Análise detalhada do público-alvo e definição de requisitos.
+              </td>
+              <td>2 semanas</td>
+            </tr>
+            <tr>
+              <td>Wireframes e Protótipos</td>
+              <td>Criação de esboços iniciais e protótipos navegáveis.</td>
+              <td>3 semanas</td>
+            </tr>
+            <tr>
+              <td>Design Final</td>
+              <td>Desenvolvimento do design visual final.</td>
+              <td>4 semanas</td>
+            </tr>
+            <tr>
+              <td>Desenvolvimento</td>
+              <td>Codificação do site com foco em performance.</td>
+              <td>5 semanas</td>
+            </tr>
+            <tr>
+              <td>Testes e Ajustes</td>
+              <td>Testes de usabilidade e compatibilidade.</td>
+              <td>2 semanas</td>
+            </tr>
+            <tr>
+              <td>Lançamento</td>
+              <td>Publicação do novo site.</td>
+              <td>1 semana</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Orçamento Estimado</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Etapa</th>
+              <th>Valor Estimado (R$)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pesquisa, Planejamento e Wireframes</td>
+              <td>R$ 5.000,00</td>
+            </tr>
+            <tr>
+              <td>Design UI e Prototipagem</td>
+              <td>R$ 8.000,00</td>
+            </tr>
+            <tr>
+              <td>Desenvolvimento e Testes</td>
+              <td>R$ 12.000,00</td>
+            </tr>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td><strong>R$ 25.000,00</strong></td>
+            </tr>
+            <p>Valores meramente ilustrativos.</p>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Conclusão</h2>
+        <p>
+          Este plano detalha todas as estratégias de UX/UI que serão
+          implementadas no site da LBC Corretora de Planos de Saúde, com foco na
+          captação eficiente de leads e na criação de uma experiência de usuário
+          fluida e envolvente.
+        </p>
+        <a href="#" class="cta-button">Em breve o site atualizado</a>
+      </section>
     </div>
-    <footer>
-        <p>&copy; 2023 LBC Corretora. Todos os direitos reservados.</p>
+    <footer id="footer">
+      <div class="conteudo">
+        <div class="contato">
+          <h2>
+            <a
+              href="mailto:thalesfotos@hotmail.com"
+              style="text-decoration: none; color: white"
+            >
+              thalesfotos@hotmail.com
+            </a>
+          </h2>
+          <h2>
+            <a
+              href="https://wa.me/5511967393632"
+              target="_blank"
+              style="text-decoration: none; color: white"
+              ><img
+                class="footer-whats"
+                src="assets/whatsapp.svg"
+                alt="whatsapp"
+              />
+              +55 11 96739-3632
+            </a>
+          </h2>
+        </div>
+        <div class="redes-sociais">
+          <a href="https://github.com/thalesvarga" target="_blank"
+            ><img class="contato-icone" src="/assets/github.svg" alt="Github"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/thales-varga-11b83033a/"
+            target="_blank"
+            ><img
+              class="contato-icone"
+              src="/assets/linkedin.svg"
+              alt="Linkedin"
+          /></a>
+          <a href="https://www.instagram.com/thalesvarga/" target="_blank"
+            ><img
+              class="contato-icone"
+              src="/assets/instagram.svg"
+              alt="Instagram"
+          /></a>
+        </div>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
