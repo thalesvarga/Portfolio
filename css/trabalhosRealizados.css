@@ -1,64 +1,71 @@
 /* trabalhos realizado ---------------------------- */
-
 #trabalhos {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem;
   width: 100%;
-  z-index: 9999;
+  margin-top: 5rem;
+  margin-bottom: 20rem;
+  min-height: 800px;
   position: relative;
-  padding-right: 2rem;
-  margin-top: 15rem;
-  transition: transform 2s ease;
 }
 
-/* #trabalhos:hover{
-    transform: scale(1.02);
-  } */
-
+/* Título */
 .trabalhos-realizado-titulo {
   background: var(--cor-background-escuro);
-  padding: 1rem 4rem 1rem 1rem;
+  padding: 2rem;
   border-radius: 8px;
   transform: rotate(-2deg);
   color: var(--cor-texto-claro);
-  z-index: -1;
-  position: absolute;
-  bottom: 100%;
-  left: 40%;
-  z-index: -1;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 3;
 }
 
-.card {
+/* Container dos cards */
+.cards-container {
+  position: relative;
   width: 50%;
-  padding: 3rem;
-  border-radius: 18px;
-  transition: transform 0.5s ease;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
 }
 
+/* Estilo base dos cards */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 1;
+}
+
+/* Card 1 (Door Digital) */
 #card1 {
   background: white;
-  position: absolute;
-  top: 10%;
+  color: black;
+  border: 1px solid black;
 }
 
-/* card lbc */
-
+/* Card 2 (LBC Corretora) */
 #card2 {
-  position: absolute;
-  z-index: -1;
   background: var(--cor-background-escuro);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease, z-index 0.5s ease;
-  color: var(--cor-texto-escuro);
-  width: 50%;
-  top: 40%;
+  color: var(--cor-texto-claro);
 }
 
-#card2.active {
-  transform: translateY(-4%);
+/* Estado ativo (card visível) */
+.card.active {
+  opacity: 1;
+  transform: translateY(0);
   z-index: 2;
-  background: var(--cor-background-escuro);
 }
 
 .card-container-conteudo {
@@ -177,7 +184,7 @@
   transform: scale(0.8);
 }
 
-/* @media (min-width: 1440px) {
+@media (min-width: 1440px) {
     .trabalhos-realizado-titulo {
       left: 20%; 
       top: 65%;
@@ -190,7 +197,7 @@
     #card2 {
       top: 90%; 
     }
-  } */
+  }
 
 /* @media (max-width: 1200px) {
   #trabalhos {
@@ -216,162 +223,161 @@
 } */
 
 @media (max-width: 1024px) {
-  #trabalhos {
-    margin-top: 8rem;
-    height: 20vh;
+  .cards-container {
+    width: 80%;
   }
 
-  .trabalhos-realizado-titulo {
-    left: 15%;
-    top: 20%;
-    padding: 2rem 2rem;
-  }
-
-  #card1 {
-    width: 70%;
-    top: 90%;
-  }
-
-  #card2 {
-    width: 70%;
-    top: 100%;
-  }
   .seta {
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    cursor: pointer;
-    z-index: 99999;
+    left: 5%;
   }
+
 }
 
 @media (max-width: 768px) {
+  /* Ajustes para a seção #trabalhos */
+ 
   #trabalhos {
-    margin-top: 2rem;
-    width: 100%;
+    margin-top: 3rem;
+    min-height: 400px;
+    margin-bottom:35rem;
+  }
+  .cards-container {
+    width: 90%;
+  }
+
+  .card {
+    padding: 1rem;
   }
 
   .trabalhos-realizado-titulo {
     left: 10%;
-    top: 50%;
+    top: -1rem;
+    font-size: 1.3em;
+    padding: 0.5rem 1rem;
+    z-index: 1;
   }
 
-  #card1 {
-    width: 70%;
-    top: 90%;
-  }
-
-  #card2 {
-    width: 70%;
-    top: 100%;
-  }
-
+  /* Ajustes para os cards */
+ 
   .card-container-conteudo {
     grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-  .card-conteudo {
+  .card-conteudo,
+  .card2-conteudo {
     order: 2;
     text-align: center;
-    width: 80%;
+    width: 100%;
   }
 
   .card-container-conteudo img {
     order: 1;
     max-width: 200px;
-    width: 60%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
   }
 
-  .card img {
-    order: 1;
-    width: auto;
-    max-width: 50%;
+  .seta {
+    left: 4%;
   }
 
-  .seta {
-    position: absolute;
-    bottom: 70%;
-    left: 10%;
-    cursor: pointer;
-    z-index: 99999;
-  }
 }
 
-@media (max-width: 600px) {
-  #trabalhos {
-    margin-top: 4rem;
-    height: 10vh;
+ @media (max-width: 600px) {
+#trabalhos {
+    margin-top: 3rem;
+    min-height: 400px;
+    margin-bottom:35rem;
   }
 
   .trabalhos-realizado-titulo {
-    left: 5%;
-    top: 5%;
+    left: 50%;
+    top: 4rem;
+    transform: translateX(-50%) rotate(-2deg); 
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
   }
 
-  #card1 {
+  .cards-container {
     width: 90%;
-    top: 100%;
+    margin-top: 4rem;
   }
 
-  #card2 {
-    width: 90%;
-    top: 110%;
+  .card {
+    position: absolute;
+    top: 0px;
+    padding: 1rem;
+  }
+
+  .card-container-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .card-conteudo,
+  .card2-conteudo {
+    text-align: left;
+    order: 2;
+  }
+
+  .card-container-conteudo img {
+    order: 1;
+    max-width: 190px; 
+    margin: 0 auto 1rem;
   }
 
   .card-conteudo h3,
   .card2-conteudo h3 {
-    font-size: 2rem;
+    font-size: 1.5rem; 
+    padding: 0.5rem 0;
   }
 
   .card-conteudo p,
   .card2-conteudo p {
-    font-size: 0.7rem;
+    font-size: 0.75rem; 
+    line-height: 1.4;
+   
   }
 
   .seta {
-    position: absolute;
-    top: 135%;
-    left: 8%;
-    cursor: pointer;
-    z-index: 99999;
+    top: calc(100% + 2rem); 
+    left: 5%;
+    transform: translateX(-50%);
+    width: 20px;
   }
 }
 
 @media (max-width: 480px) {
   #trabalhos {
     margin-top: 3rem;
+    min-height: 200px;
   }
 
   .trabalhos-realizado-titulo {
-    left: 10%;
-    top: 30%;
     font-size: 0.8rem;
     padding: 1rem;
   }
 
   #card1 {
-    width: 75%;
-    top: 105%;
     padding: 0;
   }
 
   #card2 {
     width: 75%;
-    top: 115%;
+
     padding: 0;
   }
 
-  .card-container-conteudo{
+  .card-container-conteudo {
     border: none;
-    
   }
-
 
   .card-conteudo h3,
   .card2-conteudo h3 {
@@ -381,7 +387,6 @@
   .card-conteudo p,
   .card2-conteudo p {
     font-size: 0.6rem;
-    
   }
 
   .seta {
@@ -390,5 +395,54 @@
     left: 5%;
     cursor: pointer;
     z-index: 99999;
+  }
+}
+
+@media (max-width: 380px) {
+  #trabalhos {
+    min-height: 100px; 
+    margin-top: 2rem;
+    margin-bottom: 35rem; 
+    padding: 1rem !important;
+  }
+
+  .trabalhos-realizado-titulo {
+    font-size: 0.9rem !important; 
+    top: -1rem !important; 
+    padding: 0.8rem !important;
+    margin-bottom: 1.5rem !important; 
+  }
+
+  .cards-container {
+    margin-top: 2rem !important;
+  }
+
+  .card {
+    top: 10px !important; 
+    padding: 0.8rem !important;
+  }
+
+  .card-container-conteudo img {
+    width: 40% !important; 
+    max-width: 100px !important;
+    margin-bottom: 0.5rem !important; 
+  }
+
+  .card-conteudo h3,
+  .card2-conteudo h3 {
+    font-size: 1.2rem !important; 
+    margin-top: 0.5rem !important; 
+  }
+
+  .card-conteudo p,
+  .card2-conteudo p {
+    font-size: 0.65rem !important; 
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .seta {
+    top: calc(100% + 1rem) !important; 
+    width: 10px !important; 
   }
 }

@@ -32,15 +32,13 @@
 html {
   user-select: none;
   scroll-behavior: smooth;
-  width: 100%;
-  height: 100%;
 }
 
 body {
   background: var(--cor-background);
   color: var(--cor-texto-escuro);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
   font-family: var(--font-family);
   font-size: 1rem;
@@ -59,6 +57,10 @@ main {
   transform: translateX(-50%);
   z-index: -3;
   opacity: 0.7;
+}
+
+.skills-linha{
+  display: none;
 }
 
 .sobre-mim-background {
@@ -90,8 +92,23 @@ main {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .linha {
-    display: none;
+    display: none !important;
+  }
+
+  .skills-linha{
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    opacity: 0.5;
+    height: 1050px;
+    width: 7px;
+    z-index: -5;
   }
 
   .sobre-mim-2-background {
@@ -101,7 +118,23 @@ main {
 
   .background-preto,
   .background-cinza {
-    width: 50%; 
+    display: none;
   }
 
 }
+@media (max-width: 480px) {
+
+  .linha {
+    display: none !important;
+  }
+
+  .skills-linha{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    opacity: 0.5;
+
+  }
+}
+

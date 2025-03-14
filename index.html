@@ -320,74 +320,88 @@
       </div> -->
 
       </div>
-       <div id="trabalhos">
+
+
+      <div id="trabalhos">
         <h2 class="trabalhos-realizado-titulo">Trabalhos Realizados</h2>
-        <div class="card" id="card1">
-          <div class="card-container-conteudo">
-            <div class="card-conteudo">
-              <h3>Door Digital</h3>
-              <p>
-                Criação e desenvolvimento do site, incluindo o design e a
-                estruturação da identidade visual para uma agência de eventos de
-                games e corporativos. O projeto foi centrado na experiência do
-                usuário e na comunicação eficaz da marca.
-              </p>
-
-              <div class="card-descricao">
-                <h5>FUNCÃO</h5>
-                <p>Desenvolvedor, UI Designer e UX Analista.</p>
-                <h5>PROCESSO</h5>
+      
+        <!-- Container dos cards -->
+        <div class="cards-container">
+          <!-- Card 1 (Door Digital) -->
+          <div class="card active" id="card1">
+            <div class="card-container-conteudo">
+              <div class="card-conteudo">
+                <h3>Door Digital</h3>
                 <p>
-                  Refatoração do site, aplicando conceitos de UI/UX para
-                  aprimorar a experiência do usuário e a interface. Otimização
-                  da usabilidade,com navegação mais intuitiva, com foco em
-                  acessibilidade e responsividade.
+                  Criação e desenvolvimento do site, incluindo o design e a
+                  estruturação da identidade visual para uma agência de eventos de
+                  games e corporativos. O projeto foi centrado na experiência do
+                  usuário e na comunicação eficaz da marca.
                 </p>
+      
+                <div class="card-descricao">
+                  <h5>FUNCÃO</h5>
+                  <p>Desenvolvedor, UI Designer e UX Analista.</p>
+                  <h5>PROCESSO</h5>
+                  <p>
+                    Refatoração do site, aplicando conceitos de UI/UX para
+                    aprimorar a experiência do usuário e a interface. Otimização
+                    da usabilidade, com navegação mais intuitiva, com foco em
+                    acessibilidade e responsividade.
+                  </p>
+                </div>
+                <a class="card-links card-links-site" href="">Da uma olhada no Site</a>
               </div>
-              <a class="card-links card-links-site" href=""
-                >Da uma olhada no Site</a
-              >
+      
+              <img
+                class="card-imagem"
+                src="/assets/Door_digital.png"
+                alt="imagem do website da Door digital"
+              />
             </div>
-
-            <img
-              class="card-imagem"
-              src="/assets/Door_digital.png"
-              alt="imagem do website da Door digital "
-            />
+          </div>
+      
+          <!-- Card 2 (LBC Corretora) -->
+          <div class="card inactive" id="card2">
+            <div class="card-container-conteudo">
+              <div class="card2-conteudo">
+                <h3>LBC Corretora</h3>
+                <p>
+                  O projeto foi realizado para uma Corretora de Planos de Saúde, há
+                  mais de 14 anos de trabalho.
+                </p>
+      
+                <div class="card-descricao">
+                  <h5>FUNCÃO</h5>
+                  <p>Desenvolvedor, UX Designer e UX Researcher.</p>
+                  <h5>PROCESSO</h5>
+                  <p>
+                    O projeto envolveu a atualização da identidade visual e do
+                    design, além da otimização para SEO e da melhoria da
+                    experiência do usuário. Essas iniciativas revitalizam a
+                    presença digital da marca, promovendo uma interação mais
+                    envolvente e eficaz com o público.
+                  </p>
+                </div>
+                <a class="card2-links card-links-site" href="">Da uma olhada no Site</a>
+              </div>
+      
+              <img
+                class="card-imagem"
+                src="/assets/lbc-logo-branco.webp"
+                alt="logo LBC"
+              />
+            </div>
           </div>
         </div>
-
-        <img class="seta" src="assets/arrow_down.svg" alt="" />
-
-        <div class="card" id="card2">
-          <div class="card-container-conteudo">
-            <div class="card2-conteudo">
-              <h3>LBC Corretora</h3>
-              <p>
-                O projeto foi realizado para um Corretora de PLanos de Saúde, ha
-                mais de 14 anos de anos de trabalho.
-              </p>
-
-              <div class="card-descricao">
-                <h5>FUNCÃO</h5>
-                <p>Desenvolvedor, UX Designer e UX Researcher.</p>
-                <h5>PROCESSO</h5>
-                <p>
-                  O projeto envolveu a atualização da identidade visual e do
-                  design, além da otimização para SEO e da melhoria da
-                  experiência do usuário. Essas iniciativas revitalizam a
-                  presença digital da marca, promovendo uma interação mais
-                  envolvente e eficaz com o público.
-                </p>
-              </div>
-              <a class="card2-links card-links-site" href=""
-                >Da uma olhada no Site</a
-              >
-            </div>
-
-            <img src="/assets/lbc-logo-branco.webp" alt="logo LBC" />
-          </div>
-        </div>
+      
+        <!-- Botão (seta) -->
+        <img
+          class="seta"
+          id="toggleCards"
+          src="assets/arrow_down.svg"
+          alt="Seta para alternar cards"
+        />
       </div>
 
       <div id="sobre-mim" class="sobre-mim-container">
@@ -412,11 +426,11 @@
             detalhes sobre minha trajetória.
           </p>
           <div class="sobre-mim-background">
-            <img
+            <!-- <img
               class="background-preto"
               src="assets/forma-preta.svg"
               alt="background do texto"
-            />
+            /> -->
           </div>
           <div id="sobre-mim-linkedin">
             <a
@@ -447,7 +461,7 @@
             </div>
           </div>
         </div>
-      </div>
+   
     </main>
   </body>
 

@@ -78,6 +78,7 @@ footer h2 a {
 /* ============ RESPONSIVIDADE ============ */
 @media (max-width: 1024px) {
   footer {
+ 
     min-height: 40vh; /* Altura reduzida */
   }
 
@@ -102,20 +103,23 @@ footer h2 a {
 @media (max-width: 768px) {
   footer {
     min-height: 35vh; /* Altura ainda menor */
-    padding: 1.5rem;
+    padding: 1.2rem;
+
   }
 
   .contato h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .conteudo p {
     font-size: 0.7rem;
+    padding-left: 0;
   }
 
   .redes-sociais {
     gap: 10px;
-    padding: 1.5rem 0;
+    padding-left: 2.5rem;
+
   }
 
   .redes-sociais img {
@@ -130,7 +134,7 @@ footer h2 a {
 
 @media (max-width: 480px) {
   footer {
-    min-height: 10vh; /* Altura mínima para mobile */
+    height: 50vh; /* Altura mínima para mobile */
     padding: 1rem;
     align-items: center;
     justify-content: center;

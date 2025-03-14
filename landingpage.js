@@ -145,13 +145,31 @@ document.addEventListener('click', () => {
 
 
 /* ============ TRABALHOS REALIZADOS ============ */
+const card1 = document.getElementById('card1');
+const card2 = document.getElementById('card2');
+const toggleButton = document.getElementById('toggleCards');
 
-const setaClique = document.querySelector(".seta");
-const card2 = document.getElementById("card2");
+const cards = [card1, card2];
+let currentCardIndex = 0;
 
-setaClique.addEventListener("click", () => {
-  card2.classList.toggle("active");
-});
+function toggleCards() {
+  cards[currentCardIndex].classList.remove('active');
+
+  // Atualiza o índice para o próximo card
+  currentCardIndex = (currentCardIndex + 1) % cards.length;
+
+  // Adiciona a classe 'active' ao próximo card (inicia fade-in)
+  cards[currentCardIndex].classList.add('active');
+
+  // Gira a seta
+  // toggleButton.classList.toggle('virada');
+}
+
+// Adiciona o evento de clique ao botão (seta)
+toggleButton.addEventListener('click', toggleCards);
+
+// Inicializa o primeiro card como visível
+card1.classList.add('active');
 
 // ====================HEADER HAMBURGUER===============
 
