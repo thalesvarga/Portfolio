@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thales Varga</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/sobremim.css" />
-    <link rel="stylesheet" href="/css/contato.css" />
-    <link rel="stylesheet" href="/css/experiencia.css" />
-    <link rel="stylesheet" href="/css/trabalhosRealizados.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sobremim.css" />
+    <link rel="stylesheet" href="../css../contato.css" />
+    <link rel="stylesheet" href="../css/experiencia.css" />
+    <link rel="stylesheet" href="../css/trabalhosRealizados.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dnx5lfu.css" />
-    <script src="/landingpage.js" defer type="module"></script>
+
+    <script src="../landingpage.js" defer type="module"></script>      
+    <script>
+      if (window.innerWidth <= 768) {
+        console.log("Tela pequena detectada. Redirecionando...");
+        window.location.href = "html/construcao.html"; 
+      }
+    </script>
+    
   </head>
   <body data-tema="claro">
     <!-- <div id="entrada-site" class="oculto conteudo-entrada">
@@ -114,7 +122,7 @@
       <section id="trabalhos" class="fundo-claro">
         <p class="trabalhos-titulo">TRABALHOS</p>
         <div class="trabalhos-container">
-          <a class="trabalhos-lbc-consultoria" href="./embreve.html"
+          <a class="trabalhos-lbc-consultoria" href="html/lbcConsultoria.html"
             ><strong class="trabalhos-strong">LBC </strong>&nbsp;Consultoria
             <img
               class="trabalhos-link-seta"
@@ -124,7 +132,7 @@
           </a>
           <img src="assets/Linha-divisao-trabalhos.svg" alt="" />
 
-          <a class="trabalhos-door-digital" href="./embreve.html"
+          <a class="trabalhos-door-digital" href="html/embreve.html"
             >DOOR DIGITAL
             <img
               class="trabalhos-link-seta"
@@ -132,6 +140,7 @@
               alt=""
             />
           </a>
+        
           <p class="trabalhos-andamento">
             <span class="tag">&lt;div&gt;</span><br />
             <span class="texto">Anda<br />mento</span><br />
@@ -139,6 +148,7 @@
           </p>
           <img src="assets/Linha-divisao-trabalhos.svg" alt="" />
         </div>
+        <a class="trabalhos-skills" href="html/embreve.html">skills</a>
         <div class="trabalhos-descricao">
           <p>
             Esses são trabalhos em que uso todo o meu conhecimento, desde a
@@ -221,27 +231,27 @@
           <div class="contato-links">
             <a
               href="https://www.linkedin.com/in/thales-varga-11b83033a/"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" target="_blank"
               >Linke<strong class="contato-strong">din</strong></a
             >
-            <a href="https://github.com/thalesvarga" rel="noopener noreferrer">
+            <a href="https://github.com/thalesvarga" rel="noopener noreferrer" target="_blank">
               Gi<strong class="contato-strong">th</strong>ub</a
             >
             <a
               href="https://www.instagram.com/thalesvarga"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" target="_blank"
               >ins<strong class="contato-strong">tagram</strong></a
             >
             <a
-              href="https://www.instagram.com/thalesvarga"
-              rel="noopener noreferrer"
-              >email</a
+              href="mailto:thalesbarga@gmail.com"
+              rel="noopener noreferrer" target="_blank"
+              >Email</a
             >
-            <a href="https://wa.me/5511967393632" rel="noopener noreferrer"
-            >
+            <a href="https://wa.me/5511967393632" rel="noopener noreferrer" target="_blank"
+            >Whats</a>
           </div>
           <div class="contato-descricao">
-            <p>Alguma dúvida ou faltou algo?Me chama!</p>
+            <p>Alguma dúvida ou faltou algo? <br><strong class="contato-strong">Me chama!</strong></p>
           </div>
           <div class="contato-nome">
             <h1>Thales Varga</h1>

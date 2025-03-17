@@ -56,22 +56,3 @@ document.addEventListener("scroll", () => {
   });
 });
 
-/* ============ SCROLL REVERSO============ */
-
-
-
-
-// ====================HEADER HAMBURGUER===============
-
-
-// const hamburguer = document.querySelector('.header-hamburguer');
-// const menu = document.querySelector('.header-menu');
-
-// hamburguer.addEventListener('click', () => {
-//   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-// });
-
-
-/* ============ ENTRADA============ */
-
-

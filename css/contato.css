@@ -46,7 +46,13 @@
     left: 2%;
     width:6%;
     line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 800;
     
+}
+
+.contato-strong{
+    font-weight:300 ;
 }
 
 .contato-nome{
