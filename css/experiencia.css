@@ -1,0 +1,98 @@
+#experiencia {
+  max-width: 100%;
+  min-height: 100vh;
+  /* padding: 3rem 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.experiencia-titulo p {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10rem 2rem 0;
+}
+
+/* ============CONTAINER DAS IMAGENS================= */
+
+.experiencia-container {
+  width: 100%;
+  height: 100%;
+}
+
+.imagem-circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15rem;
+}
+
+.imagem-linha-horinzontal-vermelha {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 2px;
+}
+
+.imagem-linha-central-preta {
+  position: absolute;
+  top: 0%;
+  left: 55%;
+  height: 100vh;
+}
+
+.imagem-linha-vertical-vermelha {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 85%;
+  height: 100vh;
+}
+/* ==========DESCRICAO DAS EXPERIENCIAS======= */
+
+.experiencia-descricao div {
+  margin: 1rem;
+  line-height: 1.4;
+}
+
+.experiencia-descricao {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  padding: 2rem;
+}
+.experiencia-descricao p {
+  font-size: 0.8rem;
+}
+
+.experiencia-empresas {
+  font-size: 0.8rem;
+}
+
+/* ======DOWNLOAD======== */
+.experiencia-download {
+  position: absolute;
+  top: 65%;
+  left: 83%;
+  font-size: 0.8rem;
+}
+.experiencia-download a {
+  text-decoration: none;
+  color: #ed5e5e;
+  cursor: pointer;
+}
+
+/* ======DESCRICAO DA CIDADE======== */
+.experiencia-cidade {
+  position: absolute;
+  top: 96%;
+  left: 2%;
+}
+/* ============ RESPONSIViDADE PARA TELAS PEQUENAS (768px) ============ */
+
+
+
+

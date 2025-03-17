@@ -1,285 +1,135 @@
-/* Animação para a classe .divisao-sobre-mim */
-.divisao-sobre-mim {
-  opacity: 0; 
-  transform: translateX(4%); 
-  transition: opacity 2s ease-out, transform 2s ease-out; 
-}
+/* =================== HOME/SOBRE MIM ====================*/
 
-.divisao-sobre-mim.visible {
-  opacity: 1; 
-  transform: translateX(0); 
-}
-
-.divisao-sobre-mim h2 {
-  font-size: 2rem;
-  padding-left: 3rem;
-}
-
-.sobre-mim-titulo h2 {
-  font-size: 3rem;
-  margin-top: 5rem;
-}
-
-.sobre-mim-descricao {
-  width: 40%;
-  margin: 3rem 0;
-  padding-left: 0rem;
-  opacity: 0;
-  transform: translateX(20%);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  text-align: center;
-  text-align: left;
-}
-
-.sobre-mim-descricao.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-#introducao-sobre-mim {
+#home {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: 60%;
-  height: 70vh;
+  position: relative;
+  min-height: 95vh;
+  width: 100%;
+}
+
+#introducao-home {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
   margin: 5rem 0;
   text-align: center;
   overflow-x: hidden;
+  position: relative;
 }
 
-#introducao-sobre-mim h2 {
+#introducao-home h2 {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 3rem;
   width: 70%;
   margin: 1rem auto;
 }
 
-#introducao-sobre-mim p {
-  font-size: 1.5rem;
+#introducao-home p {
+  font-size: 1.1rem;
   width: 70%;
   margin: 1rem auto;
   font-weight: 300;
   font-style: light;
 }
 
+.introducao-container-imagem {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.introducao-imagem {
+  padding: 0.8rem;
+  max-width: 208px;
+  max-height: 260px;
+}
+
+.introducao-imagem-linha {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.introducao-nome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  height: 39vh;
+}
+.introducao-nome h1 {
+  width: 35%;
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+/* ====================SOBRE MIM======================= */
+
 #sobre-mim {
   display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: 100vh;
+  text-align: left;
+  background: #e2cd94;
   position: relative;
-  width: 80%;
-  justify-content: center;
-  text-align: center;
-  margin-top: 3rem;
+  
 }
 
-#sobre-mim-2 {
-  margin-top: 2rem;
-}
-
-#sobre-mim-linkedin {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  width: fit-content;
-  padding-left: 1rem;
-  justify-content: center;
-}
-
-.linkedin-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem;
-  border: 1px solid var(--cor-background-escuro);
-  font-family: var(--font-family);
-  border-radius: 12px;
-  background: none;
+.sobre-mim-descricao-container,
+.sobre-mim-descricao-parte2 {
+  width: 6%;
+  text-align: left;
   font-size: 0.8rem;
-  color: var(--cor-texto-escuro);
+  margin: 2rem;
+}
+
+.sobre-mim-descricao-parte2 p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 72vh;
+
+}
+
+.download-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.download-cv a {
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  white-space: nowrap;
-  width: auto;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 1s ease;
+  color: inherit;
 }
 
-.linkedin-link:hover {
-  background-color: var(--cor-background-escuro);
-  color: var(--cor-texto-claro);
+.download-cv a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transform: scale(1.1);
 }
 
-.sobre-mim-icone-linkedin {
-  width: 25px;
-  padding-right: 0.5rem;
-  filter: invert(1);
-  transition: filter 0.3s ease;
-}
-
-.linkedin-link:hover .sobre-mim-icone-linkedin {
-  filter: invert(0);
-}
-
-
-.sobre-mim-link {
-  opacity: 0;
-  transform: translateX(4%);
-  transition: opacity 4s ease-out, transform 4s ease-out;
-}
-
-.sobre-mim-link.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-@media (max-width: 1024px) {
-  #sobre-mim-2{
-    margin-top: 0rem;
-  }
+.sobre-mim-container {
+  display: flex;
+  justify-content: flex-end;
   
-  .sobre-mim-descricao {
-    width: 60%;
-    padding-left: 5rem;
-  }
 
-  #introducao-sobre-mim {
-    width: 80%;
-  }
+}
+.sobre-mim-container img {
+  width: 5%;
 
-  #introducao-sobre-mim h2 {
-    font-size: 4rem;
-  }
-
-  #introducao-sobre-mim p {
-    font-size: 1.3rem;
-  }
+  position: absolute;
+  bottom: 1%;
+  left: 93%;
 }
 
-@media (max-width: 768px) {
-  .sobre-mim-descricao {
-    width: 80%;
-    padding-left: 2rem;
-  }
-
-  #introducao-sobre-mim {
-    width: 90%;
-    margin: 1rem;
-    height: 50vh;
-    overflow-x: hidden;
-  }
-
-  #introducao-sobre-mim h2 {
-    font-size: 3rem;
-  }
-
-  #introducao-sobre-mim p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #introducao-sobre-mim {
-    margin: 2rem;
-    height: 32vh;
-  }
-  #introducao-sobre-mim h2 {
-    font-size: 1.7rem;
-  }
-  #introducao-sobre-mim p {
-    font-size: 0.7rem;
-    margin: 0.7rem;
-  }
-
-  #sobre-mim {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-    width: 100%;
-  
-  }
-
-  .sobre-mim-container {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sobre-mim-titulo{
-    font-size: 2rem;
- 
-  }
-  .sobre-mim-titulo h2{
-    font-size: 1.8rem;
-    position: static;   
-     top: 1%;
-  }
-
-  .sobre-mim-descricao {
-    width: 80% !important;
-    font-size: 0.6rem;
-    line-height: 1.5;
-    margin: 0 auto 2rem !important;
-    height: auto !important;
-    padding: 2rem 0;
-  }
-
-  #sobre-mim-linkedin {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2rem;
- 
-  }
-
-  .linkedin-link,
-  #download-cv {
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
-    margin: 0 0.5rem;
-    font-size: 0.6rem;
-  }
-
-
-  @media (max-width: 380px) {
-    #sobre-mim {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-      /* height: 100vh; */
-      margin: 2rem 0 0;
-      padding: 0;
-    }
-
-    .sobre-mim-titulo h2{
-      font-size: 1.5rem;
-    }
-
-    .linkedin-link,
-    #download-cv {
-      flex: 100%;
-      max-width: 100%;
-      margin: 0.5rem 0;
-    }
-
- #sobre-mim-linkedin{
-      margin: 0;
-      padding: 0;
-    }
-
-    .sobre-mim-icone-linkedin {
-      width: 24px !important;
-      margin: 0rem;
-    }
-
-    .sobre-mim-download-cv {
-      text-align: center;
-      padding: 0.8rem;
-      display: block;
-    }
-  }
-}

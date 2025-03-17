@@ -1,451 +1,95 @@
-/* trabalhos realizado ---------------------------- */
 #trabalhos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: #2e2e2e;
+  color: white;
+}
+
+.trabalhos-titulo {
+  font: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 10rem 0 0;
+}
+
+.trabalhos-container {
+  margin: 10rem 3rem 3rem 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.trabalhos-strong{
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.trabalhos-lbc-consultoria {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  font-size: 5rem;
+  font-weight: 100;
+  padding-left: 1rem;
+  text-decoration: none;
+  color: inherit;
   padding: 2rem;
-  width: 100%;
-  margin-top: 5rem;
-  margin-bottom: 20rem;
-  min-height: 600px;
-  position: relative;
+  cursor: pointer;;
 }
 
-/* Título */
-.trabalhos-realizado-titulo {
-  background: var(--cor-background-escuro);
-  padding: 2rem 2rem 2rem 20rem;
-  border-radius: 8px;
-  transform: rotate(-2deg);
-  color: var(--cor-texto-claro);
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-
+.trabalhos-link-seta {
+  padding: 1rem;
+  margin-top: 3rem;
 }
 
-/* Container dos cards */
-.cards-container {
-  position: relative;
-  width: 50%;
-  max-width: 800px;
-  height: auto;
-  margin: 0 auto;
+.trabalhos-door-digital {
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  text-decoration: line-through;
+  cursor: pointer;;
+  
 }
+/* ======= ESTILIZAÇAO DO "EM ANDAMENTO" ================*/
 
-/* Estilo base dos cards */
-.card {
+.trabalhos-andamento{
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 22%;
+  top: 75%;
+  font-size: 0.7rem;
+  width: 5%;
+}
+
+.tag {
+  color: #61DDB0; 
+}
+
+.texto {
+  color: #ED5E5E;
+}
+
+/* ==========DESCRICAO=============== */
+.trabalhos-descricao{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 100%;
-  padding: 2rem;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  z-index: 1;
 }
-
-/* Card 1 (Door Digital) */
-#card1 {
-  background: white;
-  color: black;
-  border: 1px solid black;
-}
-
-/* Card 2 (LBC Corretora) */
-#card2 {
-  background: var(--cor-background-escuro);
-  color: var(--cor-texto-claro);
-}
-
-/* Estado ativo (card visível) */
-.card.active {
-  opacity: 1;
-  transform: translateY(0);
-  z-index: 2;
-}
-
-.card-container-conteudo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  padding: 2rem;
-  border: 1px solid white;
-  border-radius: 24px;
-}
-.card2-conteudo {
-  color: var(--cor-texto-claro);
-}
-
-.card-conteudo {
-  grid-column: 1 / 2;
-  color: var(--cor-texto-escuro);
-}
-
-.card-conteudo h3,
-.card2-conteudo h3 {
-  padding: 1rem 0;
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.card-conteudo p,
-.card2-conteudo p {
-  padding: 1rem 0;
+.trabalhos-descricao p{
+  display: flex;
+  justify-content: flex-end;
+padding-top: 5rem;
+  width: 8%;
   font-size: 0.8rem;
-  line-height: 1.5;
+  margin: 2rem;
 }
 
-@keyframes mexida {
-  0% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(5px);
-  }
-  60% {
-    transform: translateX(-3px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
-.card-links {
-  display: inline-block;
-  color: var(--cor-texto-escuro);
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.3s ease-in-out;
-}
-
-.card-links:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  animation: mexida 0.4s ease-in-out;
-}
-
-.card-links::after {
-  content: " →";
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-  padding-left: 0.3rem;
-}
-
-.card2-links {
-  display: inline-block;
-  color: var(--cor-texto-claro);
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.3s ease-in-out;
-}
-
-.card2-links:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  animation: mexida 0.4s ease-in-out;
-}
-
-.card2-links::after {
-  content: " →";
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-  padding-left: 0.3rem;
-  color: var(--cor-texto-claro);
-}
-
-.card-container-conteudo img {
-  grid-column: 2 / 3;
-  width: 100%;
-  height: auto;
-}
-
-.card-descricao {
-  padding: 1rem 0;
-}
-
-.card-descricao p {
-  padding: 0.4rem 0;
-}
-
-.seta {
-  position: absolute;
-  top: 100%;
-  left: 20%;
-  cursor: pointer;
-  z-index: 99999;
-}
-
-.seta:active {
-  transform: scale(0.8);
-}
-
-@media (min-width: 1440px) {
-    .trabalhos-realizado-titulo {
-      left: 20%; 
-      top: 65%;
-    }
-  
-    #card1 {
-      top: 80%; 
-    }
-  
-    #card2 {
-      top: 90%; 
-    }
-  }
-
-/* @media (max-width: 1200px) {
-  #trabalhos {
-    margin-top: 10rem; 
-    height: 25vh;
-  }
-
-  .trabalhos-realizado-titulo {
-    left: 18%; 
-    top: 70%;
-  
-  }
-
-  #card1 {
-    width: 60%; 
-    top: 85%;
-  }
-
-  #card2 {
-    width: 60%;
-    top: 95%;
-  }
-} */
-
-@media (max-width: 1024px) {
-  .cards-container {
-    width: 80%;
-  }
-
-  .seta {
-    left: 5%;
-  }
-
-}
-
-@media (max-width: 768px) {
-  /* Ajustes para a seção #trabalhos */
- 
-  #trabalhos {
-    margin-top: 3rem;
-    min-height: 400px;
-    margin-bottom:35rem;
-  }
-  .cards-container {
-    width: 90%;
-  }
-
-  .card {
-    padding: 1rem;
-  }
-
-  .trabalhos-realizado-titulo {
-    left: 10%;
-    top: -1rem;
-    font-size: 1.3em;
-    padding: 0.5rem 1rem;
-    z-index: 1;
-  }
-
-  /* Ajustes para os cards */
- 
-  .card-container-conteudo {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .card-conteudo,
-  .card2-conteudo {
-    order: 2;
-    text-align: center;
-    width: 100%;
-  }
-
-  .card-container-conteudo img {
-    order: 1;
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .seta {
-    left: 4%;
-  }
-
-}
-
- @media (max-width: 600px) {
-#trabalhos {
-    margin-top: 3rem;
-    min-height: 400px;
-    margin-bottom:35rem;
-  }
-
-  .trabalhos-realizado-titulo {
-    left: 50%;
-    top: 4rem;
-    transform: translateX(-50%) rotate(-2deg); 
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .cards-container {
-    width: 90%;
-    margin-top: 4rem;
-  }
-
-  .card {
-    position: absolute;
-    top: 0px;
-    padding: 1rem;
-  }
-
-  .card-container-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .card-conteudo,
-  .card2-conteudo {
-    text-align: left;
-    order: 2;
-  }
-
-  .card-container-conteudo img {
-    order: 1;
-    max-width: 190px; 
-    margin: 0 auto 1rem;
-  }
-
-  .card-conteudo h3,
-  .card2-conteudo h3 {
-    font-size: 1.5rem; 
-    padding: 0.5rem 0;
-  }
-
-  .card-conteudo p,
-  .card2-conteudo p {
-    font-size: 0.75rem; 
-    line-height: 1.4;
-   
-  }
-
-  .seta {
-    top: calc(100% + 2rem); 
-    left: 5%;
-    transform: translateX(-50%);
-    width: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  #trabalhos {
-    margin-top: 3rem;
-    min-height: 200px;
-  }
-
-  .trabalhos-realizado-titulo {
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-
-  #card1 {
-    padding: 0;
-  }
-
-  #card2 {
-    width: 75%;
-
-    padding: 0;
-  }
-
-  .card-container-conteudo {
-    border: none;
-  }
-
-  .card-conteudo h3,
-  .card2-conteudo h3 {
-    font-size: 1.5rem;
-  }
-
-  .card-conteudo p,
-  .card2-conteudo p {
-    font-size: 0.6rem;
-  }
-
-  .seta {
-    position: absolute;
-    top: 135%;
-    left: 5%;
-    cursor: pointer;
-    z-index: 99999;
-  }
-}
-
-@media (max-width: 380px) {
-  #trabalhos {
-    min-height: 100px; 
-    margin-top: 2rem;
-    margin-bottom: 35rem; 
-    padding: 1rem !important;
-  }
-
-  .trabalhos-realizado-titulo {
-    font-size: 0.9rem !important; 
-    top: -1rem !important; 
-    padding: 0.8rem !important;
-    margin-bottom: 1.5rem !important; 
-  }
-
-  .cards-container {
-    margin-top: 2rem !important;
-  }
-
-  .card {
-    top: 10px !important; 
-    padding: 0.8rem !important;
-  }
-
-  .card-container-conteudo img {
-    width: 40% !important; 
-    max-width: 100px !important;
-    margin-bottom: 0.5rem !important; 
-  }
-
-  .card-conteudo h3,
-  .card2-conteudo h3 {
-    font-size: 1.2rem !important; 
-    margin-top: 0.5rem !important; 
-  }
-
-  .card-conteudo p,
-  .card2-conteudo p {
-    font-size: 0.65rem !important; 
-    line-height: 1.3 !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  .seta {
-    top: calc(100% + 1rem) !important; 
-    width: 10px !important; 
-  }
-}

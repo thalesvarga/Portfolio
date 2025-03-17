@@ -1,0 +1,13 @@
+div p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
