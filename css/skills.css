@@ -1,0 +1,93 @@
+#header {
+  z-index: 9999;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInHeader 2s ease-in-out 3.5s forwards;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 100vh;
+  font-size: 0.8rem;
+  margin: 0 auto;
+  background: #2e2e2e;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: translateX(100%);
+  animation: slide-in-background 3.3s ease-in-out forwards;
+  z-index: -1;
+}
+
+.skills-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.conteudo {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  transform: translateX(100%);
+  animation: slide-in-content 2.6s ease-in-out 1s forwards;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 100vh;
+}
+
+ul {
+  width: 100%;
+}
+
+li {
+  margin: 0.5rem;
+}
+
+strong {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+@keyframes slide-in-background {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-content {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInHeader {
+    to {
+      opacity: 1; 
+    }
+  }
