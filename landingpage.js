@@ -56,9 +56,6 @@ document.addEventListener("scroll", () => {
   });
 });
 
-
-
-
 window.addEventListener("load", () => {
   document.body.classList.add("animate");
 });

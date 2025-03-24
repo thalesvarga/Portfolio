@@ -59,3 +59,110 @@
     font-size: 0.8rem;
 }
 
+
+@media (max-width: 780px) {
+    #contato {
+      min-height: 80vh; 
+    }
+  
+    .contato-titulo {
+      justify-content: center; 
+      padding: 1rem 1rem 0 0; 
+    }
+
+    .contato-container a {
+      font-size: 1.4rem; 
+    }
+  
+    .contato-container a strong {
+      font-size: 1.4rem; 
+  
+    .contato-descricao {
+      top: 10%; 
+      left: 5%; 
+      width: 12%; 
+      font-size: 0.8rem; 
+    }
+  
+    .contato-nome {
+      font-size: 0.6rem; 
+    }
+  
+    .contato-links {
+      padding-top: 10rem; 
+      padding-bottom: 12rem; 
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+
+    #contato {
+      min-height: 70vh; 
+    }
+  
+    .contato-titulo {
+      padding: 0.5rem 0.5rem 0 0; 
+    }
+  
+    .contato-container a {
+      font-size: 1.2rem; 
+    }
+  
+    .contato-container a strong {
+      font-size: 1.2rem; /
+    }
+  
+    .contato-descricao {
+      top: 8%; 
+      left: 3%; 
+      width: 15%; 
+      font-size: 0.6rem; 
+    }
+  
+    .contato-nome {
+      font-size: 0.5rem; 
+    }
+  
+    .contato-links {
+      padding-top: 8rem; 
+      padding-bottom: 10rem; 
+    }
+  }
+  
+
+  @media (max-width: 380px) {
+
+    #contato {
+      min-height: 60vh; 
+    }
+  
+    .contato-titulo {
+      padding: 0.3rem 0.3rem 0 0; 
+    }
+  
+    .contato-container a {
+      font-size: 1rem; 
+    }
+  
+    .contato-container a strong {
+      font-size: 1rem; 
+    }
+  
+    .contato-descricao {
+      top: 5%; 
+      left: 2%; 
+      width: 20%; 
+      font-size: 0.5rem; 
+    }
+  
+    .contato-nome {
+      font-size: 0.4rem; 
+    }
+  
+    .contato-links {
+      padding-top: 6rem; 
+      padding-bottom: 8rem; 
+    }
+  }
+}
