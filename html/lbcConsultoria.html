@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/lbcConsultoria.css" />
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/landingpage.js" defer type="module"></script>
     <title>Thales Varga</title>
 
 
@@ -21,139 +22,216 @@
   </header>
   <body>
     <div class="container-ux-ui">
-      <div class="header container">
-        <div class="logo">
+      <div class="container-titulo-projeto">
           <div class="titulo-projeto">
             <h1>
               Projeto da
-              <img src="/assets/lbc-logo-branco.webp" alt="Consultoria Logo" />
             </h1>
-          </div>
+            <img src="/assets/lbc-logo-branco.webp" class="logo" alt="Consultoria Logo" />
         </div>
+
       </div>
-      <section class="container-ux-ui">
-      
+      <div class="trabalhos-ux-ui">
         <div class="layout-container">
-         
-          <div class="grupos-container">
+          <!-- <div class="grupos-container"> -->
             <section class="container-section">
               <h2>Introdução</h2>
               <p>
-                A LBC CONSULTORIA é uma empresa especializada em planos de saúde e
-                seguros com mais de 15 anos de mercado. Seu principal objetivo é
-                ajudar famílias e empresas a encontrar a proteção ideal, com soluções
-                personalizadas e suporte contínuo.
+                A LBC Consultoria é uma empresa especializada em planos de saúde e seguros, com mais de 15 anos de mercado, dedicada a ajudar famílias e empresas a encontrar a proteção ideal por meio de soluções personalizadas e suporte contínuo. Como desenvolvedor e UX/UI designer responsável pelo projeto, meu objetivo foi criar uma experiência digital que transmitisse confiança e acolhimento, temas essenciais quando se fala de saúde. Para isso, redefini o Style Guide, adotando cores e elementos visuais que evocam bem-estar e profissionalismo, ao mesmo tempo em que garantem clareza e consistência em toda a plataforma.<br/><br/>
+
+                Desenvolvi um design system coeso, priorizando a usabilidade e uma navegação intuitiva, com botões estrategicamente posicionados para guiar o usuário de forma natural. Formulários foram simplificados para aumentar a conversão, mantendo apenas os campos essenciais e reduzindo atritos no preenchimento. Além disso, incorporei práticas de acessibilidade, como contrastes adequados e tipografia legível, para assegurar que a experiência fosse inclusiva e acessível a todos.<br/><br/>
+                
+                O resultado final foi uma plataforma visualmente engajadora e funcional, que não apenas atende às necessidades comerciais da LBC Consultoria, mas também estabelece uma conexão mais humana com o público, <strong>reforçando a confiançae a credibilidade</strong>  da marca no mercado de saúde e seguros.
               </p>
             </section>
-            <img src="/assets/linha-branca-lbc 9.svg" alt="linha decorativa" class="imagem-linha-grupos">
-      
-            <section class="container-section grupos">
-              <h2>Objetivo</h2>
-              <p>
-                O projeto foi realizado para um site moderno e responsivo para a LBC
-                Consultoria, com foco na captação de leads. A melhoria da experiência
-                do usuário era o objetivo principal, alinhando-o à identidade visual
-                da empresa, garantindo uma navegação intuitiva e uma alta taxa de
-                conversão.
-              </p>
-            </section>
-      
-            <section class="container-section grupos">
-              <h2>Estratégia</h2>
-              <p>
-                O projeto foi dividido em duas fases principais: UX/UI e
-                Desenvolvimento. Na etapa de UX/UI, focou na pesquisa de mercado,
-                persona, jornada do usuário, wireframes e protótipos. Na fase de
-                desenvolvimento, trabalhou na implementação do front-end e back-end,
-                além da integração com a API do Google Sheets.
-              </p>
-            </section>
-      
-            <section class="container-section grupos">
-              <h2>Metodologia</h2>
-              <p>
-                Durante o projeto, realizou pesquisas conduzidas por consultores de
-                UX/UI, com a ajuda de ferramentas de posicionamento estratégico de
-                botões e priorização de gestão (para organização visual das
-                informações). Esses conceitos ajudaram a criar uma experiência de
-                usuário simplificada e eficiente.
-              </p>
-            </section>
-          </div>
-      
-   
-          <section class="documentacao-completa">
-            <h2>Documentação Completa</h2>
-            <p>
-              Para mais detalhes sobre o projeto, confira a apresentação inicial e o relatório de conclusão:
-            </p>
-            <div class="documentacao-completa-links">
-            <a  class= "links" href="/html/embreve.html">Aprensetação</a>
-            <a class= "links" href="/html/embreve.html">Protótipo</a>
-            <a class= "links" href="/html/embreve.html">Site Antigo</a>
-            <a class= "links" href="/html/embreve.html">Conlusão</a>
-          </div>
-         
-          </section>
+
+
+            <div class="modal-funcao">
+              <section class="container-section">
+                <h2>Função</h2>
+                <a href="" data-modal="ux-ui" id="abrirModal">UX/UI</a>
+                <a href="" data-modal="desenvolvimento" id="abrirModal">Desenvolvimento</a>
+              </section>
+          
+              <!-- Modal UX/UI -->
+              <div id="ux-ui" class="modal">
+                <div class="modal-conteudo">
+                  <!-- Fechar modal -->
+                  <span class="fechar-modal">&times;</span>
+          
+                  <!-- Cabeçalho do modal -->
+                  <div class="cabecalho-modal">
+                    <div class="cabecalho-titulo">
+                      <div class="modal-coluna-funcao">
+                        <h4>Função</h4>
+                        <p>UX/UI</p>
+                      </div>
+                      <span class="separador">|</span>
+                      <div class="modal-coluna-prototipo">
+                        <a href="/html/embreve.html" class="botao-prototipo">Protótipo</a>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Desafio e Soluções (2 colunas) -->
+                  <div class="modal-desafio-solucoes">
+                    <div class="modal-coluna">
+                      <div class="modal-coluna-titulos">
+                        <h2>Desafio</h2>
+                      </div>
+                      <p>
+                        A LBC Consultoria, referência no mercado de planos de saúde e seguros, tinha um problema claro: seu site estava ultrapassado e não conversava com o público. A plataforma, estática e sem estratégia de conversão, falhava em captar leads e engajar clientes. Não havia chamadas eficientes, formulários otimizados ou gatilhos que incentivassem o contato, elementos essenciais para um negócio que depende de relacionamento e confiança.<br/><br/>
+          
+                        Além disso, a identidade visual não transmitia a serenidade e profissionalismo que clientes esperam ao buscar um serviço de saúde. Cores frias e uma estrutura pouco intuitiva afastavam, em vez de atrair, potenciais contratantes. Enquanto o mercado digitalizava suas operações, com corretoras investindo em presença online para conquistar clientes, a LBC corria o risco de ficar para trás, mesmo sendo uma empresa consolidada.<br/><br/>
+                        
+                        Era preciso uma transformação urgente: um site que não apenas refletisse a credibilidade da marca, mas que também funcionasse como uma ferramenta ativa de captação, combinando design acolhedor, usabilidade estratégica e tecnologia eficiente.
+                      </p>
+                      <a href="https://lbccorretora.com.br/" target="_blank" rel="noopneer noreferrer">Site Antigo</a>
+                    </div>
+                    <div class="modal-coluna">
+                      <div class="modal-coluna-titulos">
+                        <h2>Soluções</h2>
+                      </div>
+                      <ul>
+                        Para transformar o site da LBC Consultoria em uma ferramenta eficiente de captação, executei um redesenho completo com foco em três pilares: experiência do usuário, conversão e acessibilidade. <br/><br/>
+                        <li>Desenvolvi uma nova identidade visual com cores sóbrias e acolhedoras, testando rigorosamente os contrastes para garantir legibilidade e inclusão. O layout limpo e profissional transmite a credibilidade da marca, essencial no segmento de saúde.</li><br/>
+                        <li>O site foi totalmente adaptado para diferentes dispositivos, com componentes flexíveis que mantêm a usabilidade em qualquer tela. Otimizei carregamentos e simplifiquei a navegação para reduzir taxas de rejeição.</li><br/>
+                        <li>Implementei formulários enxutos com campos essenciais e CTAs estratégicos posicionados em pontos-chave do fluxo de navegação. Microinterações sutis melhoram o engajamento, enquanto uma hierarquia visual clara guia o usuário naturalmente para a ação.</li><br/>
+                      </ul>
+                    </div>
+                  </div>
+          
+                  <!-- Processo de Design (Full-width) -->
+                  <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="conteudo">
+                        <h2>Processo de Design</h2>
+                        <p>
+                          Para criar uma boa experiência do usuário para LBC Consultoria, eu segui um processo de estrutura consistente, com usabilidade e adaptável. O modo que conduzi o projeto centrado no usuário e estabelecendo um sólido design system, otimizando a hierarquia visual e assegurando acessibilidade para diferentes tipos de usuários.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Pesquisa e Benchmarking (Full-width) -->
+                  <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="numero">1.</div>
+                      <div class="conteudo">
+                        <h2>Pesquisa e Benchmarking</h2>
+                        <p>
+                          Antes de criar a identidade visual, estudei os concorrentes e o mercado de planos de saúde para entender os padrões do setor e encontrar oportunidades. Essa análise ajudou a desenvolver uma interface moderna que atende às expectativas dos usuários, mantendo a identidade exclusiva da LBC Consultoria.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Criação de Personas (2 colunas) -->
+                  <div class="modal-personas">
+                    <div class="modal-coluna">
+                      <div class="modal-item">
+                        <div class="numero">1.1</div>
+                        <div class="conteudo">
+                          <h2>Criação de Personas</h2>
+                          <p>
+                            Essa análise de mercado serviu de base para a criação de personas reais, como o João, empresário que precisa de planos para sua equipe, e a Maria, autônoma em busca da melhor relação custo-benefício em cobertura. Assim, cada escolha de design passou a atender a necessidades específicas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-coluna">
+                      <img src="/assets/Persona-Joao-RH.svg" data-src="/assets/Persona-Joao-RH.svg" class="clicavel" alt="Pesquisa João">
+                      <img src="/assets/Persona-Maria-Individual.svg" data-src="/assets/Persona-Maria-Individual.svg" class="clicavel" alt="Pesquisa Maria">
+                    </div>
+                  </div>
+          
+                  <!-- Atualização do Style Guide (Full-width) -->
+                  <div class="modal-style-guide">
+                    <div class="modal-coluna">
+                      <img src="/assets/Style-Guide.svg" data-src="/assets/Style-Guide.svg" class="clicavel" alt="">
+                    </div>
+                  <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="numero">2.</div>
+                      <div class="conteudo">
+                        <h2>Atualização do Style Guide</h2>
+                        <p>
+                          Criei um style guide que define a tipografia, paleta de cores, espaçamentos, estilos de botões e componentes interativos. Isso garantiu que o projeto atendesse às expectativas dos usuários e transmitisse confiança nos serviços da LBC.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <!-- UI Design e Protótipo (Full-width) -->
+                  <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="numero">3.</div>
+                      <div class="conteudo">
+                        <h2>UI Design e Protótipo</h2>
+                        <p>
+                          No Figma, desenvolvi um protótipo de alta fidelidade, priorizando responsividade e navegação intuitiva. Criei uma interface que guia o usuário naturalmente, garantindo uma experiência fluida em qualquer dispositivo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Acessibilidade (Full-width) -->
+                  <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="numero">4.</div>
+                      <div class="conteudo">
+                        <h2>Acessibilidade</h2>
+                        <p>
+                          Para aumentar a acessibilidade do projeto, apliquei rigorosamente as diretrizes WCAG, garantindo níveis adequados de contraste entre cores e assegurando que todos os botões e elementos interativos fossem facilmente identificáveis. Realizei testes específicos para validar que cada componente atendesse aos critérios de visibilidade e usabilidade, criando assim uma experiência inclusiva para todos os usuários.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Interações e Refinamento (Full-width) -->
+                  <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="numero">5.</div>
+                      <div class="conteudo">
+                        <h2>Interações e Refinamento</h2>
+                        <p>
+                          Após coletar feedbacks internos e validar a usabilidade, refinei o design para reforçar pontos críticos. Otimizei espaçamentos, padronizei os botões e ajustei as microinterações, elevando a qualidade final da interface.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="modal-section">
+                    <div class="modal-item">
+                      <div class="conteudo">
+                        <h2>UI Design</h2>
+                        <p>
+                          O design de interface da LBC foi desenvolvido com foco em acessibilidade e adaptabilidade, garantindo uma experiência fluida para usuários de diferentes setores. Ao priorizar um visual limpo e moderno, criei uma interface que potencializa a confiança no serviço sem comprometer a estrutura intuitiva e visualmente agradável.  
+                        </p>
+                      </div>
+                    </div>
+                    </div> -->
+
+                </div>
+              </div>
+          
+              <!-- Overlay para imagens expandidas -->
+              <div id="imagem-expandida-overlay" class="overlay">
+                <span class="fechar-imagem">&times;</span>
+                <img src="" alt="Imagem Expandida" id="imagem-expandida">
+              </div>
+          
+              <!-- Modal Desenvolvimento -->
+              <div id="desenvolvimento" class="modal">
+                <div class="modal-conteudo">
+                  <span class="close">&times;</span>
+                  <h2>Modal 2</h2>
+                  <p>Conteúdo específico para o Modal 2.</p>
+                </div>
+              </div>
           <img class="ellipse-lbc" src="/assets/ellipse-lbc.svg" alt="">
         </div>
       </section>
-    </div>
-
-<section class="container-front-back">
-  <div class="layout-container">
-    <img class="imagem-linha-grupos-front-back" src="/assets/linha-preta-lbc.svg" alt="">
-    <div class="grupos-container">
-
-      <section class="container-section-front-back grupos">
-        <h2>Tecnologias Utilizadas</h2>
-        <ul>
-          <li>Vite: Para criar um ambiente de desenvolvimento rápido e eficiente.</li>
-          <li>React: Para estruturar a interface do usuário com componentes reutilizáveis.</li>
-          <li>GIT: Para controle de versão e colaboração.</li>
-          <li>HTML/CSS: Para estruturação e estilização do site.</li>
-          <li>JavaScript: Para lógica e interatividade da aplicação.</li>
-        </ul>
-      </section>
-
- 
-
-      <section class="container-section-front-back grupos">
-        <h2>Desenvolvimento de Componentes</h2>
-        <p>
-          Desenvolveu componentes reutilizáveis em React, como botões, cards de serviços e menus de navegação. Isso permitiu uma manutenção mais fácil e um código mais organizado.
-        </p>
-      </section>
-
-      <section class="container-section-front-back grupos">
-        <h2>Integração com Back-End</h2>
-        <p>
-          O front-end foi integrado ao back-end através da API do Google Sheets. Utilizou requisições HTTP para enviar os dados dos formulários, garantindo que as informações preenchidas pelos usuários fossem armazenadas corretamente.
-        </p>
-      </section>
-
-      <section class="container-section-front-back grupos">
-        <h2>Desafios e Soluções</h2>
-        <p>
-          Um dos principais desafios foi garantir que o site carregasse rapidamente, mesmo com imagens e vídeos grandes. Para isso, utilizou técnicas de otimização de desempenho, como lazy loading e code splitting, reduzindo o tempo de carregamento do site em 30%.
-        </p>
-      </section>
-    </div>
-
-    <div class="right-column">
-      <section class="container-section-front-back resultados">
-        <h2>Resultados</h2>
-        <p>
-          Melhorou a experiência do usuário, com base nos dados coletados, foram implementadas páginas com alta taxa de saída, permitindo ajustes no design e no conteúdo. Otimizou o desempenho do site usando lazy loading e code splitting, reduzindo o tempo de carregamento do site em 30%. Tomada de decisão baseada em dados: Os analistas puderam tomar decisões mais informadas sobre o design e a funcionalidade do site.
-        </p>
-        <div class="resultados-site">
-        <p>Feito por Thales Varga.</p>
-        <a class= "links site" href="/html/embreve.html">Site</a>
-      </div>
-      </section>
-    </div>
-  </div>
-</section>
-
+    <!-- </div> -->
   </body>
 </html>

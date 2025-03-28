@@ -60,3 +60,61 @@ window.addEventListener("load", () => {
   document.body.classList.add("animate");
 });
 
+
+// =========MODAL=========
+
+const modal = document.getElementById('ux-ui');
+const abrirModalLink = document.getElementById('abrirModal');
+const btnFecharModal = document.querySelector('.fechar-modal');
+
+
+abrirModalLink.addEventListener('click', (event) => {
+  event.preventDefault(); 
+  modal.style.display = 'block';
+  setTimeout(() => {
+    modal.classList.add('active'); 
+  }, 20); 
+});
+
+
+btnFecharModal.addEventListener('click', () => {
+  modal.classList.remove('active'); 
+  setTimeout(() => {
+    modal.style.display = 'none'; 
+  }, 1000); 
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.classList.remove('active');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 1000);
+  }
+});
+// =========MODAL-expandir imagem=========
+const imagensClicaveis = document.querySelectorAll('.clicavel');
+const overlay = document.getElementById('imagem-expandida-overlay');
+const imagemExpandida = document.getElementById('imagem-expandida');
+const fecharImagem = document.querySelector('.fechar-imagem');
+
+
+imagensClicaveis.forEach(imagem => {
+  imagem.addEventListener('click', () => {
+    const src = imagem.getAttribute('data-src') || imagem.src; 
+    imagemExpandida.src = src; 
+    overlay.style.display = 'block'; 
+  });
+});
+
+
+fecharImagem.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+
+
+overlay.addEventListener('click', (event) => {
+  if (event.target === overlay) {
+    overlay.style.display = 'none';
+  }
+});
