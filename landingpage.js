@@ -63,32 +63,32 @@ window.addEventListener("load", () => {
 
 // =========MODAL=========
 
-const modal = document.getElementById('ux-ui');
+const modalUxUi = document.getElementById('ux-ui');
 const abrirModalLink = document.getElementById('abrirModal');
 const btnFecharModal = document.querySelector('.fechar-modal');
 
 
 abrirModalLink.addEventListener('click', (event) => {
   event.preventDefault(); 
-  modal.style.display = 'block';
+  modalUxUi.style.display = 'block';
   setTimeout(() => {
-    modal.classList.add('active'); 
+    modalUxUi.classList.add('active'); 
   }, 20); 
 });
 
 
 btnFecharModal.addEventListener('click', () => {
-  modal.classList.remove('active'); 
+  modalUxUi.classList.remove('active'); 
   setTimeout(() => {
-    modal.style.display = 'none'; 
+    modalUxUi.style.display = 'none'; 
   }, 1000); 
 });
 
 window.addEventListener('click', (event) => {
   if (event.target === modal) {
-    modal.classList.remove('active');
+    modalUxUi.classList.remove('active');
     setTimeout(() => {
-      modal.style.display = 'none';
+      modalUxUi.style.display = 'none';
     }, 1000);
   }
 });
